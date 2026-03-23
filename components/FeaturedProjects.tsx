@@ -10,47 +10,53 @@ export default function FeaturedProjects({ locale }: Props) {
     const isEN = locale === "en";
 
     return (
-        <div className="flex flex-col gap-3">
-            <div className="flex items-end justify-between gap-4">
-                <h2 className="text-xl font-semibold tracking-tight">
+        <section className="flex flex-col gap-4 sm:gap-5">
+            <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+                <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
                     {isEN ? "Featured projects" : "Projets à la une"}
                 </h2>
+
                 <Link
                     href={isEN ? "/en/projects" : "/projects"}
-                    className="text-sm text-white/70 hover:text-white"
+                    className="w-fit text-sm text-white/70 transition hover:text-white"
                 >
                     {isEN ? "View all →" : "Tout voir →"}
                 </Link>
             </div>
 
-            <div className="grid gap-6 md:grid-cols-3">
+            <div className="grid grid-cols-1 gap-4 sm:gap-5 md:grid-cols-2 xl:grid-cols-3">
                 {featuredProjects.map((p) => (
                     <Link
                         key={p.id}
                         href={isEN ? p.hrefEn : p.hrefFr}
-                        className="group overflow-hidden rounded-2xl border border-white/10 bg-white/5 transition hover:border-white/20"
+                        className="group overflow-hidden rounded-2xl border border-white/10 bg-white/5 transition duration-300 hover:border-white/20 hover:bg-white/[0.07]"
                     >
-                        <div className="relative aspect-[16/9] w-full overflow-hidden">
+                        <div className="relative aspect-[16/10] w-full overflow-hidden">
                             <Image
                                 src={p.cover}
                                 alt={isEN ? p.titleEn : p.titleFr}
                                 fill
-                                className="object-cover transition duration-500 group-hover:scale-105"
+                                className="object-cover transition duration-500 group-hover:scale-[1.03]"
+                                sizes="(max-width: 767px) 100vw, (max-width: 1279px) 50vw, 33vw"
                             />
                         </div>
 
-                        <div className="p-5">
-                            <p className="text-sm text-white/60">{isEN ? p.tagEn : p.tagFr}</p>
-                            <p className="mt-2 text-lg font-medium">
-                                {isEN ? p.titleEn : p.titleFr}
+                        <div className="p-4 sm:p-5">
+                            <p className="text-sm text-white/55">
+                                {isEN ? p.tagEn : p.tagFr}
                             </p>
-                            <p className="mt-2 text-sm text-white/70">
+
+                            <h3 className="mt-2 text-lg font-medium leading-snug sm:text-xl">
+                                {isEN ? p.titleEn : p.titleFr}
+                            </h3>
+
+                            <p className="mt-2 text-sm leading-6 text-white/70 sm:text-[15px]">
                                 {isEN ? p.descEn : p.descFr}
                             </p>
                         </div>
                     </Link>
                 ))}
             </div>
-        </div>
+        </section>
     );
 }
