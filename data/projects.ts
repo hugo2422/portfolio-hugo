@@ -1,5 +1,5 @@
 export type Project = {
-    slug: "ecomos-ai" | "ops-system" | "tekplateform";
+    slug: "ecomos-ai" | "ops-system" | "tekplateform" | "projet-depression";
     cover: string;
 
     // FR
@@ -58,12 +58,145 @@ export type Project = {
         demo?: string;
         docs?: string;
     };
-    statusKey: "in-progress" | "in-production";
+    statusKey: "in-progress" | "in-production" | "completed";
 };
 
 
 
 export const projects: Project[] = [
+
+    {
+        slug: "projet-depression",
+        cover: "/images/projects/projet-depression/cover.jpg",
+
+        titleFr: "Projet dépression",
+        statusFr: "Projet académique — Data & Machine Learning",
+        codeStatusFr: "Code privé (projet académique)",
+
+        taglineFr:
+            "Application web d’analyse de données combinant machine learning, statistiques avancées et visualisation pour identifier des facteurs de risque liés à la dépression.",
+        overviewFr:
+            "Projet d’analyse de données et de machine learning centré sur l’étude de variables sociodémographiques et comportementales liées à la dépression. L’application combine gestion de données, modélisation, visualisation analytique et exploration de relations entre facteurs de risque.",
+
+        titleEn: "Depression Project",
+        statusEn: "Academic project — Data & Machine Learning",
+        codeStatusEn: "Private code (academic project)",
+
+        taglineEn:
+            "Web application combining data analysis, machine learning, advanced statistics and visualization to identify depression-related risk factors.",
+        overviewEn:
+            "A data analysis and machine learning project focused on studying sociodemographic and behavioral variables related to depression. The application combines data management, modeling, analytical visualization, and exploration of relationships between risk factors.",
+
+        visionFr: [
+            "Créer une plateforme unifiée pour explorer et analyser des données liées à la dépression.",
+            "Mettre en évidence des relations entre variables comportementales, sociodémographiques et indicateurs de risque.",
+            "Combiner exploration statistique, modèles de machine learning et visualisation dans une interface web exploitable.",
+        ],
+        architectureFr: [
+            "Application web Flask avec gestion de données sociodémographiques en mode CRUD.",
+            "Pipelines de traitement et de stockage des données avec MongoDB Atlas.",
+            "Modules analytiques pour classification, régression, clustering et réduction de dimension (ACP/PCA).",
+            "Visualisation des résultats à travers graphiques analytiques, matrices de confusion et exploration statistique.",
+            "Recherche sémantique basée sur embeddings pour enrichir l’exploration des informations.",
+        ],
+        roadmapFr: [
+            "Phase 1 : gestion et structuration des données sociodémographiques.",
+            "Phase 2 : analyses statistiques, corrélations et exploration PCA.",
+            "Phase 3 : implémentation des modèles de machine learning et visualisation des résultats.",
+            "Phase 4 : enrichissement par recherche sémantique et amélioration de l’interface analytique.",
+        ],
+
+        visionEn: [
+            "Build a unified platform to explore and analyze depression-related data.",
+            "Highlight relationships between behavioral, sociodemographic, and risk-related variables.",
+            "Combine statistical exploration, machine learning models, and visualization in a usable web interface.",
+        ],
+        architectureEn: [
+            "Flask web application with CRUD management of sociodemographic data.",
+            "Data processing and storage pipelines using MongoDB Atlas.",
+            "Analytical modules for classification, regression, clustering, and dimensionality reduction (PCA).",
+            "Result visualization through analytical charts, confusion matrices, and statistical exploration.",
+            "Semantic search based on embeddings to enrich data exploration.",
+        ],
+        roadmapEn: [
+            "Phase 1: structuring and managing sociodemographic data.",
+            "Phase 2: statistical analysis, correlations, and PCA exploration.",
+            "Phase 3: machine learning implementation and result visualization.",
+            "Phase 4: semantic search integration and improvement of the analytical interface.",
+        ],
+
+        tags: ["Data Science", "Machine Learning", "Flask", "MongoDB"],
+
+        period: "2025",
+        roleFr: "Conception, développement web, analyse de données et modélisation",
+        roleEn: "Design, web development, data analysis, and modeling",
+        stack: ["Python", "Flask", "Pandas", "Scikit-learn", "MongoDB", "HTML/CSS"],
+        links: {
+            docs: "",
+        },
+        statusKey: "completed",
+
+        currentStateFr: [
+            "Application web développée avec gestion de données et interface d’analyse.",
+            "Modèles de classification, régression et clustering implémentés.",
+            "Visualisations analytiques et exploration statistique intégrées.",
+            "Recherche sémantique basée sur embeddings ajoutée au projet.",
+        ],
+        currentStateEn: [
+            "Web application developed with data management and analytical interface.",
+            "Classification, regression, and clustering models implemented.",
+            "Analytical visualizations and statistical exploration integrated.",
+            "Embedding-based semantic search added to the project.",
+        ],
+
+        engineeringDecisionsFr: [
+            "Choix de Flask pour garder une architecture légère et adaptée à un projet analytique web.",
+            "Utilisation de MongoDB Atlas pour flexibilité de stockage et intégration simple avec les pipelines de données.",
+            "Séparation entre gestion des données, analyse statistique, modélisation et visualisation pour clarifier l’architecture.",
+            "Ajout d’une recherche sémantique afin d’aller au-delà d’une simple interface de consultation de données.",
+        ],
+        engineeringDecisionsEn: [
+            "Flask chosen to keep the architecture lightweight and well-suited for a web-based analytical project.",
+            "MongoDB Atlas used for storage flexibility and easy integration with data pipelines.",
+            "Separation between data management, statistical analysis, modeling, and visualization to keep the architecture clear.",
+            "Semantic search added to go beyond a simple data viewing interface.",
+        ],
+
+        improvementsFr: [
+            "Améliorer l’interface utilisateur pour rendre l’exploration plus intuitive.",
+            "Renforcer la comparaison entre modèles de machine learning.",
+            "Documenter davantage les pipelines et les hypothèses analytiques.",
+            "Étendre les jeux de données et affiner la robustesse des résultats.",
+        ],
+        improvementsEn: [
+            "Improve the user interface to make exploration more intuitive.",
+            "Strengthen comparison between machine learning models.",
+            "Further document pipelines and analytical assumptions.",
+            "Extend datasets and improve the robustness of results.",
+        ],
+
+        lessonsFr: [
+            "Un projet data pertinent demande autant de rigueur en gestion des données qu’en modélisation.",
+            "La visualisation joue un rôle clé pour rendre les résultats interprétables.",
+            "Les relations entre variables sont souvent mieux comprises en combinant statistiques classiques et machine learning.",
+            "Une interface web analytique peut rendre un projet scientifique beaucoup plus exploitable.",
+        ],
+        lessonsEn: [
+            "A relevant data project requires as much rigor in data management as in modeling.",
+            "Visualization plays a key role in making results interpretable.",
+            "Relationships between variables are often better understood by combining classical statistics and machine learning.",
+            "An analytical web interface can make a scientific project far more usable.",
+        ],
+
+        screenshots: [
+            {
+                src: "/images/projects/projet-depression/cover.jpg",
+                altFr: "Aperçu du projet dépression",
+                altEn: "Depression project preview",
+            },
+        ],
+    },
+
     {
         slug: "tekplateform",
         cover: "/images/projects/tekplateform/cover.png",

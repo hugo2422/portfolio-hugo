@@ -36,7 +36,7 @@ export default function FeaturedProjects({ locale }: Props) {
                                 src={p.cover}
                                 alt={isEN ? p.titleEn : p.titleFr}
                                 fill
-                                className="object-cover transition duration-500 group-hover:scale-[1.03]"
+                                className="object-contain transition duration-500 group-hover:scale-[1.03]"
                                 sizes="(max-width: 767px) 100vw, (max-width: 1279px) 50vw, 33vw"
                             />
                         </div>

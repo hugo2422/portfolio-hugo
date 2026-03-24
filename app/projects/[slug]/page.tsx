@@ -55,7 +55,7 @@ export default async function ProjectPage({ params }: PageProps) {
                         src={project.cover}
                         alt={project.titleFr}
                         fill
-                        className="object-cover"
+                        className="object-contain"
                         priority
                     />
                 </div>

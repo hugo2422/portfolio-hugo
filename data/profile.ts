@@ -8,7 +8,7 @@ export const profile = {
             badge: "Dernière session à l’UQTR • Recherche stage été 2026",
             title: " Science de donnees & Développeur logiciel ",
             subtitle:
-                "Je construis des systèmes back-end robustes et des outils data utiles à la prise de décision.",
+                "Je conçois des systèmes data et des applications intelligentes combinant back-end, analyse de données et machine learning pour aider à la prise de décision.",
             ctas: {
                 primary: "Me contacter",
                 secondary: "Voir mes projets",
@@ -19,9 +19,11 @@ export const profile = {
         about: {
             title: "À propos",
             paragraphs: [
-                "Je suis étudiant en baccalauréat en informatique à l’UQTR, avec un intérêt particulier pour le développement logiciel et la science des données. J’aime transformer des besoins concrets en solutions techniques simples, robustes et bien structurées, en concevant des back-ends, des API, des bases de données relationnelles et des outils d’automatisation en Python.",
-                "Au cours de mes projets, j’ai travaillé sur plusieurs systèmes de gestion ainsi que sur un prototype SaaS orienté e-commerce, intégrant l’analyse d’indicateurs, le scoring de données et des mécanismes de recommandation. J’accorde une attention particulière à la qualité du code, la clarté des choix techniques et la documentation, afin de construire des systèmes fiables et maintenables.",
-                "Actuellement dans ma dernière session à l’UQTR, je suis à la recherche d’un stage pour l’été 2026 en développement logiciel ou en data. Je suis motivé à apprendre rapidement au sein d’une équipe, à recevoir des retours constructifs et à contribuer à des projets concrets.",
+                "Je suis étudiant en informatique à l’UQTR, spécialisé en développement logiciel et en science des données.",
+                "Je conçois des systèmes back-end, des API et des outils data pour transformer des besoins concrets en solutions robustes et bien structurées.",
+                "À travers mes projets, j’ai développé des systèmes de gestion et des applications data-driven, incluant un prototype SaaS e-commerce et un projet d’analyse de données et machine learning autour de la dépression (classification, régression, clustering, visualisation).",
+                "J’accorde une attention particulière à la qualité du code, à la clarté des choix techniques et à la maintenabilité des systèmes.",
+                "Actuellement en dernière session, je recherche un stage pour l’été 2026 en développement logiciel ou en data, afin de contribuer à des projets concrets au sein d’une équipe.",
             ],
         },
         internship: {
@@ -44,7 +46,7 @@ export const profile = {
             badge: "Final term at UQTR • Seeking Summer 2026 internship",
             title: "Data Developer & Software ",
             subtitle:
-                "I build robust backend systems and practical data tools that support decision-making.",
+                "I build data systems and intelligent applications combining back-end, data analysis, and machine learning to drive better decision-making.",
             ctas: {
                 primary: "Contact",
                 secondary: "View projects",
@@ -56,9 +58,11 @@ export const profile = {
         about: {
             title: "About",
             paragraphs: [
-                "I’m a Computer Science student at UQTR focused on software development and data. I enjoy turning real needs into simple, robust, well-structured solutions: backend/APIs, relational databases, and Python automation.",
-                "I’ve worked on management systems and I’m building a SaaS prototype for e-commerce decision support (KPI analysis, scoring, and explainable recommendations). I care about code quality, clear technical decisions, and solid documentation.",
-                "I’m currently in my final term and seeking a Summer 2026 internship. I welcome constructive feedback and I’m eager to learn fast within a strong team.",
+                "I am a Computer Science student at UQTR, specializing in software development and data science.",
+                "I design back-end systems, APIs, and data tools to turn real-world needs into robust and well-structured solutions.",
+                "Through my projects, I have developed management systems and data-driven applications, including an e-commerce SaaS prototype and a data analysis & machine learning project focused on depression (classification, regression, clustering, and visualization).",
+                "I pay close attention to code quality, clarity of technical decisions, and system maintainability.",
+                "Currently in my final semester, I am seeking an internship for Summer 2026 in software development or data, where I can contribute to real-world projects within a team.",
             ],
         },
         internship: {

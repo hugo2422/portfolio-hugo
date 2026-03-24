@@ -55,7 +55,7 @@ export default async function ProjectENPage({ params }: PageProps) {
                         src={project.cover}
                         alt={project.titleEn}
                         fill
-                        className="object-cover"
+                        className="object-contain"
                         priority
                     />
                 </div>
@@ -110,7 +110,7 @@ export default async function ProjectENPage({ params }: PageProps) {
                                         src={shot.src}
                                         alt={shot.altEn}
                                         fill
-                                        className="object-cover"
+                                        className="object-contain"
                                     />
                                 </div>
                                 <div className="p-4 text-sm text-white/70">{shot.altEn}</div>

@@ -1,5 +1,5 @@
 export type FeaturedProject = {
-    id: "ecomos-ai" | "ops-system" | "tekplateform";
+    id: "ecomos-ai" | "ops-system" | "tekplateform" | "projet-depression";
     cover: string;
     tagFr: string;
     tagEn: string;
@@ -14,6 +14,23 @@ export type FeaturedProject = {
 };
 
 export const featuredProjects: FeaturedProject[] = [
+
+    {
+        id: "projet-depression",
+        cover: "/images/projects/projet-depression/cover.jpg",
+        tagFr: "Data Science / Machine Learning",
+        tagEn: "Data Science / Machine Learning",
+        titleFr: "Projet dépression",
+        titleEn: "Depression Project",
+        codeStatusFr: "Code privé (projet académique)",
+        codeStatusEn: "Private code (academic project)",
+        descFr:
+            "Application web combinant analyse de données, machine learning, visualisation analytique et recherche sémantique pour l’étude de facteurs liés à la dépression.",
+        descEn:
+            "Web application combining data analysis, machine learning, analytical visualization, and semantic search to study factors related to depression.",
+        hrefFr: "/projects/projet-depression",
+        hrefEn: "/en/projects-depression",
+    },
     {
         id: "ecomos-ai",
         cover: "/images/projects/ecomos-ai/cover.jpg",
