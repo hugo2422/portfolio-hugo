@@ -2167,7 +2167,7 @@ export const courses: CourseItem[] = [
         slug: "sdd1004-apprentissage-automatique-applications",
         code: "SDD1004",
         category: "Data",
-        status: "Prévu 2026",
+        status: "Complété",
 
         titleFr: "Apprentissage automatique et applications",
         titleEn: "Machine Learning and Applications",
@@ -2256,7 +2256,7 @@ export const courses: CourseItem[] = [
         slug: "inf1020-commerce-electronique",
         code: "INF1020",
         category: "Web",
-        status: "Prévu 2026",
+        status: "Complété",
 
         titleFr: "Commerce électronique",
         titleEn: "Electronic Commerce",
@@ -2352,7 +2352,7 @@ export const courses: CourseItem[] = [
         slug: "inf1030-developpement-applications-mobiles",
         code: "INF1030",
         category: "Mobile",
-        status: "Prévu 2026",
+        status: "Complété",
 
         titleFr: "Introduction au développement d’applications mobiles (Android)",
         titleEn: "Introduction to Mobile Application Development (Android)",
@@ -2456,13 +2456,13 @@ export const courses: CourseItem[] = [
     {
         slug: "inf1016-stage-informatique-2",
         code: "INF1016",
-        status: "Prévu 2026",
+        status: "Complété",
         category: "Stage",
         technologies: [],
         titleFr: "Stage d’informatique II",
         titleEn: "Computer Science Internship II",
-        sessionFr: "Été 2026",
-        sessionEn: "Summer 2026",
+        sessionFr: "Automne 2026",
+        sessionEn: "Fall 2026",
         summaryFr: "Résumé global à compléter .",
         summaryEn: "Global summary to be completed .",
         topicsFr: [],

@@ -9,7 +9,7 @@ export default function NowEN() {
             <div className="grid gap-4 md:grid-cols-3">
                 <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
                     <p className="text-sm text-white/60">Goal</p>
-                    <p className="mt-2 text-white/85">Summer 2026 internship</p>
+                    <p className="mt-2 text-white/85">Open to job opportunities</p>
                 </div>
 
                 <div className="rounded-2xl border border-white/10 bg-white/5 p-5">

@@ -60,7 +60,7 @@ export default function CVPageEN() {
 
                 <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
                     <p className="text-sm text-white/60">Availability</p>
-                    <p className="mt-2 text-lg font-medium">Summer 2026 internship</p>
+                    <p className="mt-2 text-lg font-medium">Open to job opportunities</p>
                     <p className="mt-2 text-sm leading-relaxed text-white/70">
                         Final term at UQTR, currently seeking an internship to keep growing
                         in a professional software or data environment.

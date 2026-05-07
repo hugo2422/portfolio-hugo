@@ -7,175 +7,140 @@ export function generateStaticParams() {
     return projects.map((p) => ({ slug: p.slug }));
 }
 
-type PageProps = {
-    params: Promise<{ slug: string }>;
+type PageProps = { params: Promise<{ slug: string }> };
+
+const statusConfig: Record<string, { label: string; color: string; dot: string }> = {
+    "in-progress":   { label: "In progress",   color: "text-amber-400", dot: "bg-amber-400" },
+    "in-production": { label: "In production", color: "text-green-400", dot: "bg-green-400" },
+    "completed":     { label: "Completed",     color: "text-blue-400",  dot: "bg-blue-400"  },
 };
 
-export default async function ProjectENPage({ params }: PageProps) {
+function Section({ title, children }: { title: string; children: React.ReactNode }) {
+    return (
+        <div className="card-premium rounded-2xl p-6">
+            <h2 className="mb-4 text-base font-semibold uppercase tracking-wider text-white/40">{title}</h2>
+            {children}
+        </div>
+    );
+}
+
+function BulletList({ items }: { items: string[] }) {
+    return (
+        <ul className="flex flex-col gap-2.5">
+            {items.map((item, i) => (
+                <li key={i} className="flex items-start gap-3 text-sm leading-relaxed text-white/65">
+                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-400/60" />
+                    {item}
+                </li>
+            ))}
+        </ul>
+    );
+}
+
+export default async function ProjectPageEN({ params }: PageProps) {
     const { slug } = await params;
     const project = getProjectBySlug(slug);
 
     if (!project) {
         return (
-            <section className="flex flex-col gap-3">
+            <section className="flex flex-col gap-4">
                 <h1 className="text-2xl font-semibold">Project not found</h1>
-                <Link className="text-white/70 underline underline-offset-4" href="/en/projects">
-                    Back to projects
-                </Link>
+                <Link className="text-white/60 hover:text-white" href="/en/projects">← Back to projects</Link>
             </section>
         );
     }
 
+    const status = statusConfig[project.statusKey];
+
     return (
         <section className="flex flex-col gap-8">
-            <div className="flex flex-col gap-3">
-                <Link className="text-sm text-white/60 hover:text-white" href="/en/projects">
-                    ← Back to projects
-                </Link>
+            <div className="animate-fade-in flex items-center gap-2 text-sm text-white/40">
+                <Link href="/en/projects" className="transition hover:text-white/70">Projects</Link>
+                <span>/</span>
+                <span className="text-white/60">{project.titleEn}</span>
+            </div>
 
-                <h1 className="text-4xl font-semibold tracking-tight">{project.titleEn}</h1>
-
+            <div className="animate-fade-in-up flex flex-col gap-4">
                 <div className="flex flex-wrap items-center gap-2">
-                    <span className="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-sm text-white/80">
-                        {project.statusEn}
+                    <span className={`inline-flex items-center gap-1.5 rounded-full border border-current/20 bg-current/8 px-3 py-1 text-xs font-semibold ${status.color}`}>
+                        <span className={`h-1.5 w-1.5 rounded-full ${status.dot}`} />
+                        {status.label}
                     </span>
-                    <span className="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-sm text-white/80">
-                        {project.period}
-                    </span>
+                    <span className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-xs text-white/50">{project.period}</span>
+                    <span className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-xs text-white/50">{project.roleEn}</span>
                 </div>
-
+                <h1 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">{project.titleEn}</h1>
+                <p className="max-w-3xl text-base leading-relaxed text-white/60 sm:text-lg">{project.taglineEn}</p>
                 <ProjectLinks links={project.links} locale="en" />
-
-                <p className="max-w-3xl text-lg text-white/75">{project.taglineEn}</p>
             </div>
 
-            <div className="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
+            <div className="animate-fade-in-up delay-100 overflow-hidden rounded-2xl border border-white/8 bg-white/[0.03]">
                 <div className="relative aspect-[16/9] w-full">
-                    <Image
-                        src={project.cover}
-                        alt={project.titleEn}
-                        fill
-                        className="object-contain"
-                        priority
-                    />
+                    <Image src={project.cover} alt={project.titleEn} fill className="object-cover" priority />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#030712]/40 to-transparent" />
                 </div>
             </div>
 
-            <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
-                <h2 className="text-xl font-semibold">Overview</h2>
-                <p className="mt-3 leading-relaxed text-white/80">{project.overviewEn}</p>
+            <div className="animate-fade-in-up delay-200">
+                <Section title="Project overview"><p className="leading-relaxed text-white/65">{project.overviewEn}</p></Section>
+            </div>
+            <div className="animate-fade-in-up delay-200">
+                <Section title="Current state"><BulletList items={project.currentStateEn} /></Section>
             </div>
 
-            <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
-                <h2 className="text-xl font-semibold">Current state</h2>
-                <ul className="mt-3 list-disc space-y-2 pl-5 text-white/80">
-                    {project.currentStateEn.map((item, i) => (
-                        <li key={i}>{item}</li>
-                    ))}
-                </ul>
-            </div>
-
-            <div className="grid gap-6 md:grid-cols-2">
-                <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
-                    <h2 className="text-xl font-semibold">Role</h2>
-                    <p className="mt-3 leading-relaxed text-white/80">{project.roleEn}</p>
-                </div>
-
-                <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
-                    <h2 className="text-xl font-semibold">Stack</h2>
-                    <div className="mt-3 flex flex-wrap gap-2">
+            <div className="animate-fade-in-up delay-300 grid gap-5 md:grid-cols-2">
+                <Section title="Tech stack">
+                    <div className="flex flex-wrap gap-2">
                         {project.stack.map((s) => (
-                            <span
-                                key={s}
-                                className="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-sm text-white/80"
-                            >
-                                {s}
-                            </span>
+                            <span key={s} className="skill-pill rounded-full px-3 py-1.5 text-sm text-white/70">{s}</span>
                         ))}
                     </div>
-                </div>
+                </Section>
+                <Section title="Tags & Code">
+                    <div className="flex flex-col gap-4">
+                        <div className="flex flex-wrap gap-2">
+                            {project.tags.map((tag) => (
+                                <span key={tag} className="badge-accent rounded-full px-3 py-1.5 text-xs font-medium">{tag}</span>
+                            ))}
+                        </div>
+                        <p className="text-sm text-white/50">{project.codeStatusEn}</p>
+                    </div>
+                </Section>
+            </div>
+
+            <div className="animate-fade-in-up delay-300 grid gap-5 md:grid-cols-3">
+                <Section title="Vision"><BulletList items={project.visionEn} /></Section>
+                <Section title="Architecture"><BulletList items={project.architectureEn} /></Section>
+                <Section title="Roadmap"><BulletList items={project.roadmapEn} /></Section>
+            </div>
+
+            <div className="animate-fade-in-up delay-400 grid gap-5 md:grid-cols-3">
+                <Section title="Engineering decisions"><BulletList items={project.engineeringDecisionsEn} /></Section>
+                <Section title="Possible improvements"><BulletList items={project.improvementsEn} /></Section>
+                <Section title="Lessons learned"><BulletList items={project.lessonsEn} /></Section>
             </div>
 
             {project.screenshots && project.screenshots.length > 0 && (
-                <div className="flex flex-col gap-4">
-                    <h2 className="text-xl font-semibold">Screenshots</h2>
-                    <div className="grid gap-6 md:grid-cols-2">
+                <div className="animate-fade-in-up delay-400 flex flex-col gap-4">
+                    <h2 className="text-base font-semibold uppercase tracking-wider text-white/40">Screenshots</h2>
+                    <div className="grid gap-5 md:grid-cols-2">
                         {project.screenshots.map((shot, i) => (
-                            <div
-                                key={i}
-                                className="overflow-hidden rounded-2xl border border-white/10 bg-white/5"
-                            >
+                            <div key={i} className="card-premium overflow-hidden rounded-2xl">
                                 <div className="relative aspect-[16/9] w-full">
-                                    <Image
-                                        src={shot.src}
-                                        alt={shot.altEn}
-                                        fill
-                                        className="object-contain"
-                                    />
+                                    <Image src={shot.src} alt={shot.altEn} fill className="object-cover" />
                                 </div>
-                                <div className="p-4 text-sm text-white/70">{shot.altEn}</div>
+                                <p className="px-4 py-3 text-sm text-white/50">{shot.altEn}</p>
                             </div>
                         ))}
                     </div>
                 </div>
             )}
 
-            <div className="grid gap-6 md:grid-cols-3">
-                <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
-                    <h3 className="font-semibold">Vision</h3>
-                    <ul className="mt-3 list-disc space-y-2 pl-5 text-white/75">
-                        {project.visionEn.map((x, i) => (
-                            <li key={i}>{x}</li>
-                        ))}
-                    </ul>
-                </div>
-
-                <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
-                    <h3 className="font-semibold">Architecture</h3>
-                    <ul className="mt-3 list-disc space-y-2 pl-5 text-white/75">
-                        {project.architectureEn.map((x, i) => (
-                            <li key={i}>{x}</li>
-                        ))}
-                    </ul>
-                </div>
-
-                <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
-                    <h3 className="font-semibold">Roadmap</h3>
-                    <ul className="mt-3 list-disc space-y-2 pl-5 text-white/75">
-                        {project.roadmapEn.map((x, i) => (
-                            <li key={i}>{x}</li>
-                        ))}
-                    </ul>
-                </div>
-            </div>
-
-            <div className="grid gap-6 md:grid-cols-3">
-                <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
-                    <h3 className="font-semibold">Engineering decisions</h3>
-                    <ul className="mt-3 list-disc space-y-2 pl-5 text-white/75">
-                        {project.engineeringDecisionsEn.map((x, i) => (
-                            <li key={i}>{x}</li>
-                        ))}
-                    </ul>
-                </div>
-
-                <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
-                    <h3 className="font-semibold">Possible improvements</h3>
-                    <ul className="mt-3 list-disc space-y-2 pl-5 text-white/75">
-                        {project.improvementsEn.map((x, i) => (
-                            <li key={i}>{x}</li>
-                        ))}
-                    </ul>
-                </div>
-
-                <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
-                    <h3 className="font-semibold">Lessons learned</h3>
-                    <ul className="mt-3 list-disc space-y-2 pl-5 text-white/75">
-                        {project.lessonsEn.map((x, i) => (
-                            <li key={i}>{x}</li>
-                        ))}
-                    </ul>
-                </div>
+            <div className="animate-fade-in-up delay-500 flex items-center justify-between border-t border-white/[0.07] pt-6">
+                <Link href="/en/projects" className="text-sm text-white/50 transition hover:text-white/80">← All projects</Link>
+                <Link href="/en/contact" className="inline-flex min-h-[40px] items-center justify-center rounded-full bg-gradient-to-r from-blue-500 to-violet-500 px-5 py-2 text-sm font-medium text-white shadow-md shadow-blue-500/20 transition hover:from-blue-400 hover:to-violet-400">
+                    Contact me
+                </Link>
             </div>
         </section>
     );

@@ -13,7 +13,7 @@ const sessionsOrder = [
     "Été 2025",
     "Automne 2025",
     "Hiver 2026",
-    "Été 2026",
+    "Automne 2026",
 ];
 
 export default function UniversityPage() {
@@ -35,8 +35,8 @@ export default function UniversityPage() {
     }));
 
     const totalCourses = courses.length;
-    const plannedCourses = courses.filter((course) => course.status === "Prévu 2026").length;
-    const completedCourses = totalCourses - plannedCourses;
+    const plannedCourses = 0;
+    const completedCourses = totalCourses;
 
     return (
         <section className="flex flex-col gap-10">
@@ -101,7 +101,7 @@ export default function UniversityPage() {
                             </h3>
 
                             <p className="text-sm text-white/60">
-                                Dernière session en cours • stage été 2026 recherché
+                                Fin de programme été 2026 · À la recherche d'un emploi
                             </p>
 
                             <p className="leading-relaxed text-white/75">

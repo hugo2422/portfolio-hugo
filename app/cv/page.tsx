@@ -60,7 +60,7 @@ export default function CVPage() {
 
                 <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
                     <p className="text-sm text-white/60">Disponibilité</p>
-                    <p className="mt-2 text-lg font-medium">Stage été 2026</p>
+                    <p className="mt-2 text-lg font-medium">À la recherche d'un emploi</p>
                     <p className="mt-2 text-sm leading-relaxed text-white/70">
                         Dernière session à l’UQTR, actuellement à la recherche d’un stage
                         pour continuer à progresser en environnement professionnel.

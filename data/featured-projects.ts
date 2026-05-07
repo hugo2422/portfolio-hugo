@@ -1,5 +1,5 @@
 export type FeaturedProject = {
-    id: "ecomos-ai" | "ops-system" | "tekplateform" | "projet-depression";
+    id: string;
     cover: string;
     tagFr: string;
     tagEn: string;
@@ -9,74 +9,93 @@ export type FeaturedProject = {
     descEn: string;
     hrefFr: string;
     hrefEn: string;
-    codeStatusFr: string;
-    codeStatusEn: string;
+    stackPreview: string[];
+    statusKey: "in-progress" | "in-production" | "completed";
 };
 
 export const featuredProjects: FeaturedProject[] = [
-
+    {
+        id: "ops-system",
+        cover: "/images/projects/ops-system/cover.jpg",
+        tagFr: "ERP · Spring Boot",
+        tagEn: "ERP · Spring Boot",
+        titleFr: "Système de gestion d'entreprise",
+        titleEn: "Business Management System",
+        descFr: "ERP complet en production chez Lucatex SARL — envois d'argent, modules financiers, gestion multi-rôles et rapports journaliers. Utilisé quotidiennement.",
+        descEn: "Full ERP in production at Lucatex SARL — money transfers, financial modules, multi-role management and daily reports. Used daily.",
+        hrefFr: "/projects/ops-system",
+        hrefEn: "/en/projects/ops-system",
+        stackPreview: ["Java", "Spring Boot", "PostgreSQL"],
+        statusKey: "in-production",
+    },
+    {
+        id: "citoyen-actif",
+        cover: "/images/projects/citoyen-actif/cover.png",
+        tagFr: "Android · Firebase",
+        tagEn: "Android · Firebase",
+        titleFr: "Citoyen Actif",
+        titleEn: "Citoyen Actif",
+        descFr: "App Android de signalement d'infrastructures urbaines — MVVM, géolocalisation GPS, carte Google Maps interactive, notifications push Firebase.",
+        descEn: "Android app for reporting urban infrastructure issues — MVVM, GPS geolocation, Google Maps, Firebase push notifications.",
+        hrefFr: "/projects/citoyen-actif",
+        hrefEn: "/en/projects/citoyen-actif",
+        stackPreview: ["Java", "Android", "Firebase"],
+        statusKey: "completed",
+    },
     {
         id: "projet-depression",
         cover: "/images/projects/projet-depression/cover.jpg",
-        tagFr: "Data Science / Machine Learning",
-        tagEn: "Data Science / Machine Learning",
-        titleFr: "Projet dépression",
-        titleEn: "Depression Project",
-        codeStatusFr: "Code privé (projet académique)",
-        codeStatusEn: "Private code (academic project)",
-        descFr:
-            "Application web combinant analyse de données, machine learning, visualisation analytique et recherche sémantique pour l’étude de facteurs liés à la dépression.",
-        descEn:
-            "Web application combining data analysis, machine learning, analytical visualization, and semantic search to study factors related to depression.",
+        tagFr: "Data Science · ML",
+        tagEn: "Data Science · ML",
+        titleFr: "Analyse & ML — Dépression",
+        titleEn: "Analysis & ML — Depression",
+        descFr: "Application Flask combinant classification, régression, clustering, PCA et recherche sémantique par embeddings pour l'étude de facteurs de risque.",
+        descEn: "Flask app combining classification, regression, clustering, PCA, and embedding-based semantic search to study depression risk factors.",
         hrefFr: "/projects/projet-depression",
-        hrefEn: "/en/projects-depression",
+        hrefEn: "/en/projects/projet-depression",
+        stackPreview: ["Python", "Scikit-learn", "MongoDB"],
+        statusKey: "completed",
     },
     {
         id: "ecomos-ai",
         cover: "/images/projects/ecomos-ai/cover.jpg",
-        tagFr: "SaaS / Data",
-        tagEn: "SaaS / Data",
-        titleFr: "EcomOS AI (En cours — avancé)",
-        titleEn: "EcomOS AI (In progress — advanced)",
-        codeStatusFr: "Code privé (startup en développement)",
-        codeStatusEn: "Private code (startup in development)",
-        descFr:
-            "De prototype démonstrateur (CSV, scoring, recommandations) vers un MVP SaaS connecté à des données réelles (ex: Shopify), puis une vision long terme “OS IA” pour piloter l’e-commerce.",
-        descEn:
-            "From a working prototype (CSV import, scoring, recommendations) to a connected SaaS MVP (e.g., Shopify data), with a long-term vision of an “AI OS” for e-commerce operations.",
-        hrefFr: "/projects",
-        hrefEn: "/en/projects",
+        tagFr: "SaaS · Python",
+        tagEn: "SaaS · Python",
+        titleFr: "EcomOS AI",
+        titleEn: "EcomOS AI",
+        descFr: "Prototype SaaS e-commerce — pipeline de données, scoring produit multi-critères, moteur de règles YAML et génération de rapports PDF.",
+        descEn: "E-commerce SaaS prototype — data pipeline, multi-criteria product scoring, YAML rule engine and PDF report generation.",
+        hrefFr: "/projects/ecomos-ai",
+        hrefEn: "/en/projects/ecomos-ai",
+        stackPreview: ["Python", "Pandas", "Streamlit"],
+        statusKey: "in-progress",
     },
     {
-        id: "ops-system",
+        id: "bibliotheque-universitaire",
+        cover: "/images/projects/projet-depression/cover.jpg",
+        tagFr: "Back-end · SQL",
+        tagEn: "Backend · SQL",
+        titleFr: "Gestion de bibliothèque universitaire",
+        titleEn: "University Library Management",
+        descFr: "Système de gestion des prêts et retours avec gestion des pénalités, schéma relationnel avancé et conception orientée objet.",
+        descEn: "Library loan and return management system with penalty tracking, advanced relational schema and object-oriented design.",
+        hrefFr: "/projects/bibliotheque-universitaire",
+        hrefEn: "/en/projects/bibliotheque-universitaire",
+        stackPreview: ["Python", "PostgreSQL", "SQL"],
+        statusKey: "completed",
+    },
+    {
+        id: "gestion-chantier",
         cover: "/images/projects/ops-system/cover.jpg",
-        tagFr: "ERP / Opérations",
-        tagEn: "ERP / Operations",
-        titleFr: "Système de gestion des opérations (En production)",
-        titleEn: "Operations Management System (In production)",
-        codeStatusFr: "code prive ( systeme en production )",
-        codeStatusEn: "Private code (production systeme)",
-        descFr:
-            "Plateforme interne utilisée dans l’entreprise pour gérer envois, retraits, employés, rapports, traçabilité et synthèse de la situation globale.",
-        descEn:
-            "Internal platform used in production to manage transfers, withdrawals, employees, reporting workflows, full traceability, and consolidated business reporting.",
-        hrefFr: "/projects",
-        hrefEn: "/en/projects",
-    },
-    {
-        id: "tekplateform",
-        cover: "/images/projects/tekplateform/cover.png",
-        tagFr: "Startup / Infrastructure / Data",
-        tagEn: "Startup / Infrastructure / Data",
-        titleFr: "TEKPlateform (En cours — Flagship)",
-        titleEn: "TEKPlateform (In progress — flagship)",
-        codeStatusFr: "Code privé (startup en développement)",
-        codeStatusEn: "Private code (startup in development)",
-        descFr:
-            "Super-plateforme multisectorielle connectant commerce, santé et services du quotidien, avec paiements, confiance et intelligence de données.",
-        descEn:
-            "Multi-sector super-platform connecting commerce, health, and on-demand services, with payments, trust, and data intelligence at the core.",
-        hrefFr: "/projects",
-        hrefEn: "/en/projects",
+        tagFr: "Desktop · Java",
+        tagEn: "Desktop · Java",
+        titleFr: "Gestion de chantier de construction",
+        titleEn: "Construction Site Management",
+        descFr: "Application desktop de gestion des approvisionnements et stocks pour chantier — commandes, planning, traçabilité complète. Déployée en .jar.",
+        descEn: "Desktop app for construction site supply and inventory management — orders, planning, full traceability. Deployed as .jar.",
+        hrefFr: "/projects/gestion-chantier",
+        hrefEn: "/en/projects/gestion-chantier",
+        stackPreview: ["Java", "JavaFX", "PostgreSQL"],
+        statusKey: "completed",
     },
 ];

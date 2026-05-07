@@ -11,7 +11,7 @@ export default function NowPage() {
             <div className="grid gap-4 md:grid-cols-3">
                 <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
                     <p className="text-sm text-white/60">Objectif</p>
-                    <p className="mt-2 text-white/85">Stage été 2026</p>
+                    <p className="mt-2 text-white/85">À la recherche d'un emploi</p>
                 </div>
 
                 <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
