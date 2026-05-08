@@ -12,7 +12,7 @@ export default function ContactPageEN() {
                     Let&apos;s work <span className="gradient-text">together</span>
                 </h1>
                 <p className="max-w-xl text-base leading-relaxed text-white/55 sm:text-lg">
-                    My B.Sc. in Computer Science concludes in Summer 2026 and I am actively seeking my first job in software development or data.
+                    My B.Sc. in Computer Science concludes in Summer 2026. I am actively seeking my first job — no internship, a real position.
                 </p>
             </div>
 
@@ -48,7 +48,7 @@ export default function ContactPageEN() {
                             <span className="status-dot" />
                             <span className="text-xs font-semibold uppercase tracking-wider text-green-400">Available</span>
                         </div>
-                        <h2 className="text-xl font-bold text-white/95 sm:text-2xl">Fall 2026 Internship</h2>
+                        <h2 className="text-xl font-bold text-white/95 sm:text-2xl">Open to job opportunities</h2>
                         <p className="mt-1 text-white/55">Backend • Python • Java • Data • Android — Trois-Rivières or remote</p>
                     </div>
                     <Link href="/en/hire-me" className="shrink-0 inline-flex min-h-[46px] items-center justify-center rounded-full bg-gradient-to-r from-blue-500 to-violet-500 px-6 py-2.5 text-sm font-semibold text-white shadow-lg shadow-blue-500/20 transition hover:from-blue-400 hover:to-violet-400">

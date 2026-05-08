@@ -2454,25 +2454,28 @@ export const courses: CourseItem[] = [
         screenshots: [],
     },
     {
-        slug: "inf1016-stage-informatique-2",
-        code: "INF1016",
-        status: "Complété",
-        category: "Stage",
+        slug: "projet-synthese-ete-2026",
+        status: "En cours",
+
+        titleFr: "Projet de synthèse",
+        titleEn: "Capstone Project",
+
+        sessionFr: "Été 2026",
+        sessionEn: "Summer 2026",
+
+        summaryFr:
+            "Session finale du baccalauréat en informatique à l'UQTR. Projet de synthèse intégrateur — plan de cours à venir.",
+
+        summaryEn:
+            "Final session of the B.Sc. in Computer Science at UQTR. Integrative capstone project — course outline to be confirmed.",
+
         technologies: [],
-        titleFr: "Stage d’informatique II",
-        titleEn: "Computer Science Internship II",
-        sessionFr: "Automne 2026",
-        sessionEn: "Fall 2026",
-        summaryFr: "Résumé global à compléter .",
-        summaryEn: "Global summary to be completed .",
         topicsFr: [],
         topicsEn: [],
         workFr: [],
         workEn: [],
         screenshots: [],
     },
-
-
 
 ];
 

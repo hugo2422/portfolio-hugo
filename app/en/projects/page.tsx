@@ -2,10 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { projects } from "../../../data/projects";
 
-const statusConfig: Record<string, { label: string; color: string; dot: string }> = {
-    "in-progress":   { label: "In progress",    color: "text-amber-400", dot: "bg-amber-400" },
-    "in-production": { label: "In production",  color: "text-green-400", dot: "bg-green-400" },
-    "completed":     { label: "Completed",       color: "text-blue-400",  dot: "bg-blue-400"  },
+const statusConfig: Record<string, { label: string; style: React.CSSProperties; dot: string }> = {
+    "in-progress":   { label: "In progress",   dot: "#f59e0b", style: { background: "rgba(245,158,11,0.13)",  border: "1px solid rgba(245,158,11,0.3)",  color: "#fcd34d" } },
+    "in-production": { label: "In production", dot: "#10b981", style: { background: "rgba(16,185,129,0.13)",  border: "1px solid rgba(16,185,129,0.32)", color: "#6ee7b7" } },
+    "completed":     { label: "Completed",     dot: "#818cf8", style: { background: "rgba(99,102,241,0.13)",  border: "1px solid rgba(99,102,241,0.30)", color: "#a5b4fc" } },
 };
 
 export default function ProjectsPageEN() {
@@ -42,8 +42,8 @@ export default function ProjectsPageEN() {
                                 <Image src={p.cover} alt={p.titleEn} fill className="object-cover transition duration-500 group-hover:scale-[1.04]" sizes="(max-width: 767px) 100vw, 50vw" />
                                 <div className="absolute inset-0 bg-gradient-to-t from-[#030712]/70 via-transparent to-transparent" />
                                 <div className="absolute bottom-3 left-3">
-                                    <span className={`inline-flex items-center gap-1.5 rounded-full border border-current/20 bg-[#030712]/80 px-2.5 py-1 text-xs font-medium backdrop-blur-sm ${status.color}`}>
-                                        <span className={`h-1.5 w-1.5 rounded-full ${status.dot}`} />
+                                    <span style={{ display:"inline-flex", alignItems:"center", gap:"6px", padding:"4px 10px", borderRadius:"999px", fontSize:"11px", fontWeight:600, backdropFilter:"blur(8px)", ...status.style }}>
+                                        <span style={{ width:6, height:6, borderRadius:"50%", background:status.dot, flexShrink:0 }} />
                                         {status.label}
                                     </span>
                                 </div>

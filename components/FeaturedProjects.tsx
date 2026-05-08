@@ -4,151 +4,205 @@ import { featuredProjects } from "../data/featured-projects";
 
 type Props = { locale: "fr" | "en" };
 
-const statusLabel = {
-  fr: { "in-production": "En production", "in-progress": "En cours", "completed": "Terminé" },
-  en: { "in-production": "In production", "in-progress": "In progress",  "completed": "Completed"  },
+/* ── Inline styles — 100% reliable, Tailwind can't touch them ── */
+const STATUS: Record<string, { label: { fr: string; en: string }; style: React.CSSProperties; dot?: string }> = {
+  "in-production": {
+    label: { fr: "En production", en: "In production" },
+    style: {
+      background: "rgba(16, 185, 129, 0.14)",
+      border: "1px solid rgba(16, 185, 129, 0.35)",
+      color: "#6ee7b7",
+    },
+    dot: "#10b981",
+  },
+  "in-progress": {
+    label: { fr: "En cours", en: "In progress" },
+    style: {
+      background: "rgba(245, 158, 11, 0.14)",
+      border: "1px solid rgba(245, 158, 11, 0.32)",
+      color: "#fcd34d",
+    },
+  },
+  "completed": {
+    label: { fr: "Terminé", en: "Completed" },
+    style: {
+      background: "rgba(99, 102, 241, 0.14)",
+      border: "1px solid rgba(99, 102, 241, 0.32)",
+      color: "#a5b4fc",
+    },
+  },
 };
 
-const statusClass = {
-  "in-production": "status-in-production",
-  "in-progress":   "status-in-progress",
-  "completed":     "status-completed",
+const TAG_STYLE: React.CSSProperties = {
+  fontSize: "10px",
+  fontWeight: 600,
+  letterSpacing: "0.18em",
+  textTransform: "uppercase",
+  color: "rgba(255,255,255,0.3)",
+};
+
+const STACK_TAG: React.CSSProperties = {
+  background: "rgba(255,255,255,0.05)",
+  border: "1px solid rgba(255,255,255,0.09)",
+  color: "rgba(255,255,255,0.45)",
+  fontSize: "11px",
+  fontWeight: 500,
+  padding: "2px 9px",
+  borderRadius: "999px",
 };
 
 export default function FeaturedProjects({ locale }: Props) {
   const isEN = locale === "en";
-  const labels = statusLabel[locale];
 
-  // First 2 projects → "hero" cards (big). Next 4 → regular grid.
   const heroProjects    = featuredProjects.slice(0, 2);
   const regularProjects = featuredProjects.slice(2, 6);
 
   return (
-    <section className="flex flex-col gap-6 sm:gap-8">
+    <section style={{ display: "flex", flexDirection: "column", gap: "1.75rem" }}>
 
-      {/* Header */}
-      <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+      {/* ── Header ── */}
+      <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", gap: "1rem", flexWrap: "wrap" }}>
         <div>
-          <p className="mb-1.5 text-[10px] font-semibold uppercase tracking-[0.22em] text-white/30">
-            {isEN ? "Portfolio" : "Portfolio"}
-          </p>
-          <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">
+          <p style={TAG_STYLE}>Portfolio</p>
+          <h2 style={{ margin: "6px 0 0", fontSize: "clamp(1.4rem,4vw,1.875rem)", fontWeight: 700, letterSpacing: "-0.02em", color: "rgba(255,255,255,0.95)" }}>
             {isEN ? "Featured projects" : "Projets à la une"}
           </h2>
         </div>
         <Link
           href={isEN ? "/en/projects" : "/projects"}
-          className="group flex w-fit items-center gap-1.5 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-sm text-white/55 transition hover:border-white/18 hover:text-white/80"
+          style={{
+            display: "inline-flex", alignItems: "center", gap: "5px",
+            padding: "7px 16px", borderRadius: "999px",
+            border: "1px solid rgba(255,255,255,0.1)",
+            background: "rgba(255,255,255,0.04)",
+            fontSize: "13px", color: "rgba(255,255,255,0.5)",
+            textDecoration: "none", transition: "all 0.18s",
+            whiteSpace: "nowrap",
+          }}
         >
-          {isEN ? "All projects" : "Tous les projets"}
-          <span className="transition-transform duration-200 group-hover:translate-x-0.5">→</span>
+          {isEN ? "All projects" : "Tous les projets"} →
         </Link>
       </div>
 
-      {/* ── Hero row: 2 big cards side-by-side ── */}
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5">
-        {heroProjects.map((p) => (
-          <Link
-            key={p.id}
-            href={isEN ? p.hrefEn : p.hrefFr}
-            className="project-card shimmer-border group flex flex-col overflow-hidden rounded-2xl"
-          >
-            {/* Image — taller for hero */}
-            <div className="relative aspect-[4/3] w-full overflow-hidden bg-white/[0.025]">
-              <Image
-                src={p.cover}
-                alt={isEN ? p.titleEn : p.titleFr}
-                fill
-                className="project-img object-cover"
-                sizes="(max-width: 639px) 100vw, 50vw"
-                priority
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#030712]/75 via-[#030712]/10 to-transparent" />
-              {/* Status badge over image */}
-              <div className="absolute left-3 top-3">
-                <span className={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-[10px] font-semibold ${statusClass[p.statusKey]}`}>
-                  {p.statusKey === "in-production" && <span className="h-1.5 w-1.5 rounded-full bg-green-400" />}
-                  {labels[p.statusKey]}
-                </span>
-              </div>
-            </div>
-
-            {/* Content */}
-            <div className="flex flex-1 flex-col gap-3 p-4 sm:p-5">
-              <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-white/35">
-                {isEN ? p.tagEn : p.tagFr}
-              </p>
-
-              <h3 className="text-base font-bold leading-snug text-white/95 transition-colors duration-200 group-hover:text-white sm:text-lg">
-                {isEN ? p.titleEn : p.titleFr}
-              </h3>
-
-              <p className="flex-1 text-sm leading-relaxed text-white/52">
-                {isEN ? p.descEn : p.descFr}
-              </p>
-
-              <div className="flex items-center justify-between pt-1">
-                <div className="flex flex-wrap gap-1.5">
-                  {p.stackPreview.map((s) => (
-                    <span key={s} className="stack-tag">{s}</span>
-                  ))}
+      {/* ── Hero row — 2 big cards ── */}
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "16px" }}>
+        {heroProjects.map((p) => {
+          const s = STATUS[p.statusKey];
+          return (
+            <Link
+              key={p.id}
+              href={isEN ? p.hrefEn : p.hrefFr}
+              className="project-card shimmer-border group"
+              style={{ display: "flex", flexDirection: "column", borderRadius: "16px", overflow: "hidden", textDecoration: "none" }}
+            >
+              {/* Image */}
+              <div style={{ position: "relative", aspectRatio: "4/3", overflow: "hidden", background: "rgba(255,255,255,0.025)" }}>
+                <Image
+                  src={p.cover}
+                  alt={isEN ? p.titleEn : p.titleFr}
+                  fill
+                  className="project-img"
+                  style={{ objectFit: "cover" }}
+                  sizes="(max-width: 639px) 100vw, 50vw"
+                  priority
+                />
+                <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(3,7,18,0.75) 0%, rgba(3,7,18,0.08) 50%, transparent 100%)" }} />
+                {/* Status badge */}
+                <div style={{ position: "absolute", top: 12, left: 12 }}>
+                  <span style={{
+                    display: "inline-flex", alignItems: "center", gap: "6px",
+                    padding: "4px 10px", borderRadius: "999px",
+                    fontSize: "11px", fontWeight: 600,
+                    backdropFilter: "blur(8px)",
+                    ...s.style,
+                  }}>
+                    {s.dot && <span style={{ width: 6, height: 6, borderRadius: "50%", background: s.dot, flexShrink: 0 }} />}
+                    {isEN ? s.label.en : s.label.fr}
+                  </span>
                 </div>
-                <span className="text-xs text-white/28 transition-colors duration-200 group-hover:text-white/55">
-                  {isEN ? "View →" : "Voir →"}
-                </span>
               </div>
-            </div>
-          </Link>
-        ))}
+
+              {/* Content */}
+              <div style={{ display: "flex", flexDirection: "column", gap: "10px", padding: "16px 18px", flex: 1 }}>
+                <p style={TAG_STYLE}>{isEN ? p.tagEn : p.tagFr}</p>
+                <h3 style={{ fontSize: "17px", fontWeight: 700, lineHeight: 1.25, color: "rgba(255,255,255,0.94)", margin: 0 }}>
+                  {isEN ? p.titleEn : p.titleFr}
+                </h3>
+                <p style={{ fontSize: "13.5px", lineHeight: 1.6, color: "rgba(255,255,255,0.5)", margin: 0, flex: 1 }}>
+                  {isEN ? p.descEn : p.descFr}
+                </p>
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", paddingTop: 4 }}>
+                  <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
+                    {p.stackPreview.map((s) => (
+                      <span key={s} style={STACK_TAG}>{s}</span>
+                    ))}
+                  </div>
+                  <span style={{ fontSize: "12px", color: "rgba(255,255,255,0.25)" }}>
+                    {isEN ? "View →" : "Voir →"}
+                  </span>
+                </div>
+              </div>
+            </Link>
+          );
+        })}
       </div>
 
-      {/* ── Regular grid: 4 cards ── */}
-      <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-4 lg:gap-4">
-        {regularProjects.map((p) => (
-          <Link
-            key={p.id}
-            href={isEN ? p.hrefEn : p.hrefFr}
-            className="project-card shimmer-border group flex flex-col overflow-hidden rounded-xl"
-          >
-            {/* Compact image */}
-            <div className="relative aspect-[16/9] w-full overflow-hidden bg-white/[0.025]">
-              <Image
-                src={p.cover}
-                alt={isEN ? p.titleEn : p.titleFr}
-                fill
-                className="project-img object-cover"
-                sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 25vw"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#030712]/80 via-transparent to-transparent" />
-              <div className="absolute left-2 top-2">
-                <span className={`inline-flex items-center rounded-full px-2 py-0.5 text-[9px] font-semibold ${statusClass[p.statusKey]}`}>
-                  {labels[p.statusKey]}
-                </span>
+      {/* ── Regular grid — 4 compact cards ── */}
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))", gap: "12px" }}>
+        {regularProjects.map((p) => {
+          const s = STATUS[p.statusKey];
+          return (
+            <Link
+              key={p.id}
+              href={isEN ? p.hrefEn : p.hrefFr}
+              className="project-card shimmer-border group"
+              style={{ display: "flex", flexDirection: "column", borderRadius: "12px", overflow: "hidden", textDecoration: "none" }}
+            >
+              {/* Image */}
+              <div style={{ position: "relative", aspectRatio: "16/9", overflow: "hidden", background: "rgba(255,255,255,0.025)" }}>
+                <Image
+                  src={p.cover}
+                  alt={isEN ? p.titleEn : p.titleFr}
+                  fill
+                  className="project-img"
+                  style={{ objectFit: "cover" }}
+                  sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 25vw"
+                />
+                <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(3,7,18,0.82) 0%, transparent 60%)" }} />
+                {/* Status badge */}
+                <div style={{ position: "absolute", top: 8, left: 8 }}>
+                  <span style={{
+                    display: "inline-flex", alignItems: "center", gap: "5px",
+                    padding: "3px 8px", borderRadius: "999px",
+                    fontSize: "10px", fontWeight: 600,
+                    backdropFilter: "blur(8px)",
+                    ...s.style,
+                  }}>
+                    {s.dot && <span style={{ width: 5, height: 5, borderRadius: "50%", background: s.dot, flexShrink: 0 }} />}
+                    {isEN ? s.label.en : s.label.fr}
+                  </span>
+                </div>
               </div>
-            </div>
 
-            {/* Content */}
-            <div className="flex flex-1 flex-col gap-2 p-3.5">
-              <p className="text-[9px] font-semibold uppercase tracking-[0.18em] text-white/32">
-                {isEN ? p.tagEn : p.tagFr}
-              </p>
-
-              <h3 className="text-sm font-bold leading-snug text-white/90 transition-colors duration-200 group-hover:text-white">
-                {isEN ? p.titleEn : p.titleFr}
-              </h3>
-
-              <p className="flex-1 text-xs leading-relaxed text-white/48 line-clamp-2">
-                {isEN ? p.descEn : p.descFr}
-              </p>
-
-              <div className="flex flex-wrap gap-1 pt-0.5">
-                {p.stackPreview.slice(0, 2).map((s) => (
-                  <span key={s} className="stack-tag">{s}</span>
-                ))}
+              {/* Content */}
+              <div style={{ display: "flex", flexDirection: "column", gap: "7px", padding: "12px 14px", flex: 1 }}>
+                <p style={{ ...TAG_STYLE, fontSize: "9px" }}>{isEN ? p.tagEn : p.tagFr}</p>
+                <h3 style={{ fontSize: "13.5px", fontWeight: 700, lineHeight: 1.3, color: "rgba(255,255,255,0.92)", margin: 0 }}>
+                  {isEN ? p.titleEn : p.titleFr}
+                </h3>
+                <p style={{ fontSize: "12px", lineHeight: 1.55, color: "rgba(255,255,255,0.45)", margin: 0,
+                  display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical", overflow: "hidden" }}>
+                  {isEN ? p.descEn : p.descFr}
+                </p>
+                <div style={{ display: "flex", gap: 5, flexWrap: "wrap", paddingTop: 2 }}>
+                  {p.stackPreview.slice(0, 2).map((s) => (
+                    <span key={s} style={{ ...STACK_TAG, fontSize: "10px", padding: "2px 7px" }}>{s}</span>
+                  ))}
+                </div>
               </div>
-            </div>
-          </Link>
-        ))}
+            </Link>
+          );
+        })}
       </div>
 
     </section>

@@ -14,7 +14,7 @@ export default function ContactPage() {
         </h1>
         <p className="max-w-xl text-base leading-relaxed text-white/55 sm:text-lg">
           Mon baccalauréat en informatique (UQTR) se termine à l&apos;été 2026 et je suis
-          activement à la recherche d&apos;un premier emploi en développement logiciel ou en data.
+          activement à la recherche d&apos;un premier emploi en développement logiciel ou en data. Aucun stage — je cherche directement un emploi.
         </p>
       </div>
 

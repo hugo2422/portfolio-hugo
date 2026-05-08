@@ -11,10 +11,10 @@ type PageProps = {
     params: Promise<{ slug: string }>;
 };
 
-const statusConfig: Record<string, { label: string; color: string; dot: string }> = {
-    "in-progress":   { label: "En cours",        color: "text-amber-400", dot: "bg-amber-400" },
-    "in-production": { label: "En production",   color: "text-green-400", dot: "bg-green-400" },
-    "completed":     { label: "Terminé",          color: "text-blue-400",  dot: "bg-blue-400"  },
+const statusConfig: Record<string, { label: string; style: React.CSSProperties; dot: string }> = {
+    "in-progress":   { label: "En cours",        dot: "#f59e0b", style: { background: "rgba(245,158,11,0.13)",  border: "1px solid rgba(245,158,11,0.3)",  color: "#fcd34d" } },
+    "in-production": { label: "En production",   dot: "#10b981", style: { background: "rgba(16,185,129,0.13)",  border: "1px solid rgba(16,185,129,0.32)", color: "#6ee7b7" } },
+    "completed":     { label: "Terminé",          dot: "#818cf8", style: { background: "rgba(99,102,241,0.13)",  border: "1px solid rgba(99,102,241,0.30)", color: "#a5b4fc" } },
 };
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
@@ -67,8 +67,8 @@ export default async function ProjectPage({ params }: PageProps) {
             {/* Header */}
             <div className="animate-fade-in-up flex flex-col gap-4">
                 <div className="flex flex-wrap items-center gap-2">
-                    <span className={`inline-flex items-center gap-1.5 rounded-full border border-current/20 bg-current/8 px-3 py-1 text-xs font-semibold ${status.color}`}>
-                        <span className={`h-1.5 w-1.5 rounded-full ${status.dot}`} />
+                    <span style={{ display:"inline-flex", alignItems:"center", gap:"6px", padding:"4px 12px", borderRadius:"999px", fontSize:"11px", fontWeight:600, backdropFilter:"blur(8px)", ...status.style }}>
+                        <span style={{ width:6, height:6, borderRadius:"50%", background:status.dot, flexShrink:0 }} />
                         {status.label}
                     </span>
                     <span className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-xs text-white/50">

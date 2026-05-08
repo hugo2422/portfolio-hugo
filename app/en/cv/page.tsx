@@ -62,7 +62,7 @@ export default function CVPageEN() {
                     <p className="text-sm text-white/60">Availability</p>
                     <p className="mt-2 text-lg font-medium">Open to job opportunities</p>
                     <p className="mt-2 text-sm leading-relaxed text-white/70">
-                        Final term at UQTR, currently seeking an internship to keep growing
+                        Graduating from UQTR in Summer 2026, actively seeking employment
                         in a professional software or data environment.
                     </p>
                 </div>

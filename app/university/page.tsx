@@ -13,8 +13,8 @@ const sessionsOrder = [
     "Été 2025",
     "Automne 2025",
     "Hiver 2026",
-    "Automne 2026",
-];
+    "Été 2026",
+    ];
 
 export default function UniversityPage() {
     const [activeCategory, setActiveCategory] = useState("Tous");
@@ -35,8 +35,8 @@ export default function UniversityPage() {
     }));
 
     const totalCourses = courses.length;
-    const plannedCourses = 0;
-    const completedCourses = totalCourses;
+    const inProgressCourses = courses.filter((course) => course.status === "En cours").length;
+    const completedCourses = totalCourses - inProgressCourses;
 
     return (
         <section className="flex flex-col gap-10">
@@ -159,15 +159,16 @@ export default function UniversityPage() {
                 <div className="flex flex-wrap gap-2">
                     {categories.map((category) => {
                         const isActive = activeCategory === category;
-
                         return (
                             <button
-                                key={category}
+                                key={String(category)}
+                                type="button"
                                 onClick={() => setActiveCategory(category)}
-                                className={`rounded-full border px-4 py-2 text-sm transition ${isActive
-                                    ? "border-white/30 bg-white text-black shadow-[0_0_30px_rgba(255,255,255,0.08)]"
-                                    : "border-white/15 bg-white/5 text-white/80 hover:border-white/25 hover:bg-white/10"
-                                    }`}
+                                className={`rounded-full border px-4 py-2 text-sm transition ${
+                                    isActive
+                                        ? "border-white/30 bg-white text-black shadow-[0_0_30px_rgba(255,255,255,0.08)]"
+                                        : "border-white/15 bg-white/5 text-white/80 hover:border-white/25 hover:bg-white/10"
+                                }`}
                             >
                                 {category}
                             </button>

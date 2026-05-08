@@ -135,7 +135,7 @@ export default function Home() {
             {/* "Open to work" badge */}
             <div className="absolute -bottom-1 -right-1 rounded-xl border border-white/[0.09] bg-[#030712]/92 px-2.5 py-1.5 backdrop-blur-sm sm:-bottom-3 sm:-right-3">
               <p className="text-[10px] font-bold text-green-400 sm:text-xs">Open to work</p>
-              <p className="text-[9px] text-white/40 sm:text-[10px]">Disponible · Aut. 2026</p>
+              <p className="text-[9px] text-white/40 sm:text-[10px]">Diplômé été 2026</p>
             </div>
           </div>
         </div>

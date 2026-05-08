@@ -23,7 +23,7 @@ export default function HireMePage() {
                     <span className="gradient-text">d&apos;un emploi</span>
                 </h1>
                 <p className="max-w-2xl text-base leading-relaxed text-white/55 sm:text-lg">
-                    {t.internship.intro}
+                    Mon baccalauréat en informatique (UQTR) se termine à l&apos;été 2026. Je suis à la recherche d&apos;un premier emploi en développement logiciel, back-end ou data.
                 </p>
             </div>
 
@@ -33,7 +33,7 @@ export default function HireMePage() {
                     <p className="text-xs font-semibold uppercase tracking-wider text-white/35">Disponibilité</p>
                     <div className="mt-3 flex items-center gap-2">
                         <span className="status-dot" />
-                        <p className="font-medium text-white/90">Automne 2026</p>
+                        <p className="font-medium text-white/90">Dès l'été 2026</p>
                     </div>
                 </div>
 
@@ -85,7 +85,7 @@ export default function HireMePage() {
                         {
                             icon: "📊",
                             title: "Science des données",
-                            desc: "Pipeline de données, ML (classification, régression, clustering, PCA), visualisation et reporting analytique. Expérience en stage chez Lucatex SARL.",
+                            desc: "Pipeline de données, ML (classification, régression, clustering, PCA), visualisation et reporting analytique. Expérience chez Lucatex SARL (stage data analyst).",
                         },
                         {
                             icon: "📱",

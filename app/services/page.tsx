@@ -29,7 +29,7 @@ export default function ServicesPage() {
 
             <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
                 <p className="text-white/70">
-                    Pour une demande (stage, mission, collaboration), écris-moi.
+                    Pour une opportunité d'emploi ou une collaboration, écris-moi.
                 </p>
                 <Link
                     href="/contact"

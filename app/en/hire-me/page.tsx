@@ -15,12 +15,12 @@ export default function HireMePageEN() {
     return (
         <section className="flex flex-col gap-12">
             <div className="animate-fade-in-up flex flex-col gap-4">
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/35">Internship</p>
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/35">Hiring</p>
                 <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
                     Available for a{" "}
                     <span className="gradient-text">job opportunities</span>
                 </h1>
-                <p className="max-w-2xl text-base leading-relaxed text-white/55 sm:text-lg">{t.internship.intro}</p>
+                <p className="max-w-2xl text-base leading-relaxed text-white/55 sm:text-lg">My B.Sc. in Computer Science at UQTR concludes in Summer 2026. I am actively seeking my first job in software development, backend, or data.</p>
             </div>
 
             <div className="animate-fade-in-up delay-100 grid gap-4 sm:grid-cols-3">
@@ -28,7 +28,7 @@ export default function HireMePageEN() {
                     <p className="text-xs font-semibold uppercase tracking-wider text-white/35">Availability</p>
                     <div className="mt-3 flex items-center gap-2">
                         <span className="status-dot" />
-                        <p className="font-medium text-white/90">Fall 2026</p>
+                        <p className="font-medium text-white/90">From Summer 2026</p>
                     </div>
                 </div>
                 <div className="card-premium rounded-2xl p-5">

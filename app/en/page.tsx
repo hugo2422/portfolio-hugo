@@ -132,7 +132,7 @@ export default function HomeEN() {
                         </div>
                         <div className="absolute -bottom-2 -right-2 rounded-2xl border border-white/10 bg-[#030712]/90 px-3 py-2 backdrop-blur-sm sm:-bottom-4 sm:-right-4">
                             <p className="text-xs font-semibold text-green-400">Open to work</p>
-                            <p className="text-xs text-white/50">Available Fall 2026</p>
+                            <p className="text-xs text-white/50">Graduating Summer 2026</p>
                         </div>
                     </div>
                 </div>

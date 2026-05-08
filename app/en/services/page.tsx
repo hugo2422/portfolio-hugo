@@ -29,7 +29,7 @@ export default function ServicesEN() {
 
             <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
                 <p className="text-white/70">
-                    For internships, missions, or collaboration, feel free to reach out.
+                    For job opportunities or collaboration, feel free to reach out.
                 </p>
                 <Link
                     href="/en/contact"

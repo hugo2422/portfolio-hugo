@@ -5,7 +5,7 @@ export const profile = {
         headline:
             "Développeur logiciel & Data | Python • Java • SQL • Android | Bac. Informatique UQTR (été 2026) | Ouvert aux opportunités",
         hero: {
-            badge: "Fin de programme été 2026 · À la recherche d'un emploi",
+            badge: "Diplômé été 2026 · À la recherche d'un emploi",
             title: "Science des données & Développement logiciel",
             subtitle:
                 "Je conçois des systèmes back-end et des applications orientées données, combinant développement logiciel, analyse de données, machine learning et développement mobile Android.",
@@ -25,12 +25,7 @@ export const profile = {
                 "Mon programme se termine à l'été 2026 et je suis activement à la recherche d'un premier emploi en développement logiciel ou en data.",
             ],
         },
-        internship: {
-            title: "À la recherche d'un emploi",
-            intro:
-                "Mon baccalauréat en informatique (UQTR) se termine à l'été 2026. Je suis à la recherche d'un premier emploi en développement logiciel, back-end ou data.",
-            targetRoles: ["Back-end", "Python", "Java", "Data", "Mobile Android"],
-        },
+
         contact: {
             email: "tekenghugo7750@gmail.com",
             phone: "(819) 266-7890",
@@ -63,12 +58,7 @@ export const profile = {
                 "My program ends in Summer 2026 and I am actively looking for my first job in software development or data engineering.",
             ],
         },
-        internship: {
-            title: "Open to Job Opportunities",
-            intro:
-                "My B.Sc. in Computer Science at UQTR concludes in Summer 2026. I am actively seeking my first job in software development, backend, or data.",
-            targetRoles: ["Backend", "Python", "Java", "Data", "Android"],
-        },
+
         contact: {
             email: "tekenghugo7750@gmail.com",
             phone: "(819) 266-7890",

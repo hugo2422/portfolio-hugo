@@ -62,8 +62,8 @@ export default async function ProjectPageEN({ params }: PageProps) {
 
             <div className="animate-fade-in-up flex flex-col gap-4">
                 <div className="flex flex-wrap items-center gap-2">
-                    <span className={`inline-flex items-center gap-1.5 rounded-full border border-current/20 bg-current/8 px-3 py-1 text-xs font-semibold ${status.color}`}>
-                        <span className={`h-1.5 w-1.5 rounded-full ${status.dot}`} />
+                    <span style={{ display:"inline-flex", alignItems:"center", gap:"6px", padding:"4px 12px", borderRadius:"999px", fontSize:"11px", fontWeight:600, backdropFilter:"blur(8px)", ...status.style }}>
+                        <span style={{ width:6, height:6, borderRadius:"50%", background:status.dot, flexShrink:0 }} />
                         {status.label}
                     </span>
                     <span className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-xs text-white/50">{project.period}</span>
