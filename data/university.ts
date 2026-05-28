@@ -2456,6 +2456,8 @@ export const courses: CourseItem[] = [
     {
         slug: "projet-synthese-ete-2026",
         status: "En cours",
+        code: "INF-SYN",
+        category: "Projet de synthèse",
 
         titleFr: "Projet de synthèse",
         titleEn: "Capstone Project",
