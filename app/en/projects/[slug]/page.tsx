@@ -9,10 +9,10 @@ export function generateStaticParams() {
 
 type PageProps = { params: Promise<{ slug: string }> };
 
-const statusConfig: Record<string, { label: string; color: string; dot: string }> = {
-    "in-progress":   { label: "In progress",   color: "text-amber-400", dot: "bg-amber-400" },
-    "in-production": { label: "In production", color: "text-green-400", dot: "bg-green-400" },
-    "completed":     { label: "Completed",     color: "text-blue-400",  dot: "bg-blue-400"  },
+const statusConfig: Record<string, { label: string; color: string; dot: string; style: React.CSSProperties }> = {
+    "in-progress":   { label: "In progress",   color: "text-amber-400", dot: "#f59e0b", style: { background: "rgba(245,158,11,0.12)", border: "1px solid rgba(245,158,11,0.25)", color: "#f59e0b" } },
+    "in-production": { label: "In production", color: "text-green-400", dot: "#34d399", style: { background: "rgba(52,211,153,0.12)", border: "1px solid rgba(52,211,153,0.25)", color: "#34d399" } },
+    "completed":     { label: "Completed",     color: "text-blue-400",  dot: "#60a5fa", style: { background: "rgba(96,165,250,0.12)", border: "1px solid rgba(96,165,250,0.25)", color: "#60a5fa" } },
 };
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
