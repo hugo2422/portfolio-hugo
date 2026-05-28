@@ -777,6 +777,244 @@ export const projects: Project[] = [
         screenshots: [],
     },
 
+    // ── ANALYSE EEG ───────────────────────────────────────────────
+    {
+        slug: "eeg-causal",
+        cover: "/images/projects/projet-depression/cover.jpg",
+
+        titleFr: "Analyse EEG et inférence causale",
+        statusFr: "Projet universitaire — En cours",
+        codeStatusFr: "Code privé (projet académique)",
+
+        taglineFr: "Prédiction de l'état des yeux et estimation d'effets causaux sur signaux EEG avec deep learning et méthodes causales avancées.",
+        overviewFr:
+            "Analyse complète d'un enregistrement EEG temporel pour prédire l'état des yeux (ouvert/fermé) et estimer des effets causaux. Le projet combine apprentissage automatique classique, deep learning sur séquences et inférence causale avec arbres causaux et Double Machine Learning.",
+
+        titleEn: "EEG Analysis and Causal Inference",
+        statusEn: "University project — In progress",
+        codeStatusEn: "Private code (academic project)",
+
+        taglineEn: "Eye state prediction and causal effect estimation on EEG signals using deep learning and advanced causal methods.",
+        overviewEn:
+            "Full analysis of a temporal EEG recording to predict eye state (open/closed) and estimate causal effects. The project combines classical machine learning, sequence deep learning, and causal inference with causal trees and Double Machine Learning.",
+
+        visionFr: [
+            "Prédire l'état des yeux à partir de signaux EEG en respectant la structure temporelle des données.",
+            "Estimer un effet causal de l'état des yeux sur l'activité EEG postérieure via des méthodes avancées.",
+            "Distinguer clairement prédiction et causalité — un modèle précis ne prouve pas un effet causal.",
+        ],
+        architectureFr: [
+            "Exploration et prétraitement : index temporel, fenêtres glissantes, variables dérivées (mean, std, PCA).",
+            "Modèles prédictifs : régression logistique, forêt aléatoire, gradient boosting, LSTM — séparation train/test temporelle.",
+            "Question causale : DAG, critère backdoor, variables d'ajustement (âge, alcool).",
+            "Estimation causale : score de propension, arbres causaux (EconML), Double Machine Learning (cross-fitting 5 folds).",
+            "Analyse de sensibilité : robustesse des résultats aux variations de confondeurs.",
+        ],
+        roadmapFr: [
+            "Phase 1 : exploration, prétraitement et création des variables dérivées temporelles.",
+            "Phase 2 : modèles prédictifs (ML classique + deep learning) avec évaluation rigoureuse.",
+            "Phase 3 : formulation causale, DAG et estimation par arbres causaux et DML.",
+            "Phase 4 : interprétation, analyse de sensibilité et rapport final.",
+        ],
+
+        visionEn: [
+            "Predict eye state from EEG signals while respecting the temporal structure of the data.",
+            "Estimate a causal effect of eye state on posterior EEG activity using advanced methods.",
+            "Clearly distinguish prediction from causality — an accurate model does not prove a causal effect.",
+        ],
+        architectureEn: [
+            "Exploration and preprocessing: temporal index, sliding windows, derived features (mean, std, PCA).",
+            "Predictive models: logistic regression, random forest, gradient boosting, LSTM — temporal train/test split.",
+            "Causal question: DAG, backdoor criterion, adjustment variables.",
+            "Causal estimation: propensity score, causal trees (EconML), Double Machine Learning (5-fold cross-fitting).",
+            "Sensitivity analysis: robustness of results to confounder variations.",
+        ],
+        roadmapEn: [
+            "Phase 1: exploration, preprocessing, and temporal feature engineering.",
+            "Phase 2: predictive models (classical ML + deep learning) with rigorous evaluation.",
+            "Phase 3: causal formulation, DAG, and estimation via causal trees and DML.",
+            "Phase 4: interpretation, sensitivity analysis, and final report.",
+        ],
+
+        tags: ["Data Science", "Causal Inference", "Deep Learning", "Python"],
+        period: "2026",
+        roleFr: "Analyse complète — modélisation, inférence causale, interprétation",
+        roleEn: "Full analysis — modeling, causal inference, interpretation",
+        stack: ["Python", "Scikit-learn", "EconML", "Pandas", "Jupyter"],
+        links: {},
+        statusKey: "in-progress",
+
+        currentStateFr: [
+            "Prétraitement temporel et création des variables dérivées complétés.",
+            "Modèles ML classiques et deep learning (LSTM) entraînés et évalués.",
+            "Question causale formulée avec DAG et hypothèses d'identification.",
+            "Estimation causale par DML et arbres causaux en cours de finalisation.",
+        ],
+        currentStateEn: [
+            "Temporal preprocessing and feature engineering completed.",
+            "Classical ML and deep learning (LSTM) models trained and evaluated.",
+            "Causal question formulated with DAG and identification assumptions.",
+            "Causal estimation via DML and causal trees being finalized.",
+        ],
+
+        engineeringDecisionsFr: [
+            "Séparation train/test temporelle stricte pour éviter toute fuite d'information.",
+            "Double Machine Learning pour lever l'hypothèse de linéarité de la régression classique.",
+            "Cross-fitting en 5 folds pour éviter le surapprentissage dans l'estimation des nuisances.",
+            "DAG explicite pour formaliser les hypothèses causales et identifier les confondeurs.",
+        ],
+        engineeringDecisionsEn: [
+            "Strict temporal train/test split to prevent any data leakage.",
+            "Double Machine Learning to relax the linearity assumption of classical regression.",
+            "5-fold cross-fitting to avoid overfitting in nuisance estimation.",
+            "Explicit DAG to formalize causal assumptions and identify confounders.",
+        ],
+
+        improvementsFr: [
+            "Étendre l'analyse à plusieurs enregistrements EEG pour renforcer la généralisation.",
+            "Tester des architectures deep learning plus complexes (GRU, CNN 1D).",
+            "Explorer des méthodes causales supplémentaires (DiD, IV).",
+        ],
+        improvementsEn: [
+            "Extend the analysis to multiple EEG recordings to improve generalization.",
+            "Test more complex deep learning architectures (GRU, 1D CNN).",
+            "Explore additional causal methods (DiD, IV).",
+        ],
+
+        lessonsFr: [
+            "La structure temporelle des données impose des contraintes fortes sur la modélisation.",
+            "Distinguer prédiction et causalité est fondamental — deux questions très différentes.",
+            "Le Double Machine Learning offre des garanties théoriques solides sans imposer de forme fonctionnelle.",
+        ],
+        lessonsEn: [
+            "Temporal data structure imposes strong constraints on modeling choices.",
+            "Distinguishing prediction from causality is fundamental — two very different questions.",
+            "Double Machine Learning provides solid theoretical guarantees without imposing a functional form.",
+        ],
+
+        screenshots: [],
+    },
+
+    // ── INFÉRENCE CAUSALE TABAGISME ───────────────────────────────
+    {
+        slug: "causal-smoking",
+        cover: "/images/projects/projet-depression/cover.jpg",
+
+        titleFr: "Inférence causale — Tabagisme et qualité du sommeil",
+        statusFr: "Projet universitaire — Complété",
+        codeStatusFr: "Code privé (projet académique)",
+
+        taglineFr: "Estimation de l'effet causal du tabagisme sur la qualité du sommeil sur 413 768 observations avec Double Machine Learning.",
+        overviewFr:
+            "Estimation rigoureuse de l'effet causal du tabagisme actuel sur la probabilité de mauvais sommeil à partir de données observationnelles. Le projet applique trois méthodes complémentaires (différence brute, OLS, DML) et conclut à un effet causal estimé d'environ 13 %, robuste et convergent.",
+
+        titleEn: "Causal Inference — Smoking and Sleep Quality",
+        statusEn: "University project — Completed",
+        codeStatusEn: "Private code (academic project)",
+
+        taglineEn: "Causal effect estimation of smoking on sleep quality across 413,768 observations using Double Machine Learning.",
+        overviewEn:
+            "Rigorous estimation of the causal effect of current smoking on the probability of poor sleep quality from observational data. The project applies three complementary methods (naive difference, OLS, DML) and concludes with an estimated causal effect of approximately 13%, robust and convergent.",
+
+        visionFr: [
+            "Estimer un effet causal réel — pas une simple association — entre tabagisme et sommeil.",
+            "Appliquer une démarche causale rigoureuse sur des données observationnelles à grande échelle.",
+            "Démontrer l'intérêt du Double Machine Learning face aux approches classiques.",
+        ],
+        architectureFr: [
+            "Données : 413 768 observations, 16 variables — nettoyage et filtrage (fumeurs actuels vs non-fumeurs).",
+            "Modélisation causale : DAG, critère backdoor, variables de confusion (âge, consommation d'alcool).",
+            "Méthode 1 — Différence brute : ATT naïf = 0.099 (biaisé, sans ajustement).",
+            "Méthode 2 — OLS avec erreurs robustes HC3 : θ = 0.132 (ajustement linéaire).",
+            "Méthode 3 — Double ML (Random Forest, cross-fitting 5 folds) : θ = 0.134 (robuste, non linéaire).",
+            "Analyse de sensibilité : retrait d'un confondeur pour valider la robustesse du DAG.",
+        ],
+        roadmapFr: [
+            "Phase 1 : exploration, nettoyage et construction des variables de traitement et de résultat.",
+            "Phase 2 : modélisation causale avec DAG et identification des chemins de backdoor.",
+            "Phase 3 : estimation naïve, OLS ajusté et Double Machine Learning.",
+            "Phase 4 : analyse de sensibilité, comparaison des méthodes et rédaction du rapport.",
+        ],
+
+        visionEn: [
+            "Estimate a real causal effect — not a mere association — between smoking and sleep.",
+            "Apply rigorous causal methodology to large-scale observational data.",
+            "Demonstrate the value of Double Machine Learning over classical approaches.",
+        ],
+        architectureEn: [
+            "Data: 413,768 observations, 16 variables — cleaning and filtering (current smokers vs non-smokers).",
+            "Causal modeling: DAG, backdoor criterion, confounders (age, alcohol consumption).",
+            "Method 1 — Naive difference: ATT = 0.099 (biased, no adjustment).",
+            "Method 2 — OLS with HC3 robust standard errors: θ = 0.132 (linear adjustment).",
+            "Method 3 — Double ML (Random Forest, 5-fold cross-fitting): θ = 0.134 (robust, non-linear).",
+            "Sensitivity analysis: confounder removal to validate DAG robustness.",
+        ],
+        roadmapEn: [
+            "Phase 1: exploration, cleaning, and construction of treatment and outcome variables.",
+            "Phase 2: causal modeling with DAG and backdoor path identification.",
+            "Phase 3: naive estimation, adjusted OLS, and Double Machine Learning.",
+            "Phase 4: sensitivity analysis, method comparison, and report writing.",
+        ],
+
+        tags: ["Causal Inference", "Machine Learning", "Python", "Statistics"],
+        period: "2025",
+        roleFr: "Analyse causale complète — modélisation, estimation, interprétation",
+        roleEn: "Full causal analysis — modeling, estimation, interpretation",
+        stack: ["Python", "Scikit-learn", "Statsmodels", "Pandas", "Jupyter"],
+        links: {},
+        statusKey: "completed",
+
+        currentStateFr: [
+            "Analyse complète réalisée sur 413 768 observations.",
+            "Trois méthodes appliquées et comparées : naïve, OLS, Double ML.",
+            "Effet causal estimé à ~13 % — convergent et robuste.",
+            "Rapport final produit avec interprétation rigoureuse.",
+        ],
+        currentStateEn: [
+            "Full analysis completed on 413,768 observations.",
+            "Three methods applied and compared: naive, OLS, Double ML.",
+            "Causal effect estimated at ~13% — convergent and robust.",
+            "Final report produced with rigorous interpretation.",
+        ],
+
+        engineeringDecisionsFr: [
+            "Double ML pour lever l'hypothèse de linéarité et obtenir des garanties théoriques solides.",
+            "Random Forest dans le DML pour modéliser des relations non linéaires entre confondeurs et variables.",
+            "Cross-fitting en 5 folds pour éviter le biais de surapprentissage dans l'estimation des nuisances.",
+            "Analyse de sensibilité systématique pour valider la robustesse des conclusions.",
+        ],
+        engineeringDecisionsEn: [
+            "Double ML to relax linearity assumption and obtain solid theoretical guarantees.",
+            "Random Forest in DML to model non-linear relationships between confounders and variables.",
+            "5-fold cross-fitting to avoid overfitting bias in nuisance estimation.",
+            "Systematic sensitivity analysis to validate the robustness of conclusions.",
+        ],
+
+        improvementsFr: [
+            "Tester des méthodes causales supplémentaires (DiD, variables instrumentales).",
+            "Enrichir l'analyse avec des confondeurs supplémentaires (stress, activité physique).",
+            "Étudier l'hétérogénéité de l'effet causal par sous-groupes.",
+        ],
+        improvementsEn: [
+            "Test additional causal methods (DiD, instrumental variables).",
+            "Enrich the analysis with additional confounders (stress, physical activity).",
+            "Study causal effect heterogeneity across subgroups.",
+        ],
+
+        lessonsFr: [
+            "La convergence OLS/DML est un signal fort de robustesse des résultats.",
+            "Un DAG explicite force à formaliser et justifier chaque hypothèse causale.",
+            "Le Double Machine Learning est méthodologiquement supérieur même quand les relations sont proches de la linéarité.",
+        ],
+        lessonsEn: [
+            "OLS/DML convergence is a strong signal of result robustness.",
+            "An explicit DAG forces you to formalize and justify every causal assumption.",
+            "Double Machine Learning is methodologically superior even when relationships are close to linear.",
+        ],
+
+        screenshots: [],
+    },
+
     // ── TEKPLATEFORM ──────────────────────────────────────────────
     {
         slug: "tekplateform",

@@ -3,12 +3,12 @@ export const profile = {
         name: "Hugo Tekeng",
         location: "Trois-Rivières, QC",
         headline:
-            "Développeur logiciel & Data | Python • Java • SQL • Android | Bac. Informatique UQTR (été 2026) | Ouvert aux opportunités",
+            "Développeur logiciel & Data | Python • Java • Spring Boot • React | Bac. Informatique UQTR (septembre 2026) | Ouvert aux opportunités",
         hero: {
-            badge: "Diplômé été 2026 · À la recherche d'un emploi",
-            title: "Science des données & Développement logiciel",
+            badge: "Diplômé septembre 2026 · Ouvert aux opportunités",
+            title: "Développement logiciel & Science des données",
             subtitle:
-                "Je conçois des systèmes back-end et des applications orientées données, combinant développement logiciel, analyse de données, machine learning et développement mobile Android.",
+                "Je conçois des systèmes back-end robustes et des applications orientées données — du développement fullstack jusqu'au machine learning et à l'inférence causale.",
             ctas: {
                 primary: "Me contacter",
                 secondary: "Voir mes projets",
@@ -18,11 +18,11 @@ export const profile = {
         about: {
             title: "À propos",
             paragraphs: [
-                "Je suis développeur logiciel spécialisé en science des données, en fin de baccalauréat en informatique à l'UQTR (diplôme prévu à l'été 2026).",
-                "Je conçois des systèmes back-end, des API et des outils data pour transformer des besoins concrets en solutions robustes et bien structurées.",
-                "À travers mes projets, j'ai développé des systèmes de gestion en production (Spring Boot, Java, PostgreSQL), des applications mobiles Android, des outils d'analyse de données et de machine learning, ainsi qu'un prototype SaaS e-commerce.",
-                "J'accorde une attention particulière à la qualité du code, à la clarté des choix techniques et à la maintenabilité des systèmes.",
-                "Mon programme se termine à l'été 2026 et je suis activement à la recherche d'un premier emploi en développement logiciel ou en data.",
+                "Je suis étudiant finissant en informatique à l'UQTR (diplôme prévu en septembre 2026), spécialisé en développement logiciel et en science des données.",
+                "Je conçois des systèmes back-end, des API REST et des outils data pour transformer des besoins concrets en solutions robustes, bien structurées et maintenables.",
+                "À travers mes projets, j'ai livré des systèmes en production (Spring Boot, Java, PostgreSQL), développé des applications mobiles Android, construit des modèles de machine learning et d'inférence causale, et conçu des outils d'analyse de données.",
+                "J'accorde une attention particulière à la qualité du code, à la rigueur méthodologique et à la clarté des choix techniques.",
+                "Ouvert aux opportunités en développement logiciel ou en science des données dès septembre 2026.",
             ],
         },
 
@@ -36,12 +36,12 @@ export const profile = {
         name: "Hugo Tekeng",
         location: "Trois-Rivières, QC",
         headline:
-            "Software Developer & Data | Python • Java • SQL • Android | B.Sc. Computer Science UQTR (Summer 2026) | Open to opportunities",
+            "Software Developer & Data Scientist | Python • Java • Spring Boot • React | B.Sc. Computer Science UQTR (September 2026) | Open to opportunities",
         hero: {
-            badge: "Graduating Summer 2026 · Open to job opportunities",
-            title: "Data Science & Software Developer",
+            badge: "Graduating September 2026 · Open to opportunities",
+            title: "Software Development & Data Science",
             subtitle:
-                "I build backend systems and data-driven applications combining software development, data analysis, machine learning, and Android mobile development.",
+                "I build robust backend systems and data-driven applications — from fullstack development to machine learning and causal inference.",
             ctas: {
                 primary: "Contact",
                 secondary: "View projects",
@@ -51,11 +51,11 @@ export const profile = {
         about: {
             title: "About",
             paragraphs: [
-                "I am a software developer specializing in data science, finishing my B.Sc. in Computer Science at UQTR (graduating Summer 2026).",
-                "I design back-end systems, APIs, and data tools to turn real-world needs into robust and well-structured solutions.",
-                "Through my projects, I have built production management systems (Spring Boot, Java, PostgreSQL), Android mobile apps, data analysis and machine learning tools, and an e-commerce SaaS prototype.",
-                "I pay close attention to code quality, clarity of technical decisions, and system maintainability.",
-                "My program ends in Summer 2026 and I am actively looking for my first job in software development or data engineering.",
+                "I am a finishing student in Computer Science at UQTR (graduating September 2026), specializing in software development and data science.",
+                "I design backend systems, REST APIs, and data tools to turn real-world needs into robust, well-structured, and maintainable solutions.",
+                "Through my projects, I have delivered production systems (Spring Boot, Java, PostgreSQL), built Android mobile apps, developed machine learning and causal inference models, and designed data analysis tools.",
+                "I pay close attention to code quality, methodological rigor, and clarity of technical decisions.",
+                "Open to opportunities in software development or data science from September 2026.",
             ],
         },
 
