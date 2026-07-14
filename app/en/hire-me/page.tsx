@@ -20,7 +20,7 @@ export default function HireMePageEN() {
                     Available for a{" "}
                     <span className="gradient-text">job opportunities</span>
                 </h1>
-                <p className="max-w-2xl text-base leading-relaxed text-white/55 sm:text-lg">My B.Sc. in Computer Science at UQTR concludes in Summer 2026. I am actively seeking my first job in software development, backend, or data.</p>
+                <p className="max-w-2xl text-base leading-relaxed text-white/55 sm:text-lg">My B.Sc. in Computer Science at UQTR concludes in September 2026. I am actively seeking my first job in software development, backend, or data.</p>
             </div>
 
             <div className="animate-fade-in-up delay-100 grid gap-4 sm:grid-cols-3">
@@ -28,7 +28,7 @@ export default function HireMePageEN() {
                     <p className="text-xs font-semibold uppercase tracking-wider text-white/35">Availability</p>
                     <div className="mt-3 flex items-center gap-2">
                         <span className="status-dot" />
-                        <p className="font-medium text-white/90">From Summer 2026</p>
+                        <p className="font-medium text-white/90">From September 2026</p>
                     </div>
                 </div>
                 <div className="card-premium rounded-2xl p-5">

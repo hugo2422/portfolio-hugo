@@ -2462,8 +2462,8 @@ export const courses: CourseItem[] = [
         titleFr: "Projet de synthèse",
         titleEn: "Capstone Project",
 
-        sessionFr: "Été 2026",
-        sessionEn: "Summer 2026",
+        sessionFr: "Été/Sept. 2026",
+        sessionEn: "Summer/Sept. 2026",
 
         summaryFr:
             "Session finale du baccalauréat en informatique à l'UQTR. Projet de synthèse intégrateur — plan de cours à venir.",

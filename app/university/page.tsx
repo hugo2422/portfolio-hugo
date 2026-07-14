@@ -101,7 +101,7 @@ export default function UniversityPage() {
                             </h3>
 
                             <p className="text-sm text-white/60">
-                                Fin de programme été 2026 · À la recherche d'un emploi
+                                Fin de programme sept. 2026 · À la recherche d'un emploi
                             </p>
 
                             <p className="leading-relaxed text-white/75">

@@ -13,7 +13,7 @@ export default function ContactPage() {
           Travaillons <span className="gradient-text">ensemble</span>
         </h1>
         <p className="max-w-xl text-base leading-relaxed text-white/55 sm:text-lg">
-          Mon baccalauréat en informatique (UQTR) se termine à l&apos;été 2026 et je suis
+          Mon baccalauréat en informatique (UQTR) se termine à l&apos;septembre 2026 et je suis
           activement à la recherche d&apos;un premier emploi en développement logiciel ou en data. Aucun stage — je cherche directement un emploi.
         </p>
       </div>
@@ -93,7 +93,7 @@ export default function ContactPage() {
             </div>
             <h2 className="text-xl font-bold text-white/95 sm:text-2xl">À la recherche d&apos;un emploi</h2>
             <p className="mt-1 text-white/55">
-              Développement logiciel · Back-end · Data · Android — Fin de programme été 2026
+              Développement logiciel · Back-end · Data · Android — Fin de programme sept. 2026
             </p>
           </div>
           <Link

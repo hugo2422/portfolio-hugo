@@ -12,7 +12,7 @@ export default function ContactPageEN() {
                     Let&apos;s work <span className="gradient-text">together</span>
                 </h1>
                 <p className="max-w-xl text-base leading-relaxed text-white/55 sm:text-lg">
-                    My B.Sc. in Computer Science concludes in Summer 2026. I am actively seeking my first job — no internship, a real position.
+                    My B.Sc. in Computer Science concludes in September 2026. I am actively seeking my first job — no internship, a real position.
                 </p>
             </div>
 

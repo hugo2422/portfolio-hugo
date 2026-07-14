@@ -18,7 +18,7 @@ const education = [
         alt: "UQTR",
         name: "UQTR",
         desc: "B.Sc. Computer Science",
-        status: "Summer 2026",
+        status: "September 2026",
         statusColor: "text-amber-400",
         statusBg: "bg-amber-400/10 border-amber-400/25",
     },
@@ -132,7 +132,7 @@ export default function HomeEN() {
                         </div>
                         <div className="absolute -bottom-2 -right-2 rounded-2xl border border-white/10 bg-[#030712]/90 px-3 py-2 backdrop-blur-sm sm:-bottom-4 sm:-right-4">
                             <p className="text-xs font-semibold text-green-400">Open to work</p>
-                            <p className="text-xs text-white/50">Graduating Summer 2026</p>
+                            <p className="text-xs text-white/50">Graduating September 2026</p>
                         </div>
                     </div>
                 </div>

@@ -13,7 +13,7 @@ const sessionsOrder = [
     "Summer 2025",
     "Fall 2025",
     "Winter 2026",
-    "Summer 2026",
+    "September 2026",
     ];
 
 export default function UniversityENPage() {
@@ -120,7 +120,7 @@ export default function UniversityENPage() {
                             </h3>
 
                             <p className="text-sm text-white/60">
-                                Graduating Summer 2026 · Open to job opportunities
+                                Graduating September 2026 · Open to job opportunities
                             </p>
 
                             <p className="leading-relaxed text-white/75">
