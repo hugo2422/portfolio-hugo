@@ -1,0 +1,10 @@
+import Link from "next/link";
+export default function ResumeOptions({locale}: {locale: "fr" | "en"}) {
+ const en=locale==="en";
+ return <section className="flex flex-col gap-8"><header className="max-w-3xl"><p className="text-sm text-white/50">Curriculum vitae</p><h1 className="mt-3 text-4xl font-bold">{en?"Two resumes, one background":"Deux CV, un même parcours"}</h1><p className="mt-4 leading-relaxed text-white/65">{en?"Choose the resume that matches the role. Both present my education, experience and projects. Documents are available in French.":"Choisissez le CV adapté au poste. Les deux versions présentent mon parcours, mes expériences et mes projets, avec un éclairage différent sur mes compétences."}</p></header><div className="grid gap-6 md:grid-cols-2">
+ {[
+ {id:"software",file:"hugo-tekeng-developpement",title:en?"Software development":"Développement logiciel",description:en?"Junior software developer, Java/Python backend developer and programmer analyst.":"Développeur logiciel junior, développeur backend Java/Python et analyste-programmeur."},
+ {id:"data",file:"hugo-tekeng-science-des-donnees",title:en?"Data science":"Science des données",description:en?"Junior data/BI analyst, data scientist and modeling analyst.":"Analyste de données/BI junior, scientifique de données junior et analyste en modélisation."}
+ ].map(item=><article key={item.id} id={item.id} className="card-premium scroll-mt-24 rounded-2xl p-6"><h2 className="text-2xl font-semibold">{item.title}</h2><p className="mt-3 min-h-20 leading-relaxed text-white/65">{item.description}</p><div className="mt-5 flex flex-wrap gap-3"><a href={"/documents/"+item.file+".pdf"} target="_blank" rel="noopener noreferrer" className="btn-primary">{en?"View PDF (French)":"Consulter le PDF"}</a><a href={"/documents/"+item.file+".pdf"} download className="btn-secondary">{en?"Download PDF":"Télécharger le PDF"}</a></div></article>)}
+ </div><Link className="btn-tertiary w-fit" href={en?"/en/contact":"/contact"}>{en?"Contact me":"Me contacter"}</Link></section>;
+}

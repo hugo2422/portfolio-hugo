@@ -36,7 +36,7 @@ export default function UniversityPage() {
 
     const totalCourses = courses.length;
     const inProgressCourses = courses.filter((course) => course.status === "En cours").length;
-    const completedCourses = totalCourses - inProgressCourses;
+
 
     return (
         <section className="flex flex-col gap-10">
@@ -97,11 +97,11 @@ export default function UniversityPage() {
                             </div>
 
                             <h3 className="text-xl font-semibold">
-                                Baccalauréat en informatique — Sciences des données
+                                Baccalauréat en informatique — concentration en science des données
                             </h3>
 
                             <p className="text-sm text-white/60">
-                                Fin de programme sept. 2026 · À la recherche d'un emploi
+                                Diplômé en 2026 · À la recherche d’un emploi
                             </p>
 
                             <p className="leading-relaxed text-white/75">

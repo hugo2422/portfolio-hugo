@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { profile } from "../../data/profile";
+
 
 const skills = [
     { category: "Langages",      items: ["Python", "Java", "SQL", "C++", "C#", "HTML/CSS"] },
@@ -10,7 +10,7 @@ const skills = [
 ];
 
 export default function HireMePage() {
-    const t = profile.fr;
+
 
     return (
         <section className="flex flex-col gap-12">
@@ -23,7 +23,7 @@ export default function HireMePage() {
                     <span className="gradient-text">d&apos;un emploi</span>
                 </h1>
                 <p className="max-w-2xl text-base leading-relaxed text-white/55 sm:text-lg">
-                    Mon baccalauréat en informatique (UQTR) se termine à l&apos;septembre 2026. Je suis à la recherche d&apos;un premier emploi en développement logiciel, back-end ou data.
+                    Diplômé en informatique de l’UQTR en 2026, concentration en science des données, je recherche un poste junior en développement logiciel, analyse-programmation, analyse de données/BI ou science des données.
                 </p>
             </div>
 
@@ -33,13 +33,13 @@ export default function HireMePage() {
                     <p className="text-xs font-semibold uppercase tracking-wider text-white/35">Disponibilité</p>
                     <div className="mt-3 flex items-center gap-2">
                         <span className="status-dot" />
-                        <p className="font-medium text-white/90">Dès septembre 2026</p>
+                        <p className="font-medium text-white/90">À la recherche d’un emploi</p>
                     </div>
                 </div>
 
                 <div className="card-premium rounded-2xl p-5">
                     <p className="text-xs font-semibold uppercase tracking-wider text-white/35">Rôles ciblés</p>
-                    <p className="mt-3 font-medium text-white/85">Back-end · Data · Android</p>
+                    <p className="mt-3 font-medium text-white/85">Développement · Analyse-programmation · Data/BI · Modélisation</p>
                 </div>
 
                 <div className="card-premium rounded-2xl p-5">
@@ -59,10 +59,10 @@ export default function HireMePage() {
                     </div>
                     <div>
                         <h2 className="text-lg font-semibold text-white/95">
-                            Baccalauréat en informatique — Fin de programme sept. 2026
+                            Baccalauréat en informatique — Diplômé en 2026
                         </h2>
                         <p className="mt-1 text-sm text-white/50">
-                            Université du Québec à Trois-Rivières (UQTR) · Spécialisation : Science des données & développement logiciel
+                            Université du Québec à Trois-Rivières (UQTR) · Concentration : science des données
                         </p>
                         <p className="mt-2 text-sm text-white/55">
                             Également titulaire d&apos;une Licence en Mathématiques Appliquées de l&apos;Université de Dschang
@@ -80,7 +80,7 @@ export default function HireMePage() {
                         {
                             icon: "🖥️",
                             title: "Développement back-end",
-                            desc: "Expérience réelle en production avec Spring Boot, Java et PostgreSQL. Système ERP complet déployé et utilisé quotidiennement par une entreprise.",
+                            desc: "Expérience réelle en production avec Spring Boot, Java et SQL. Système ERP complet déployé et utilisé quotidiennement par une entreprise.",
                         },
                         {
                             icon: "📊",
@@ -127,9 +127,7 @@ export default function HireMePage() {
                     Recruteurs &amp; entreprises, échangeons.
                 </h2>
                 <p className="mt-2 max-w-xl text-white/55">
-                    Mon programme se termine à l&apos;septembre 2026. Je suis ouvert à tout type de poste en développement
-                    logiciel, back-end, data ou mobile Android. N&apos;hésitez pas à me contacter — je suis également
-                    ouvert aux retours constructifs.
+                    Je suis ouvert aux postes juniors de développeur logiciel, analyste-programmeur, analyste de données/BI et scientifique de données. Ces quatre orientations ont la même importance dans ma recherche.
                 </p>
 
                 <div className="mt-6 flex flex-wrap gap-3">
@@ -149,7 +147,7 @@ export default function HireMePage() {
                         href="/cv"
                         className="inline-flex min-h-[46px] items-center justify-center rounded-full border border-white/10 px-6 py-2.5 text-sm text-white/65 transition hover:border-white/20 hover:text-white/90"
                     >
-                        Télécharger mon CV ↗
+                        Choisir mon CV ↗
                     </Link>
                 </div>
             </div>

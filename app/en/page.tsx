@@ -1,3 +1,4 @@
+import CareerPaths from "../../components/CareerPaths";
 import Link from "next/link";
 import Image from "next/image";
 import { profile } from "../../data/profile";
@@ -18,7 +19,7 @@ const education = [
         alt: "UQTR",
         name: "UQTR",
         desc: "B.Sc. Computer Science",
-        status: "September 2026",
+        status: "Graduated 2026",
         statusColor: "text-amber-400",
         statusBg: "bg-amber-400/10 border-amber-400/25",
     },
@@ -35,6 +36,7 @@ const education = [
 ];
 
 const experience = [
+ {href: "/en/experience", logo: "/images/logos/lucatex.jpg", alt: "Lucatex", name: "Lucatex SARL", desc: "Backend Developer · Freelance", period: "2025 – 2026"},
     {
         href: "/en/experience",
         logo: "/images/logos/lucatex.jpg",
@@ -104,7 +106,7 @@ export default function HomeEN() {
                             <span style={{fontSize:'11px',opacity:0.6}}>↗</span>
                         </Link>
                         <Link
-                            href="https://www.linkedin.com/in/hugo-tekeng-a31295292"
+                            href="https://www.linkedin.com/in/hugo-tekeng"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="btn-linkedin"
@@ -132,7 +134,7 @@ export default function HomeEN() {
                         </div>
                         <div className="absolute -bottom-2 -right-2 rounded-2xl border border-white/10 bg-[#030712]/90 px-3 py-2 backdrop-blur-sm sm:-bottom-4 sm:-right-4">
                             <p className="text-xs font-semibold text-green-400">Open to work</p>
-                            <p className="text-xs text-white/50">Graduating September 2026</p>
+                            <p className="text-xs text-white/50">Graduated in 2026</p>
                         </div>
                     </div>
                 </div>
@@ -176,7 +178,7 @@ export default function HomeEN() {
                     <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
                         {education.map((item) => (
                             <Link
-                                key={item.name}
+                                key={item.name + item.desc}
                                 href={item.href}
                                 className="card-premium shimmer-border group rounded-2xl p-4"
                             >
@@ -222,7 +224,7 @@ export default function HomeEN() {
                     <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
                         {experience.map((item) => (
                             <Link
-                                key={item.name}
+                                key={item.name + item.desc}
                                 href={item.href}
                                 className="card-premium shimmer-border group rounded-2xl p-4"
                             >
@@ -248,7 +250,8 @@ export default function HomeEN() {
                 </div>
             </div>
 
-            {/* ── FEATURED PROJECTS ── */}
+            <CareerPaths locale="en" />
+      {/* ── FEATURED PROJECTS ── */}
             <div className="animate-fade-in-up delay-600">
                 <FeaturedProjects locale="en" />
             </div>

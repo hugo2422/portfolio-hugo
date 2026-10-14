@@ -179,369 +179,352 @@ export const projects: Project[] = [
 
     // ── SYSTÈME LUCATEX (ops-system) ──────────────────────────────
     {
-        slug: "ops-system",
-        cover: "/images/projects/ops-system/cover.jpg",
-
-        titleFr: "Système de gestion d'entreprise — Lucatex SARL",
-        statusFr: "En production",
-        codeStatusFr: "Code privé (système en production)",
-
-        taglineFr: "ERP complet en production : opérations, employés, finances, rapports, traçabilité.",
-        overviewFr:
-            "Application back-end conçue et développée en production pour Lucatex SARL, couvrant l'ensemble des opérations métier : envois d'argent, gestion des employés, modules financiers, rapports journaliers, archivage sécurisé et forum interne.",
-
-        titleEn: "Business Management System — Lucatex SARL",
-        statusEn: "In production",
-        codeStatusEn: "Private code (production system)",
-
-        taglineEn: "Full ERP in production: operations, employees, finance, reporting, traceability.",
-        overviewEn:
-            "A backend application designed and developed in production for Lucatex SARL, covering all business operations: money transfers, employee management, financial modules, daily reports, secure archiving, and internal communication.",
-
-        visionFr: [
-            "Centraliser toutes les opérations de l'entreprise pour réduire les erreurs manuelles.",
-            "Améliorer la traçabilité et la visibilité sur la situation globale en temps réel.",
-            "Fournir des tableaux de bord dédiés par rôle pour une gestion plus efficace.",
-        ],
-        architectureFr: [
-            "Architecture Spring Boot MVC avec gestion multi-rôles (employé, patron, administrateur) et authentification sécurisée.",
-            "Gestion des envois d'argent classiques et Xpress avec contrôle des limites et archivage mensuel automatique.",
-            "Modules financiers : rapports journaliers, transferts de caisse, prêts, primes, retraits et gestion des manquants banque.",
-            "Suivi des performances employés, calcul automatique des primes et tableau de bord dédié par rôle.",
-            "Gestion clientèle avec autocomplétion, historique des transactions et profils clients.",
-            "Verrouillage des journées comptables, génération de rapports globaux et archivage sécurisé.",
-            "Forum interne de communication entre employés et gestion des soldes téléphoniques.",
-        ],
-        roadmapFr: [
-            "Améliorer les dashboards et automatiser davantage la consolidation des rapports.",
-            "Renforcer les mécanismes d'audit et de supervision.",
-        ],
-
-        visionEn: [
-            "Centralize all company operations to reduce manual errors.",
-            "Improve real-time traceability and visibility of the overall business situation.",
-            "Provide role-specific dashboards for more efficient management.",
-        ],
-        architectureEn: [
-            "Spring Boot MVC architecture with multi-role management (employee, manager, admin) and secure authentication.",
-            "Money transfer management (standard and Xpress) with limit controls and automatic monthly archiving.",
-            "Financial modules: daily reports, cash transfers, loans, bonuses, withdrawals, and bank discrepancy management.",
-            "Employee performance tracking, automatic bonus calculation, and role-specific dashboards.",
-            "Client management with autocomplete search, transaction history, and client profiles.",
-            "Accounting day lock, global report generation, and secure data archiving.",
-            "Internal employee communication forum and phone credit management.",
-        ],
-        roadmapEn: [
-            "Improve dashboards and automate report consolidation further.",
-            "Strengthen audit and supervision mechanisms.",
-        ],
-
-        tags: ["Backend", "ERP", "Spring Boot", "Java", "SQL"],
-        period: "2026",
-        roleFr: "Concepteur & développeur back-end",
-        roleEn: "Designer & backend developer",
-        stack: ["Java", "Spring Boot", "PostgreSQL", "SQL", "HTML/CSS", "Thymeleaf"],
-        links: {},
-        statusKey: "in-production",
-
-        currentStateFr: [
-            "Système utilisé quotidiennement en production par l'équipe opérationnelle de Lucatex SARL.",
-            "Tous les modules opérationnels (envois, finances, employés, rapports) déployés.",
-            "Évolutions possibles autour du reporting consolidé et de l'audit avancé.",
-        ],
-        currentStateEn: [
-            "System used daily in production by Lucatex SARL's operational team.",
-            "All operational modules (transfers, finance, employees, reporting) deployed.",
-            "Possible improvements around consolidated reporting and advanced audit.",
-        ],
-
-        engineeringDecisionsFr: [
-            "Spring Boot MVC pour une architecture robuste, testable et maintenable.",
-            "Gestion multi-rôles dès la conception pour une sécurité et une flexibilité maximales.",
-            "Archivage mensuel automatique pour préserver l'historique sans alourdir les performances.",
-            "Tableau de bord dédié par rôle pour une expérience utilisateur adaptée.",
-        ],
-        engineeringDecisionsEn: [
-            "Spring Boot MVC for a robust, testable, and maintainable architecture.",
-            "Multi-role management from the start for maximum security and flexibility.",
-            "Automatic monthly archiving to preserve history without impacting performance.",
-            "Role-specific dashboards for an adapted user experience.",
-        ],
-
-        improvementsFr: [
-            "Ajouter des tableaux de bord analytiques plus avancés.",
-            "Automatiser davantage la consolidation des rapports.",
-            "Renforcer les mécanismes d'audit et de supervision.",
-        ],
-        improvementsEn: [
-            "Add more advanced analytical dashboards.",
-            "Further automate report consolidation.",
-            "Strengthen audit and supervision mechanisms.",
-        ],
-
-        lessonsFr: [
-            "Un système en production demande une rigueur absolue sur la traçabilité et la sécurité.",
-            "La gestion multi-rôles doit être pensée dès le début pour éviter la dette technique.",
-            "Un ERP interne équilibre contrôle, simplicité et fiabilité.",
-        ],
-        lessonsEn: [
-            "A production system demands absolute rigor on traceability and security.",
-            "Multi-role management must be designed from the start to avoid technical debt.",
-            "An internal ERP balances control, simplicity, and reliability.",
-        ],
-
-        screenshots: [
-            {
-                src: "/images/projects/ops-system/cover.jpg",
-                altFr: "Aperçu du système de gestion Lucatex",
-                altEn: "Lucatex management system preview",
-            },
-        ],
-    },
+    "slug": "ops-system",
+    "cover": "/images/projects/ops-system/cover.jpg",
+    "titleFr": "Système de gestion d'entreprise — Lucatex SARL",
+    "statusFr": "En production",
+    "codeStatusFr": "Code privé (système en production)",
+    "taglineFr": "ERP complet en production : opérations, employés, finances, rapports, traçabilité.",
+    "overviewFr": "Application back-end conçue et développée en production pour Lucatex SARL, couvrant l'ensemble des opérations métier : envois d'argent, gestion des employés, modules financiers, rapports journaliers, archivage sécurisé et forum interne.",
+    "titleEn": "Business Management System — Lucatex SARL",
+    "statusEn": "In production",
+    "codeStatusEn": "Private code (production system)",
+    "taglineEn": "Full ERP in production: operations, employees, finance, reporting, traceability.",
+    "overviewEn": "A backend application designed and developed in production for Lucatex SARL, covering all business operations: money transfers, employee management, financial modules, daily reports, secure archiving, and internal communication.",
+    "visionFr": [
+        "Centraliser toutes les opérations de l'entreprise pour réduire les erreurs manuelles.",
+        "Améliorer la traçabilité et la visibilité sur la situation globale en temps réel.",
+        "Fournir des tableaux de bord dédiés par rôle pour une gestion plus efficace."
+    ],
+    "architectureFr": [
+        "Architecture Spring Boot MVC avec gestion multi-rôles (employé, patron, administrateur) et authentification sécurisée.",
+        "Gestion des envois d'argent classiques et Xpress avec contrôle des limites et archivage mensuel automatique.",
+        "Modules financiers : rapports journaliers, transferts de caisse, prêts, primes, retraits et gestion des manquants banque.",
+        "Suivi des performances employés, calcul automatique des primes et tableau de bord dédié par rôle.",
+        "Gestion clientèle avec autocomplétion, historique des transactions et profils clients.",
+        "Verrouillage des journées comptables, génération de rapports globaux et archivage sécurisé.",
+        "Forum interne de communication entre employés et gestion des soldes téléphoniques."
+    ],
+    "roadmapFr": [
+        "Améliorer les dashboards et automatiser davantage la consolidation des rapports.",
+        "Renforcer les mécanismes d'audit et de supervision."
+    ],
+    "visionEn": [
+        "Centralize all company operations to reduce manual errors.",
+        "Improve real-time traceability and visibility of the overall business situation.",
+        "Provide role-specific dashboards for more efficient management."
+    ],
+    "architectureEn": [
+        "Spring Boot MVC architecture with multi-role management (employee, manager, admin) and secure authentication.",
+        "Money transfer management (standard and Xpress) with limit controls and automatic monthly archiving.",
+        "Financial modules: daily reports, cash transfers, loans, bonuses, withdrawals, and bank discrepancy management.",
+        "Employee performance tracking, automatic bonus calculation, and role-specific dashboards.",
+        "Client management with autocomplete search, transaction history, and client profiles.",
+        "Accounting day lock, global report generation, and secure data archiving.",
+        "Internal employee communication forum and phone credit management."
+    ],
+    "roadmapEn": [
+        "Improve dashboards and automate report consolidation further.",
+        "Strengthen audit and supervision mechanisms."
+    ],
+    "tags": [
+        "Backend",
+        "ERP",
+        "Spring Boot",
+        "Java",
+        "SQL"
+    ],
+    "period": "2025 — 2026",
+    "roleFr": "Concepteur & développeur back-end",
+    "roleEn": "Designer & backend developer",
+    "stack": [
+        "Java",
+        "Spring Boot",
+        "SQL",
+        "HTML/CSS",
+        "Thymeleaf"
+    ],
+    "links": {},
+    "statusKey": "in-production",
+    "currentStateFr": [
+        "Système utilisé quotidiennement en production par l'équipe opérationnelle de Lucatex SARL.",
+        "Tous les modules opérationnels (envois, finances, employés, rapports) déployés.",
+        "Évolutions possibles autour du reporting consolidé et de l'audit avancé."
+    ],
+    "currentStateEn": [
+        "System used daily in production by Lucatex SARL's operational team.",
+        "All operational modules (transfers, finance, employees, reporting) deployed.",
+        "Possible improvements around consolidated reporting and advanced audit."
+    ],
+    "engineeringDecisionsFr": [
+        "Spring Boot MVC pour une architecture robuste, testable et maintenable.",
+        "Gestion multi-rôles dès la conception pour une sécurité et une flexibilité maximales.",
+        "Archivage mensuel automatique pour préserver l'historique sans alourdir les performances.",
+        "Tableau de bord dédié par rôle pour une expérience utilisateur adaptée."
+    ],
+    "engineeringDecisionsEn": [
+        "Spring Boot MVC for a robust, testable, and maintainable architecture.",
+        "Multi-role management from the start for maximum security and flexibility.",
+        "Automatic monthly archiving to preserve history without impacting performance.",
+        "Role-specific dashboards for an adapted user experience."
+    ],
+    "improvementsFr": [
+        "Ajouter des tableaux de bord analytiques plus avancés.",
+        "Automatiser davantage la consolidation des rapports.",
+        "Renforcer les mécanismes d'audit et de supervision."
+    ],
+    "improvementsEn": [
+        "Add more advanced analytical dashboards.",
+        "Further automate report consolidation.",
+        "Strengthen audit and supervision mechanisms."
+    ],
+    "lessonsFr": [
+        "Un système en production demande une rigueur absolue sur la traçabilité et la sécurité.",
+        "La gestion multi-rôles doit être pensée dès le début pour éviter la dette technique.",
+        "Un ERP interne équilibre contrôle, simplicité et fiabilité."
+    ],
+    "lessonsEn": [
+        "A production system demands absolute rigor on traceability and security.",
+        "Multi-role management must be designed from the start to avoid technical debt.",
+        "An internal ERP balances control, simplicity, and reliability."
+    ],
+    "screenshots": [
+        {
+            "src": "/images/projects/ops-system/cover.jpg",
+            "altFr": "Aperçu du système de gestion Lucatex",
+            "altEn": "Lucatex management system preview"
+        }
+    ]
+},
 
     // ── PROJET DÉPRESSION ─────────────────────────────────────────
     {
-        slug: "projet-depression",
-        cover: "/images/projects/projet-depression/cover.jpg",
-
-        titleFr: "Projet dépression",
-        statusFr: "Projet académique — Data & Machine Learning",
-        codeStatusFr: "Code privé (projet académique)",
-
-        taglineFr:
-            "Application web d'analyse combinant machine learning, statistiques avancées et visualisation pour identifier des facteurs de risque liés à la dépression.",
-        overviewFr:
-            "Projet d'analyse de données et de machine learning centré sur l'étude de variables sociodémographiques et comportementales liées à la dépression. L'application combine gestion de données CRUD, modélisation, visualisation analytique et recherche sémantique.",
-
-        titleEn: "Depression Project",
-        statusEn: "Academic project — Data & Machine Learning",
-        codeStatusEn: "Private code (academic project)",
-
-        taglineEn:
-            "Web application combining data analysis, machine learning, advanced statistics and visualization to identify depression-related risk factors.",
-        overviewEn:
-            "A data analysis and machine learning project focused on studying sociodemographic and behavioral variables related to depression. The app combines CRUD data management, modeling, analytical visualization, and semantic search.",
-
-        visionFr: [
-            "Créer une plateforme unifiée pour explorer et analyser des données liées à la dépression.",
-            "Mettre en évidence des relations entre variables comportementales, sociodémographiques et indicateurs de risque.",
-            "Combiner exploration statistique, modèles de machine learning et visualisation dans une interface web.",
-        ],
-        architectureFr: [
-            "Application web Flask avec gestion de données sociodémographiques en mode CRUD.",
-            "Pipelines de traitement et de stockage des données avec MongoDB Atlas.",
-            "Modules analytiques : classification, régression, clustering et réduction de dimension (PCA).",
-            "Visualisation des résultats : graphiques analytiques, matrices de confusion, exploration statistique.",
-            "Recherche sémantique basée sur embeddings pour enrichir l'exploration des données.",
-        ],
-        roadmapFr: [
-            "Phase 1 : gestion et structuration des données sociodémographiques.",
-            "Phase 2 : analyses statistiques, corrélations et exploration PCA.",
-            "Phase 3 : implémentation des modèles de machine learning et visualisation.",
-            "Phase 4 : enrichissement par recherche sémantique et amélioration de l'interface.",
-        ],
-
-        visionEn: [
-            "Build a unified platform to explore and analyze depression-related data.",
-            "Highlight relationships between behavioral, sociodemographic, and risk variables.",
-            "Combine statistical exploration, machine learning models, and visualization in a usable web interface.",
-        ],
-        architectureEn: [
-            "Flask web application with CRUD management of sociodemographic data.",
-            "Data processing and storage pipelines using MongoDB Atlas.",
-            "Analytical modules: classification, regression, clustering, and dimensionality reduction (PCA).",
-            "Result visualization: analytical charts, confusion matrices, statistical exploration.",
-            "Embedding-based semantic search to enrich data exploration.",
-        ],
-        roadmapEn: [
-            "Phase 1: structuring and managing sociodemographic data.",
-            "Phase 2: statistical analysis, correlations, and PCA exploration.",
-            "Phase 3: machine learning implementation and result visualization.",
-            "Phase 4: semantic search integration and analytical interface improvement.",
-        ],
-
-        tags: ["Data Science", "Machine Learning", "Flask", "MongoDB"],
-        period: "2025",
-        roleFr: "Conception, développement web, analyse de données et modélisation",
-        roleEn: "Design, web development, data analysis, and modeling",
-        stack: ["Python", "Flask", "Pandas", "Scikit-learn", "MongoDB", "HTML/CSS"],
-        links: {},
-        statusKey: "completed",
-
-        currentStateFr: [
-            "Application web développée avec gestion de données et interface d'analyse.",
-            "Modèles de classification, régression et clustering implémentés.",
-            "Visualisations analytiques et exploration statistique intégrées.",
-            "Recherche sémantique basée sur embeddings ajoutée.",
-        ],
-        currentStateEn: [
-            "Web application developed with data management and analytical interface.",
-            "Classification, regression, and clustering models implemented.",
-            "Analytical visualizations and statistical exploration integrated.",
-            "Embedding-based semantic search added.",
-        ],
-
-        engineeringDecisionsFr: [
-            "Flask pour une architecture légère et adaptée à un projet analytique web.",
-            "MongoDB Atlas pour la flexibilité de stockage et l'intégration simple avec les pipelines.",
-            "Séparation claire entre gestion des données, analyse statistique, modélisation et visualisation.",
-            "Recherche sémantique pour aller au-delà d'une simple interface de consultation.",
-        ],
-        engineeringDecisionsEn: [
-            "Flask for a lightweight architecture suited to a web analytical project.",
-            "MongoDB Atlas for storage flexibility and easy pipeline integration.",
-            "Clear separation between data management, statistical analysis, modeling, and visualization.",
-            "Semantic search to go beyond a simple data viewing interface.",
-        ],
-
-        improvementsFr: [
-            "Améliorer l'interface pour rendre l'exploration plus intuitive.",
-            "Renforcer la comparaison entre modèles de machine learning.",
-            "Documenter davantage les pipelines et hypothèses analytiques.",
-        ],
-        improvementsEn: [
-            "Improve the UI to make exploration more intuitive.",
-            "Strengthen comparison between machine learning models.",
-            "Further document pipelines and analytical assumptions.",
-        ],
-
-        lessonsFr: [
-            "Un projet data pertinent demande autant de rigueur en gestion des données qu'en modélisation.",
-            "La visualisation joue un rôle clé pour rendre les résultats interprétables.",
-            "Une interface web analytique rend un projet scientifique beaucoup plus exploitable.",
-        ],
-        lessonsEn: [
-            "A relevant data project requires as much rigor in data management as in modeling.",
-            "Visualization plays a key role in making results interpretable.",
-            "An analytical web interface makes a scientific project far more usable.",
-        ],
-
-        screenshots: [
-            {
-                src: "/images/projects/projet-depression/cover.jpg",
-                altFr: "Aperçu du projet dépression",
-                altEn: "Depression project preview",
-            },
-        ],
-    },
+    "slug": "projet-depression",
+    "cover": "/images/projects/projet-depression/cover.jpg",
+    "titleFr": "Projet dépression",
+    "statusFr": "Projet académique — Data & Machine Learning",
+    "codeStatusFr": "Code privé (projet académique)",
+    "taglineFr": "Application Flask/MongoDB, recherche sémantique et analyses sur 19 999 enregistrements.",
+    "overviewFr": "Projet universitaire associant une application de gestion de données Flask/MongoDB Atlas et des scripts distincts d’analyse. Exploration, segmentation K-means, ACP, classification et régression sont complétées par une recherche sémantique MiniLM. Il s’agit d’un exercice analytique, sans outil de diagnostic clinique.",
+    "titleEn": "Depression Project",
+    "statusEn": "Academic project — Data & Machine Learning",
+    "codeStatusEn": "Private code (academic project)",
+    "taglineEn": "Flask/MongoDB application, semantic search and analyses of 19,999 records.",
+    "overviewEn": "Academic project combining a Flask/MongoDB Atlas data management application with separate analysis scripts. Exploration, K-means, PCA, classification and regression are complemented by MiniLM semantic search. This is an analytical exercise, not a clinical diagnostic tool.",
+    "visionFr": [
+        "Créer une plateforme unifiée pour explorer et analyser des données liées à la dépression.",
+        "Mettre en évidence des relations entre variables comportementales, sociodémographiques et indicateurs de risque.",
+        "Combiner exploration statistique, modèles de machine learning et visualisation dans une interface web."
+    ],
+    "architectureFr": [
+        "Application Flask avec opérations CRUD sur MongoDB Atlas.",
+        "Recherche sémantique à partir d’embeddings MiniLM.",
+        "Scripts d’analyse distincts : exploration, K-means, ACP, classification et régression."
+    ],
+    "roadmapFr": [
+        "Phase 1 : gestion et structuration des données sociodémographiques.",
+        "Phase 2 : analyses statistiques, corrélations et exploration PCA.",
+        "Phase 3 : implémentation des modèles de machine learning et visualisation.",
+        "Phase 4 : enrichissement par recherche sémantique et amélioration de l'interface."
+    ],
+    "visionEn": [
+        "Build a unified platform to explore and analyze depression-related data.",
+        "Highlight relationships between behavioral, sociodemographic, and risk variables.",
+        "Combine statistical exploration, machine learning models, and visualization in a usable web interface."
+    ],
+    "architectureEn": [
+        "Flask application with CRUD operations on MongoDB Atlas.",
+        "Semantic search using MiniLM embeddings.",
+        "Separate analytical scripts: exploration, K-means, PCA, classification and regression."
+    ],
+    "roadmapEn": [
+        "Phase 1: structuring and managing sociodemographic data.",
+        "Phase 2: statistical analysis, correlations, and PCA exploration.",
+        "Phase 3: machine learning implementation and result visualization.",
+        "Phase 4: semantic search integration and analytical interface improvement."
+    ],
+    "tags": [
+        "Data Science",
+        "Machine Learning",
+        "Flask",
+        "MongoDB"
+    ],
+    "period": "2025",
+    "roleFr": "Conception, développement web, analyse de données et modélisation",
+    "roleEn": "Design, web development, data analysis, and modeling",
+    "stack": [
+        "Python",
+        "Flask",
+        "Pandas",
+        "Scikit-learn",
+        "MongoDB",
+        "HTML/CSS"
+    ],
+    "links": {},
+    "statusKey": "completed",
+    "currentStateFr": [
+        "Application de gestion des données et recherche sémantique fonctionnelles.",
+        "Analyses réalisées sur 19 999 enregistrements dans des scripts distincts.",
+        "Performances des modèles comparées aux références, avec discussion de leurs limites."
+    ],
+    "currentStateEn": [
+        "Functional data management application and semantic search.",
+        "Analyses of 19,999 records in separate scripts.",
+        "Model performance compared with baselines and limitations discussed."
+    ],
+    "engineeringDecisionsFr": [
+        "Flask pour une architecture légère et adaptée à un projet analytique web.",
+        "MongoDB Atlas pour la flexibilité de stockage et l'intégration simple avec les pipelines.",
+        "Séparation claire entre gestion des données, analyse statistique, modélisation et visualisation.",
+        "Recherche sémantique pour aller au-delà d'une simple interface de consultation."
+    ],
+    "engineeringDecisionsEn": [
+        "Flask for a lightweight architecture suited to a web analytical project.",
+        "MongoDB Atlas for storage flexibility and easy pipeline integration.",
+        "Clear separation between data management, statistical analysis, modeling, and visualization.",
+        "Semantic search to go beyond a simple data viewing interface."
+    ],
+    "improvementsFr": [
+        "Améliorer l'interface pour rendre l'exploration plus intuitive.",
+        "Renforcer la comparaison entre modèles de machine learning.",
+        "Documenter davantage les pipelines et hypothèses analytiques."
+    ],
+    "improvementsEn": [
+        "Improve the UI to make exploration more intuitive.",
+        "Strengthen comparison between machine learning models.",
+        "Further document pipelines and analytical assumptions."
+    ],
+    "lessonsFr": [
+        "Un projet data pertinent demande autant de rigueur en gestion des données qu'en modélisation.",
+        "La visualisation joue un rôle clé pour rendre les résultats interprétables.",
+        "Une interface web analytique rend un projet scientifique beaucoup plus exploitable."
+    ],
+    "lessonsEn": [
+        "A relevant data project requires as much rigor in data management as in modeling.",
+        "Visualization plays a key role in making results interpretable.",
+        "An analytical web interface makes a scientific project far more usable."
+    ],
+    "screenshots": [
+        {
+            "src": "/images/projects/projet-depression/cover.jpg",
+            "altFr": "Aperçu du projet dépression",
+            "altEn": "Depression project preview"
+        }
+    ]
+},
 
     // ── ECOMOS AI ─────────────────────────────────────────────────
     {
-        slug: "ecomos-ai",
-        cover: "/images/projects/ecomos-ai/cover.jpg",
-
-        titleFr: "EcomOS AI",
-        statusFr: "En cours — avancé",
-        codeStatusFr: "Code privé (startup en développement)",
-
-        taglineFr: "Aide à la décision e-commerce : scoring, recommandations explicables, rapports PDF.",
-        overviewFr:
-            "Prototype SaaS analysant les performances d'une boutique e-commerce et produisant des recommandations actionnables (produits à pousser/stopper) basées sur un moteur de règles explicables et des indicateurs clés calculés automatiquement.",
-
-        titleEn: "EcomOS AI",
-        statusEn: "In progress — advanced",
-        codeStatusEn: "Private code (startup in development)",
-
-        taglineEn: "E-commerce decision support: scoring, explainable recommendations, PDF reports.",
-        overviewEn:
-            "A SaaS prototype analyzing e-commerce store performance and generating actionable recommendations (push/stop products) using an explainable rule engine and automatically calculated KPIs.",
-
-        visionFr: [
-            "Rendre la décision quotidienne plus simple : quoi faire aujourd'hui, et pourquoi.",
-            "Passer d'un prototype CSV à des données connectées (ex: Shopify) pour un MVP.",
-        ],
-        architectureFr: [
-            "Pipeline : import CSV → validation de schéma → nettoyage → calcul KPIs (ROAS, marge, CTR) → scoring → recommandations → rapport PDF.",
-            "Moteur de scoring multi-critères pondéré (marge, volume, rentabilité publicitaire, risque).",
-            "Moteur de règles décisionnelles YAML : conditions imbriquées AND/OR, niveaux de priorité (SURVIE, CROISSANCE).",
-            "Génération automatique de recommandations contextualisées et de rapports PDF (ReportLab).",
-            "Interface interactive Streamlit pour l'exploration des données et la visualisation des décisions.",
-        ],
-        roadmapFr: [
-            "Stabiliser le moteur de scoring et la qualité des rapports.",
-            "Connexion à une source de données réelle comme Shopify (MVP).",
-            "Automatisation et personnalisation par boutique (vision long terme).",
-        ],
-
-        visionEn: [
-            "Make daily decisions simpler: what to do today, and why.",
-            "Move from CSV prototype to connected data (e.g., Shopify) for an MVP.",
-        ],
-        architectureEn: [
-            "Pipeline: CSV import → schema validation → cleaning → KPI calculation (ROAS, margin, CTR) → scoring → recommendations → PDF report.",
-            "Weighted multi-criteria scoring engine (margin, volume, ad profitability, risk).",
-            "YAML-based decision rule engine: nested AND/OR conditions, priority levels (SURVIVAL, GROWTH).",
-            "Automatic generation of contextualized recommendations and PDF reports (ReportLab).",
-            "Streamlit interactive UI for data exploration and decision visualization.",
-        ],
-        roadmapEn: [
-            "Stabilize scoring engine and report quality.",
-            "Connect to a real data source like Shopify (MVP).",
-            "Automation and per-store personalization (long-term).",
-        ],
-
-        tags: ["SaaS", "Data", "Python"],
-        period: "2025 — présent",
-        roleFr: "Concepteur & développeur (prototype SaaS)",
-        roleEn: "Designer & developer (SaaS prototype)",
-        stack: ["Python", "Pandas", "Streamlit", "ReportLab", "YAML", "Jupyter"],
-        links: {},
-        statusKey: "in-progress",
-
-        currentStateFr: [
-            "Prototype démonstrateur fonctionnel avancé.",
-            "Pipeline complet : import, scoring, recommandations et génération de rapports PDF.",
-            "Moteur de règles YAML opérationnel avec niveaux de priorité.",
-            "Transition en cours vers un MVP SaaS connecté à des données réelles.",
-        ],
-        currentStateEn: [
-            "Advanced functional demonstration prototype built.",
-            "Full pipeline: import, scoring, recommendations, and PDF report generation.",
-            "YAML rule engine operational with priority levels.",
-            "Currently moving toward a connected SaaS MVP with real data sources.",
-        ],
-
-        engineeringDecisionsFr: [
-            "Moteur de règles YAML pour des recommandations compréhensibles et configurables.",
-            "Prototype rapide pour valider la logique métier avant industrialisation.",
-            "ReportLab pour la génération de rapports PDF professionnels sans dépendance externe.",
-        ],
-        engineeringDecisionsEn: [
-            "YAML rule engine for understandable and configurable recommendations.",
-            "Fast prototype to validate business logic before industrialization.",
-            "ReportLab for professional PDF report generation without external dependency.",
-        ],
-
-        improvementsFr: [
-            "Connexion à Shopify ou d'autres sources de données réelles.",
-            "Amélioration de la qualité et personnalisation des rapports.",
-            "Couche plus intelligente et automatisée (ML).",
-        ],
-        improvementsEn: [
-            "Connect to Shopify or other real data sources.",
-            "Improve report quality and personalization.",
-            "More intelligent and automated layer (ML).",
-        ],
-
-        lessonsFr: [
-            "La qualité des données influence directement la pertinence des recommandations.",
-            "L'explicabilité est essentielle pour l'adoption d'un outil d'aide à la décision.",
-            "Un prototype rapide permet de valider une logique métier complexe.",
-        ],
-        lessonsEn: [
-            "Data quality directly impacts recommendation relevance.",
-            "Explainability is essential for adoption in decision-support tools.",
-            "A fast prototype helps validate complex business logic.",
-        ],
-
-        screenshots: [
-            {
-                src: "/images/projects/ecomos-ai/cover.jpg",
-                altFr: "Aperçu EcomOS AI",
-                altEn: "EcomOS AI preview",
-            },
-        ],
-    },
+    "slug": "ecomos-ai",
+    "cover": "/images/projects/ecomos-ai/cover.jpg",
+    "titleFr": "EcomOS AI",
+    "statusFr": "Prototype fonctionnel — En développement",
+    "codeStatusFr": "Code privé (startup en développement)",
+    "taglineFr": "Aide à la décision e-commerce : scoring, recommandations explicables, rapports PDF.",
+    "overviewFr": "Prototype Python/Streamlit bilingue : import CSV, préparation des données, indicateurs commerciaux, scoring par règles YAML et rapports PDF. Les recommandations reposent sur des règles métier ; les connexions directes aux plateformes e-commerce restent une évolution envisagée.",
+    "titleEn": "EcomOS AI",
+    "statusEn": "Working prototype — In development",
+    "codeStatusEn": "Private code (startup in development)",
+    "taglineEn": "E-commerce decision support: scoring, explainable recommendations, PDF reports.",
+    "overviewEn": "Bilingual Python/Streamlit prototype: CSV import, data preparation, business metrics, YAML rule-based scoring and PDF reports. Recommendations use business rules; direct e-commerce platform integrations remain a planned improvement.",
+    "visionFr": [
+        "Rendre la décision quotidienne plus simple : quoi faire aujourd'hui, et pourquoi.",
+        "Passer d'un prototype CSV à des données connectées (ex: Shopify) pour un MVP."
+    ],
+    "architectureFr": [
+        "Pipeline : import CSV → validation de schéma → nettoyage → calcul KPIs (ROAS, marge, CTR) → scoring → recommandations → rapport PDF.",
+        "Moteur de scoring multi-critères pondéré (marge, volume, rentabilité publicitaire, risque).",
+        "Moteur de règles décisionnelles YAML : conditions imbriquées AND/OR, niveaux de priorité (SURVIE, CROISSANCE).",
+        "Génération automatique de recommandations contextualisées et de rapports PDF (ReportLab).",
+        "Interface interactive Streamlit pour l'exploration des données et la visualisation des décisions."
+    ],
+    "roadmapFr": [
+        "Stabiliser le moteur de scoring et la qualité des rapports.",
+        "Connexion à une source de données réelle comme Shopify (MVP).",
+        "Automatisation et personnalisation par boutique (vision long terme)."
+    ],
+    "visionEn": [
+        "Make daily decisions simpler: what to do today, and why.",
+        "Move from CSV prototype to connected data (e.g., Shopify) for an MVP."
+    ],
+    "architectureEn": [
+        "Pipeline: CSV import → schema validation → cleaning → KPI calculation (ROAS, margin, CTR) → scoring → recommendations → PDF report.",
+        "Weighted multi-criteria scoring engine (margin, volume, ad profitability, risk).",
+        "YAML-based decision rule engine: nested AND/OR conditions, priority levels (SURVIVAL, GROWTH).",
+        "Automatic generation of contextualized recommendations and PDF reports (ReportLab).",
+        "Streamlit interactive UI for data exploration and decision visualization."
+    ],
+    "roadmapEn": [
+        "Stabilize scoring engine and report quality.",
+        "Connect to a real data source like Shopify (MVP).",
+        "Automation and per-store personalization (long-term)."
+    ],
+    "tags": [
+        "SaaS",
+        "Data",
+        "Python"
+    ],
+    "period": "2025 — présent",
+    "roleFr": "Concepteur & développeur (prototype SaaS)",
+    "roleEn": "Designer & developer (SaaS prototype)",
+    "stack": [
+        "Python",
+        "Pandas",
+        "Streamlit",
+        "ReportLab",
+        "YAML",
+        "Jupyter"
+    ],
+    "links": {},
+    "statusKey": "in-progress",
+    "currentStateFr": [
+        "Prototype fonctionnel avec import CSV et correspondance des colonnes.",
+        "Indicateurs, scoring, recommandations par règles YAML et rapports PDF.",
+        "Historique local des analyses ; validation auprès d’utilisateurs à poursuivre."
+    ],
+    "currentStateEn": [
+        "Working prototype with CSV import and column mapping.",
+        "Metrics, scoring, YAML rule-based recommendations and PDF reports.",
+        "Local analysis history; further user validation planned."
+    ],
+    "engineeringDecisionsFr": [
+        "Moteur de règles YAML pour des recommandations compréhensibles et configurables.",
+        "Prototype rapide pour valider la logique métier avant industrialisation.",
+        "ReportLab pour la génération de rapports PDF professionnels sans dépendance externe."
+    ],
+    "engineeringDecisionsEn": [
+        "YAML rule engine for understandable and configurable recommendations.",
+        "Fast prototype to validate business logic before industrialization.",
+        "ReportLab for professional PDF report generation without external dependency."
+    ],
+    "improvementsFr": [
+        "Connexion à Shopify ou d'autres sources de données réelles.",
+        "Amélioration de la qualité et personnalisation des rapports.",
+        "Couche plus intelligente et automatisée (ML)."
+    ],
+    "improvementsEn": [
+        "Connect to Shopify or other real data sources.",
+        "Improve report quality and personalization.",
+        "More intelligent and automated layer (ML)."
+    ],
+    "lessonsFr": [
+        "La qualité des données influence directement la pertinence des recommandations.",
+        "L'explicabilité est essentielle pour l'adoption d'un outil d'aide à la décision.",
+        "Un prototype rapide permet de valider une logique métier complexe."
+    ],
+    "lessonsEn": [
+        "Data quality directly impacts recommendation relevance.",
+        "Explainability is essential for adoption in decision-support tools.",
+        "A fast prototype helps validate complex business logic."
+    ],
+    "screenshots": [
+        {
+            "src": "/images/projects/ecomos-ai/cover.jpg",
+            "altFr": "Aperçu EcomOS AI",
+            "altEn": "EcomOS AI preview"
+        }
+    ]
+},
 
     // ── BIBLIOTHÈQUE UNIVERSITAIRE ────────────────────────────────
     {
@@ -779,241 +762,219 @@ export const projects: Project[] = [
 
     // ── ANALYSE EEG ───────────────────────────────────────────────
     {
-        slug: "eeg-causal",
-        cover: "/images/projects/projet-depression/cover.jpg",
-
-        titleFr: "Analyse EEG et inférence causale",
-        statusFr: "Projet universitaire — En cours",
-        codeStatusFr: "Code privé (projet académique)",
-
-        taglineFr: "Prédiction de l'état des yeux et estimation d'effets causaux sur signaux EEG avec deep learning et méthodes causales avancées.",
-        overviewFr:
-            "Analyse complète d'un enregistrement EEG temporel pour prédire l'état des yeux (ouvert/fermé) et estimer des effets causaux. Le projet combine apprentissage automatique classique, deep learning sur séquences et inférence causale avec arbres causaux et Double Machine Learning.",
-
-        titleEn: "EEG Analysis and Causal Inference",
-        statusEn: "University project — In progress",
-        codeStatusEn: "Private code (academic project)",
-
-        taglineEn: "Eye state prediction and causal effect estimation on EEG signals using deep learning and advanced causal methods.",
-        overviewEn:
-            "Full analysis of a temporal EEG recording to predict eye state (open/closed) and estimate causal effects. The project combines classical machine learning, sequence deep learning, and causal inference with causal trees and Double Machine Learning.",
-
-        visionFr: [
-            "Prédire l'état des yeux à partir de signaux EEG en respectant la structure temporelle des données.",
-            "Estimer un effet causal de l'état des yeux sur l'activité EEG postérieure via des méthodes avancées.",
-            "Distinguer clairement prédiction et causalité — un modèle précis ne prouve pas un effet causal.",
-        ],
-        architectureFr: [
-            "Exploration et prétraitement : index temporel, fenêtres glissantes, variables dérivées (mean, std, PCA).",
-            "Modèles prédictifs : régression logistique, forêt aléatoire, gradient boosting, LSTM — séparation train/test temporelle.",
-            "Question causale : DAG, critère backdoor, variables d'ajustement (âge, alcool).",
-            "Estimation causale : score de propension, arbres causaux (EconML), Double Machine Learning (cross-fitting 5 folds).",
-            "Analyse de sensibilité : robustesse des résultats aux variations de confondeurs.",
-        ],
-        roadmapFr: [
-            "Phase 1 : exploration, prétraitement et création des variables dérivées temporelles.",
-            "Phase 2 : modèles prédictifs (ML classique + deep learning) avec évaluation rigoureuse.",
-            "Phase 3 : formulation causale, DAG et estimation par arbres causaux et DML.",
-            "Phase 4 : interprétation, analyse de sensibilité et rapport final.",
-        ],
-
-        visionEn: [
-            "Predict eye state from EEG signals while respecting the temporal structure of the data.",
-            "Estimate a causal effect of eye state on posterior EEG activity using advanced methods.",
-            "Clearly distinguish prediction from causality — an accurate model does not prove a causal effect.",
-        ],
-        architectureEn: [
-            "Exploration and preprocessing: temporal index, sliding windows, derived features (mean, std, PCA).",
-            "Predictive models: logistic regression, random forest, gradient boosting, LSTM — temporal train/test split.",
-            "Causal question: DAG, backdoor criterion, adjustment variables.",
-            "Causal estimation: propensity score, causal trees (EconML), Double Machine Learning (5-fold cross-fitting).",
-            "Sensitivity analysis: robustness of results to confounder variations.",
-        ],
-        roadmapEn: [
-            "Phase 1: exploration, preprocessing, and temporal feature engineering.",
-            "Phase 2: predictive models (classical ML + deep learning) with rigorous evaluation.",
-            "Phase 3: causal formulation, DAG, and estimation via causal trees and DML.",
-            "Phase 4: interpretation, sensitivity analysis, and final report.",
-        ],
-
-        tags: ["Data Science", "Causal Inference", "Deep Learning", "Python"],
-        period: "2026",
-        roleFr: "Analyse complète — modélisation, inférence causale, interprétation",
-        roleEn: "Full analysis — modeling, causal inference, interpretation",
-        stack: ["Python", "Scikit-learn", "EconML", "Pandas", "Jupyter"],
-        links: {},
-        statusKey: "in-progress",
-
-        currentStateFr: [
-            "Prétraitement temporel et création des variables dérivées complétés.",
-            "Modèles ML classiques et deep learning (LSTM) entraînés et évalués.",
-            "Question causale formulée avec DAG et hypothèses d'identification.",
-            "Estimation causale par DML et arbres causaux en cours de finalisation.",
-        ],
-        currentStateEn: [
-            "Temporal preprocessing and feature engineering completed.",
-            "Classical ML and deep learning (LSTM) models trained and evaluated.",
-            "Causal question formulated with DAG and identification assumptions.",
-            "Causal estimation via DML and causal trees being finalized.",
-        ],
-
-        engineeringDecisionsFr: [
-            "Séparation train/test temporelle stricte pour éviter toute fuite d'information.",
-            "Double Machine Learning pour lever l'hypothèse de linéarité de la régression classique.",
-            "Cross-fitting en 5 folds pour éviter le surapprentissage dans l'estimation des nuisances.",
-            "DAG explicite pour formaliser les hypothèses causales et identifier les confondeurs.",
-        ],
-        engineeringDecisionsEn: [
-            "Strict temporal train/test split to prevent any data leakage.",
-            "Double Machine Learning to relax the linearity assumption of classical regression.",
-            "5-fold cross-fitting to avoid overfitting in nuisance estimation.",
-            "Explicit DAG to formalize causal assumptions and identify confounders.",
-        ],
-
-        improvementsFr: [
-            "Étendre l'analyse à plusieurs enregistrements EEG pour renforcer la généralisation.",
-            "Tester des architectures deep learning plus complexes (GRU, CNN 1D).",
-            "Explorer des méthodes causales supplémentaires (DiD, IV).",
-        ],
-        improvementsEn: [
-            "Extend the analysis to multiple EEG recordings to improve generalization.",
-            "Test more complex deep learning architectures (GRU, 1D CNN).",
-            "Explore additional causal methods (DiD, IV).",
-        ],
-
-        lessonsFr: [
-            "La structure temporelle des données impose des contraintes fortes sur la modélisation.",
-            "Distinguer prédiction et causalité est fondamental — deux questions très différentes.",
-            "Le Double Machine Learning offre des garanties théoriques solides sans imposer de forme fonctionnelle.",
-        ],
-        lessonsEn: [
-            "Temporal data structure imposes strong constraints on modeling choices.",
-            "Distinguishing prediction from causality is fundamental — two very different questions.",
-            "Double Machine Learning provides solid theoretical guarantees without imposing a functional form.",
-        ],
-
-        screenshots: [],
-    },
+    "slug": "eeg-causal",
+    "cover": "/images/projects/projet-depression/cover.jpg",
+    "titleFr": "EEG et état des yeux",
+    "statusFr": "Projet universitaire — Terminé",
+    "codeStatusFr": "Code privé (projet académique)",
+    "taglineFr": "Classification de l’état des yeux sur signaux EEG et analyse causale, avec évaluation chronologique.",
+    "overviewFr": "Analyse de 14 980 observations sur 14 canaux EEG, segmentées en 117 fenêtres de 128 observations. Comparaison de modèles prédictifs et étude de l’effet de la fermeture des yeux sur l’activité EEG future. Les résultats causaux ne mettent pas en évidence d’effet statistiquement significatif.",
+    "titleEn": "EEG and eye state",
+    "statusEn": "University project — Completed",
+    "codeStatusEn": "Private code (academic project)",
+    "taglineEn": "Eye-state classification from EEG signals and causal analysis, with chronological evaluation.",
+    "overviewEn": "Analysis of 14,980 observations from 14 EEG channels, segmented into 117 windows of 128 observations. Comparison of predictive models and study of the effect of eye closure on future EEG activity. No statistically significant causal effect was detected.",
+    "visionFr": [
+        "Prédire l'état des yeux à partir de signaux EEG en respectant la structure temporelle des données.",
+        "Estimer un effet causal de l'état des yeux sur l'activité EEG postérieure via des méthodes avancées.",
+        "Distinguer clairement prédiction et causalité — un modèle précis ne prouve pas un effet causal."
+    ],
+    "architectureFr": [
+        "Préparation des signaux et segmentation en fenêtres de 128 observations.",
+        "Séparation chronologique : 78 fenêtres d’entraînement, 15 de validation et 24 de test.",
+        "Comparaison de la régression logistique, de Random Forest et d’un Transformer Encoder.",
+        "Évaluation par ROC-AUC, F1 macro et exactitude équilibrée ; cinq initialisations pour le Transformer.",
+        "Estimation causale par régression avec erreurs HAC et CausalForestDML."
+    ],
+    "roadmapFr": [
+        "Préparation des signaux et définition du protocole temporel.",
+        "Entraînement, comparaison et analyse des erreurs.",
+        "Estimation causale et interprétation des intervalles de confiance.",
+        "Rédaction du rapport final."
+    ],
+    "visionEn": [
+        "Predict eye state from EEG signals while respecting the temporal structure of the data.",
+        "Estimate a causal effect of eye state on posterior EEG activity using advanced methods.",
+        "Clearly distinguish prediction from causality — an accurate model does not prove a causal effect."
+    ],
+    "architectureEn": [
+        "Signal preparation and segmentation into 128-observation windows.",
+        "Chronological split: 78 training, 15 validation and 24 test windows.",
+        "Comparison of logistic regression, Random Forest and a Transformer Encoder.",
+        "ROC-AUC, macro F1 and balanced accuracy; five Transformer initializations.",
+        "Causal estimation using regression with HAC errors and CausalForestDML."
+    ],
+    "roadmapEn": [
+        "Signal preparation and temporal evaluation protocol.",
+        "Training, comparison and error analysis.",
+        "Causal estimation and confidence interval interpretation.",
+        "Final report preparation."
+    ],
+    "tags": [
+        "Data Science",
+        "Causal Inference",
+        "Deep Learning",
+        "Python"
+    ],
+    "period": "2026",
+    "roleFr": "Analyse complète — modélisation, inférence causale, interprétation",
+    "roleEn": "Full analysis — modeling, causal inference, interpretation",
+    "stack": [
+        "Python",
+        "Pandas",
+        "Scikit-learn",
+        "PyTorch",
+        "Statsmodels",
+        "EconML",
+        "Matplotlib"
+    ],
+    "links": {},
+    "statusKey": "completed",
+    "currentStateFr": [
+        "Analyse et rapport terminés en 2026.",
+        "Transformer : ROC-AUC moyenne 0,8545 et exactitude équilibrée moyenne 0,7318 sur cinq initialisations.",
+        "Jeu de test limité à 24 fenêtres, dont seulement deux dans la classe yeux fermés : résultats à interpréter avec prudence.",
+        "Aucun effet causal statistiquement significatif détecté dans cette analyse."
+    ],
+    "currentStateEn": [
+        "Analysis and report completed in 2026.",
+        "Transformer: mean ROC-AUC 0.8545 and mean balanced accuracy 0.7318 across five initializations.",
+        "Test set limited to 24 windows, including only two closed-eye windows: results require cautious interpretation.",
+        "No statistically significant causal effect detected in this analysis."
+    ],
+    "engineeringDecisionsFr": [
+        "Respecter l’ordre temporel et ajuster le prétraitement sur les données d’entraînement.",
+        "Comparer des modèles simples et un Transformer.",
+        "Rapporter la variabilité et les limites liées au faible effectif de test."
+    ],
+    "engineeringDecisionsEn": [
+        "Preserve temporal order and fit preprocessing on training data.",
+        "Compare simpler models with a Transformer.",
+        "Report variability and limitations of the small test set."
+    ],
+    "improvementsFr": [
+        "Étendre l'analyse à plusieurs enregistrements EEG pour renforcer la généralisation.",
+        "Tester des architectures deep learning plus complexes (GRU, CNN 1D).",
+        "Explorer des méthodes causales supplémentaires (DiD, IV)."
+    ],
+    "improvementsEn": [
+        "Extend the analysis to multiple EEG recordings to improve generalization.",
+        "Test more complex deep learning architectures (GRU, 1D CNN).",
+        "Explore additional causal methods (DiD, IV)."
+    ],
+    "lessonsFr": [
+        "Une capacité prédictive ne constitue pas une preuve de causalité.",
+        "Le déséquilibre des classes et le faible effectif de test limitent la portée des métriques."
+    ],
+    "lessonsEn": [
+        "Predictive performance is not evidence of causation.",
+        "Class imbalance and a small test set limit what metrics can establish."
+    ],
+    "screenshots": []
+},
 
     // ── INFÉRENCE CAUSALE TABAGISME ───────────────────────────────
     {
-        slug: "causal-smoking",
-        cover: "/images/projects/projet-depression/cover.jpg",
-
-        titleFr: "Inférence causale — Tabagisme et qualité du sommeil",
-        statusFr: "Projet universitaire — Complété",
-        codeStatusFr: "Code privé (projet académique)",
-
-        taglineFr: "Estimation de l'effet causal du tabagisme sur la qualité du sommeil sur 413 768 observations avec Double Machine Learning.",
-        overviewFr:
-            "Estimation rigoureuse de l'effet causal du tabagisme actuel sur la probabilité de mauvais sommeil à partir de données observationnelles. Le projet applique trois méthodes complémentaires (différence brute, OLS, DML) et conclut à un effet causal estimé d'environ 13 %, robuste et convergent.",
-
-        titleEn: "Causal Inference — Smoking and Sleep Quality",
-        statusEn: "University project — Completed",
-        codeStatusEn: "Private code (academic project)",
-
-        taglineEn: "Causal effect estimation of smoking on sleep quality across 413,768 observations using Double Machine Learning.",
-        overviewEn:
-            "Rigorous estimation of the causal effect of current smoking on the probability of poor sleep quality from observational data. The project applies three complementary methods (naive difference, OLS, DML) and concludes with an estimated causal effect of approximately 13%, robust and convergent.",
-
-        visionFr: [
-            "Estimer un effet causal réel — pas une simple association — entre tabagisme et sommeil.",
-            "Appliquer une démarche causale rigoureuse sur des données observationnelles à grande échelle.",
-            "Démontrer l'intérêt du Double Machine Learning face aux approches classiques.",
-        ],
-        architectureFr: [
-            "Données : 413 768 observations, 16 variables — nettoyage et filtrage (fumeurs actuels vs non-fumeurs).",
-            "Modélisation causale : DAG, critère backdoor, variables de confusion (âge, consommation d'alcool).",
-            "Méthode 1 — Différence brute : ATT naïf = 0.099 (biaisé, sans ajustement).",
-            "Méthode 2 — OLS avec erreurs robustes HC3 : θ = 0.132 (ajustement linéaire).",
-            "Méthode 3 — Double ML (Random Forest, cross-fitting 5 folds) : θ = 0.134 (robuste, non linéaire).",
-            "Analyse de sensibilité : retrait d'un confondeur pour valider la robustesse du DAG.",
-        ],
-        roadmapFr: [
-            "Phase 1 : exploration, nettoyage et construction des variables de traitement et de résultat.",
-            "Phase 2 : modélisation causale avec DAG et identification des chemins de backdoor.",
-            "Phase 3 : estimation naïve, OLS ajusté et Double Machine Learning.",
-            "Phase 4 : analyse de sensibilité, comparaison des méthodes et rédaction du rapport.",
-        ],
-
-        visionEn: [
-            "Estimate a real causal effect — not a mere association — between smoking and sleep.",
-            "Apply rigorous causal methodology to large-scale observational data.",
-            "Demonstrate the value of Double Machine Learning over classical approaches.",
-        ],
-        architectureEn: [
-            "Data: 413,768 observations, 16 variables — cleaning and filtering (current smokers vs non-smokers).",
-            "Causal modeling: DAG, backdoor criterion, confounders (age, alcohol consumption).",
-            "Method 1 — Naive difference: ATT = 0.099 (biased, no adjustment).",
-            "Method 2 — OLS with HC3 robust standard errors: θ = 0.132 (linear adjustment).",
-            "Method 3 — Double ML (Random Forest, 5-fold cross-fitting): θ = 0.134 (robust, non-linear).",
-            "Sensitivity analysis: confounder removal to validate DAG robustness.",
-        ],
-        roadmapEn: [
-            "Phase 1: exploration, cleaning, and construction of treatment and outcome variables.",
-            "Phase 2: causal modeling with DAG and backdoor path identification.",
-            "Phase 3: naive estimation, adjusted OLS, and Double Machine Learning.",
-            "Phase 4: sensitivity analysis, method comparison, and report writing.",
-        ],
-
-        tags: ["Causal Inference", "Machine Learning", "Python", "Statistics"],
-        period: "2025",
-        roleFr: "Analyse causale complète — modélisation, estimation, interprétation",
-        roleEn: "Full causal analysis — modeling, estimation, interpretation",
-        stack: ["Python", "Scikit-learn", "Statsmodels", "Pandas", "Jupyter"],
-        links: {},
-        statusKey: "completed",
-
-        currentStateFr: [
-            "Analyse complète réalisée sur 413 768 observations.",
-            "Trois méthodes appliquées et comparées : naïve, OLS, Double ML.",
-            "Effet causal estimé à ~13 % — convergent et robuste.",
-            "Rapport final produit avec interprétation rigoureuse.",
-        ],
-        currentStateEn: [
-            "Full analysis completed on 413,768 observations.",
-            "Three methods applied and compared: naive, OLS, Double ML.",
-            "Causal effect estimated at ~13% — convergent and robust.",
-            "Final report produced with rigorous interpretation.",
-        ],
-
-        engineeringDecisionsFr: [
-            "Double ML pour lever l'hypothèse de linéarité et obtenir des garanties théoriques solides.",
-            "Random Forest dans le DML pour modéliser des relations non linéaires entre confondeurs et variables.",
-            "Cross-fitting en 5 folds pour éviter le biais de surapprentissage dans l'estimation des nuisances.",
-            "Analyse de sensibilité systématique pour valider la robustesse des conclusions.",
-        ],
-        engineeringDecisionsEn: [
-            "Double ML to relax linearity assumption and obtain solid theoretical guarantees.",
-            "Random Forest in DML to model non-linear relationships between confounders and variables.",
-            "5-fold cross-fitting to avoid overfitting bias in nuisance estimation.",
-            "Systematic sensitivity analysis to validate the robustness of conclusions.",
-        ],
-
-        improvementsFr: [
-            "Tester des méthodes causales supplémentaires (DiD, variables instrumentales).",
-            "Enrichir l'analyse avec des confondeurs supplémentaires (stress, activité physique).",
-            "Étudier l'hétérogénéité de l'effet causal par sous-groupes.",
-        ],
-        improvementsEn: [
-            "Test additional causal methods (DiD, instrumental variables).",
-            "Enrich the analysis with additional confounders (stress, physical activity).",
-            "Study causal effect heterogeneity across subgroups.",
-        ],
-
-        lessonsFr: [
-            "La convergence OLS/DML est un signal fort de robustesse des résultats.",
-            "Un DAG explicite force à formaliser et justifier chaque hypothèse causale.",
-            "Le Double Machine Learning est méthodologiquement supérieur même quand les relations sont proches de la linéarité.",
-        ],
-        lessonsEn: [
-            "OLS/DML convergence is a strong signal of result robustness.",
-            "An explicit DAG forces you to formalize and justify every causal assumption.",
-            "Double Machine Learning is methodologically superior even when relationships are close to linear.",
-        ],
-
-        screenshots: [],
-    },
+    "slug": "causal-smoking",
+    "cover": "/images/projects/projet-depression/cover.jpg",
+    "titleFr": "Inférence causale — Tabagisme et qualité du sommeil",
+    "statusFr": "Projet universitaire — Complété",
+    "codeStatusFr": "Code privé (projet académique)",
+    "taglineFr": "Étude du tabagisme et du sommeil sur 297 584 observations analysées, avec Double Machine Learning.",
+    "overviewFr": "À partir d’un jeu initial de 413 768 observations, analyse de 297 584 observations après exclusion des anciens fumeurs. Comparaison de la différence brute, d’une régression OLS et du Double Machine Learning. L’interprétation causale reste conditionnelle aux hypothèses du graphe causal et à l’ajustement des facteurs de confusion.",
+    "titleEn": "Causal Inference — Smoking and Sleep Quality",
+    "statusEn": "University project — Completed",
+    "codeStatusEn": "Private code (academic project)",
+    "taglineEn": "Smoking and sleep study using 297,584 analyzed observations and Double Machine Learning.",
+    "overviewEn": "From an initial 413,768 observations, analysis of 297,584 records after excluding former smokers. Comparison of the raw difference, OLS regression and Double Machine Learning. Causal interpretation remains conditional on the causal graph assumptions and confounder adjustment.",
+    "visionFr": [
+        "Étudier une question causale à partir de données observationnelles.",
+        "Comparer des approches ajustées et non ajustées en explicitant les hypothèses."
+    ],
+    "architectureFr": [
+        "Nettoyage et filtrage du jeu initial : 413 768 observations, 297 584 analysées.",
+        "Formalisation d’un DAG et choix des variables d’ajustement.",
+        "Comparaison de la différence brute et d’une régression OLS.",
+        "Double Machine Learning avec Random Forest et cross-fitting en cinq plis."
+    ],
+    "roadmapFr": [
+        "Phase 1 : exploration, nettoyage et construction des variables de traitement et de résultat.",
+        "Phase 2 : modélisation causale avec DAG et identification des chemins de backdoor.",
+        "Phase 3 : estimation naïve, OLS ajusté et Double Machine Learning.",
+        "Phase 4 : analyse de sensibilité, comparaison des méthodes et rédaction du rapport."
+    ],
+    "visionEn": [
+        "Study a causal question using observational data.",
+        "Compare adjusted and unadjusted approaches with explicit assumptions."
+    ],
+    "architectureEn": [
+        "Cleaning and filtering: 413,768 initial observations, 297,584 analyzed.",
+        "Causal DAG and adjustment variable selection.",
+        "Comparison of raw difference and OLS regression.",
+        "Double Machine Learning with Random Forest and five-fold cross-fitting."
+    ],
+    "roadmapEn": [
+        "Phase 1: exploration, cleaning, and construction of treatment and outcome variables.",
+        "Phase 2: causal modeling with DAG and backdoor path identification.",
+        "Phase 3: naive estimation, adjusted OLS, and Double Machine Learning.",
+        "Phase 4: sensitivity analysis, method comparison, and report writing."
+    ],
+    "tags": [
+        "Causal Inference",
+        "Machine Learning",
+        "Python",
+        "Statistics"
+    ],
+    "period": "2026",
+    "roleFr": "Analyse causale complète — modélisation, estimation, interprétation",
+    "roleEn": "Full causal analysis — modeling, estimation, interpretation",
+    "stack": [
+        "Python",
+        "Scikit-learn",
+        "Statsmodels",
+        "Pandas",
+        "Jupyter"
+    ],
+    "links": {},
+    "statusKey": "completed",
+    "currentStateFr": [
+        "Rapport et code produits.",
+        "Trois approches comparées : différence brute, OLS et DML.",
+        "Les estimations doivent être interprétées en tenant compte des hypothèses d’identification et des facteurs non observés."
+    ],
+    "currentStateEn": [
+        "Report and code produced.",
+        "Three approaches compared: raw difference, OLS and DML.",
+        "Estimates require interpretation in light of identification assumptions and unobserved factors."
+    ],
+    "engineeringDecisionsFr": [
+        "Random Forest pour les relations non linéaires dans les modèles de nuisance.",
+        "Cross-fitting en cinq plis pour séparer apprentissage des nuisances et estimation."
+    ],
+    "engineeringDecisionsEn": [
+        "Random Forest for nonlinear nuisance models.",
+        "Five-fold cross-fitting to separate nuisance fitting from estimation."
+    ],
+    "improvementsFr": [
+        "Tester des méthodes causales supplémentaires (DiD, variables instrumentales).",
+        "Enrichir l'analyse avec des confondeurs supplémentaires (stress, activité physique).",
+        "Étudier l'hétérogénéité de l'effet causal par sous-groupes."
+    ],
+    "improvementsEn": [
+        "Test additional causal methods (DiD, instrumental variables).",
+        "Enrich the analysis with additional confounders (stress, physical activity).",
+        "Study causal effect heterogeneity across subgroups."
+    ],
+    "lessonsFr": [
+        "La proximité des estimations OLS et DML ne prouve pas à elle seule leur validité causale.",
+        "Un graphe causal explicite rend les hypothèses discutables et vérifiables."
+    ],
+    "lessonsEn": [
+        "Similar OLS and DML estimates do not by themselves prove causal validity.",
+        "An explicit causal graph makes assumptions open to scrutiny."
+    ],
+    "screenshots": []
+},
 
     // ── TEKPLATEFORM ──────────────────────────────────────────────
     {

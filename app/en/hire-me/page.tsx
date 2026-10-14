@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { profile } from "../../../data/profile";
+
 
 const skills = [
     { category: "Languages", items: ["Python", "Java", "SQL", "C++", "C#", "HTML/CSS"] },
@@ -10,17 +10,17 @@ const skills = [
 ];
 
 export default function HireMePageEN() {
-    const t = profile.en;
+
 
     return (
         <section className="flex flex-col gap-12">
             <div className="animate-fade-in-up flex flex-col gap-4">
                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/35">Hiring</p>
                 <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
-                    Available for a{" "}
+                    Open to{" "}
                     <span className="gradient-text">job opportunities</span>
                 </h1>
-                <p className="max-w-2xl text-base leading-relaxed text-white/55 sm:text-lg">My B.Sc. in Computer Science at UQTR concludes in September 2026. I am actively seeking my first job in software development, backend, or data.</p>
+                <p className="max-w-2xl text-base leading-relaxed text-white/55 sm:text-lg">I graduated from UQTR in 2026 in Computer Science, concentration in Data Science. I am equally interested in junior software developer, programmer analyst, data/BI analyst and data science/modeling roles.</p>
             </div>
 
             <div className="animate-fade-in-up delay-100 grid gap-4 sm:grid-cols-3">
@@ -28,12 +28,12 @@ export default function HireMePageEN() {
                     <p className="text-xs font-semibold uppercase tracking-wider text-white/35">Availability</p>
                     <div className="mt-3 flex items-center gap-2">
                         <span className="status-dot" />
-                        <p className="font-medium text-white/90">From September 2026</p>
+                        <p className="font-medium text-white/90">Open to opportunities</p>
                     </div>
                 </div>
                 <div className="card-premium rounded-2xl p-5">
                     <p className="text-xs font-semibold uppercase tracking-wider text-white/35">Target roles</p>
-                    <p className="mt-3 font-medium text-white/85">Backend • Data • Android</p>
+                    <p className="mt-3 font-medium text-white/85">Software · Programmer analysis · Data/BI · Modeling</p>
                 </div>
                 <div className="card-premium rounded-2xl p-5">
                     <p className="text-xs font-semibold uppercase tracking-wider text-white/35">Location</p>
@@ -50,7 +50,7 @@ export default function HireMePageEN() {
                     </div>
                     <div>
                         <h2 className="text-lg font-semibold text-white/95">B.Sc. Computer Science — Completed</h2>
-                        <p className="mt-1 text-white/55">Université du Québec à Trois-Rivières (UQTR) · Specialization: Data Science & Software Development</p>
+                        <p className="mt-1 text-white/55">Université du Québec à Trois-Rivières (UQTR) · Concentration: Data Science</p>
                     </div>
                 </div>
             </div>
@@ -75,7 +75,7 @@ export default function HireMePageEN() {
                 <h2 className="text-xl font-semibold text-white/90">What I bring</h2>
                 <div className="grid gap-4 sm:grid-cols-3">
                     {[
-                        { icon: "🖥️", title: "Backend development", desc: "Production experience with Spring Boot, Java, and PostgreSQL. Full ERP deployed and used daily in a real company." },
+                        { icon: "🖥️", title: "Backend development", desc: "Production experience with Spring Boot, Java, and SQL. Full ERP deployed and used daily in a real company." },
                         { icon: "📊", title: "Data science", desc: "Data pipelines, ML (classification, regression, clustering), visualization and analytical reporting." },
                         { icon: "📱", title: "Android mobile", desc: "MVVM architecture, Firebase, Room, Google Maps. Functional app developed collaboratively." },
                     ].map((item) => (
@@ -99,7 +99,7 @@ export default function HireMePageEN() {
                         View my projects →
                     </Link>
                     <Link href="/en/cv" className="inline-flex min-h-[46px] items-center justify-center rounded-full border border-white/10 px-6 py-2.5 text-sm text-white/65 transition hover:border-white/20 hover:text-white/90">
-                        Download CV ↗
+                        Choose a resume ↗
                     </Link>
                 </div>
             </div>

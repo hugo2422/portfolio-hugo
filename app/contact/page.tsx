@@ -13,8 +13,7 @@ export default function ContactPage() {
           Travaillons <span className="gradient-text">ensemble</span>
         </h1>
         <p className="max-w-xl text-base leading-relaxed text-white/55 sm:text-lg">
-          Mon baccalauréat en informatique (UQTR) se termine à l&apos;septembre 2026 et je suis
-          activement à la recherche d&apos;un premier emploi en développement logiciel ou en data. Aucun stage — je cherche directement un emploi.
+          Diplômé en informatique de l’UQTR, concentration en science des données, je recherche un poste junior en développement logiciel, analyse-programmation, analyse de données/BI ou modélisation.
         </p>
       </div>
 
@@ -53,7 +52,7 @@ export default function ContactPage() {
 
         {/* LinkedIn */}
         <a
-          href="https://www.linkedin.com/in/hugo-tekeng-a31295292"
+          href="https://www.linkedin.com/in/hugo-tekeng"
           target="_blank"
           rel="noopener noreferrer"
           className="card-premium shimmer-border group flex flex-col gap-4 rounded-2xl p-6"
@@ -65,7 +64,7 @@ export default function ContactPage() {
           </div>
           <div>
             <p className="text-xs font-semibold uppercase tracking-wider text-white/40">LinkedIn</p>
-            <p className="mt-1 text-white/85 transition group-hover:text-white">hugo-tekeng-a31295292</p>
+            <p className="mt-1 text-white/85 transition group-hover:text-white">hugo-tekeng</p>
           </div>
         </a>
 
@@ -93,7 +92,7 @@ export default function ContactPage() {
             </div>
             <h2 className="text-xl font-bold text-white/95 sm:text-2xl">À la recherche d&apos;un emploi</h2>
             <p className="mt-1 text-white/55">
-              Développement logiciel · Back-end · Data · Android — Fin de programme sept. 2026
+              Développement logiciel · Back-end · Data · Android — Diplômé en 2026
             </p>
           </div>
           <Link

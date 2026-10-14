@@ -1,3 +1,4 @@
+import { matchesProjectFocus } from "../../../data/project-focus";
 import Image from "next/image";
 import Link from "next/link";
 import { projects } from "../../../data/projects";
@@ -8,7 +9,10 @@ const statusConfig: Record<string, { label: string; style: React.CSSProperties; 
     "completed":     { label: "Completed",     dot: "#818cf8", style: { background: "rgba(99,102,241,0.13)",  border: "1px solid rgba(99,102,241,0.30)", color: "#a5b4fc" } },
 };
 
-export default function ProjectsPageEN() {
+export default async function ProjectsPageEN({searchParams}: {searchParams: Promise<{focus?: string}>}) {
+ const {focus: requestedFocus}=await searchParams;
+ const focus=requestedFocus==="software"||requestedFocus==="data"?requestedFocus:"all";
+ const visibleProjects=projects.filter(p=>matchesProjectFocus(p.slug,focus));
     return (
         <section className="flex flex-col gap-10">
             <div className="animate-fade-in-up flex flex-col gap-3">
@@ -33,8 +37,9 @@ export default function ProjectsPageEN() {
                 </div>
             </div>
 
+            <nav aria-label="Project categories" className="flex flex-wrap gap-3">{[{id:"all",label:"All projects"},{id:"software",label:"Software development"},{id:"data",label:"Data science"}].map(item=><Link key={item.id} aria-current={focus===item.id?"page":undefined} href={item.id==="all"?"/en/projects":"/en/projects?focus="+item.id} className={focus===item.id?"btn-primary":"btn-secondary"}>{item.label}</Link>)}</nav>
             <div className="animate-fade-in-up delay-100 grid gap-5 md:grid-cols-2">
-                {projects.map((p) => {
+                {visibleProjects.map((p) => {
                     const status = statusConfig[p.statusKey];
                     return (
                         <Link key={p.slug} href={`/en/projects/${p.slug}`} className="card-premium shimmer-border group flex flex-col overflow-hidden rounded-2xl">

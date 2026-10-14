@@ -1,3 +1,4 @@
+import CareerPaths from "../components/CareerPaths";
 import Link from "next/link";
 import Image from "next/image";
 import { profile } from "../data/profile";
@@ -18,7 +19,7 @@ const education = [
     alt: "UQTR",
     name: "UQTR",
     desc: "Bac. Informatique",
-    status: "Sept. 2026",
+    status: "Diplômé 2026",
     statusStyle: { background:"rgba(245,158,11,0.13)", border:"1px solid rgba(245,158,11,0.3)", color:"#fcd34d" } as React.CSSProperties,
   },
   {
@@ -33,6 +34,7 @@ const education = [
 ];
 
 const experience = [
+ {href: "/experience", logo: "/images/logos/lucatex.jpg", alt: "Lucatex", name: "Lucatex SARL", desc: "Développeur backend · Freelance", period: "2025 – 2026"},
   {
     href: "/experience",
     logo: "/images/logos/lucatex.jpg",
@@ -95,10 +97,10 @@ export default function Home() {
           <div className="animate-fade-in-up delay-300 flex flex-wrap gap-2.5">
             <Link href="/contact" className="btn-primary">{t.hero.ctas.primary}</Link>
             <Link href="/projects" className="btn-secondary">{t.hero.ctas.secondary}</Link>
-            <Link href="/documents/hugo-tekeng-cv.pdf" target="_blank" className="btn-tertiary">
+            <Link href="/cv" className="btn-tertiary">
               {t.hero.ctas.tertiary}<span className="text-[11px] opacity-55">↗</span>
             </Link>
-            <Link href="https://www.linkedin.com/in/hugo-tekeng-a31295292" target="_blank" rel="noopener noreferrer" className="btn-linkedin">
+            <Link href="https://www.linkedin.com/in/hugo-tekeng" target="_blank" rel="noopener noreferrer" className="btn-linkedin">
               <svg className="h-[14px] w-[14px] shrink-0" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
               </svg>
@@ -123,7 +125,7 @@ export default function Home() {
             </div>
             <div className="absolute -bottom-1 -right-1 rounded-xl border border-white/[0.08] bg-[#050a14]/94 px-2.5 py-1.5 backdrop-blur-sm sm:-bottom-3 sm:-right-3">
               <p className="text-[10px] font-bold text-green-400 sm:text-[11px]">Open to work</p>
-              <p className="text-[9px] text-white/38 sm:text-[10px]">Diplôme sept. 2026</p>
+              <p className="text-[9px] text-white/38 sm:text-[10px]">Diplômé en 2026</p>
             </div>
           </div>
         </div>
@@ -161,7 +163,7 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-2 gap-3 sm:gap-4">
             {education.map((item) => (
-              <Link key={item.name} href={item.href} className="card-premium shimmer-border group rounded-xl p-3.5 sm:rounded-2xl sm:p-4">
+              <Link key={item.name + item.desc} href={item.href} className="card-premium shimmer-border group rounded-xl p-3.5 sm:rounded-2xl sm:p-4">
                 <div className="flex h-12 items-center justify-center rounded-lg bg-white/[0.032] sm:h-14">
                   <Image src={item.logo} alt={item.alt} width={90} height={36}
                     className="h-8 w-auto object-contain opacity-62 grayscale transition duration-300 group-hover:opacity-100 group-hover:grayscale-0" />
@@ -194,7 +196,7 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-2 gap-3 sm:gap-4">
             {experience.map((item) => (
-              <Link key={item.name} href={item.href} className="card-premium shimmer-border group rounded-xl p-3.5 sm:rounded-2xl sm:p-4">
+              <Link key={item.name + item.desc} href={item.href} className="card-premium shimmer-border group rounded-xl p-3.5 sm:rounded-2xl sm:p-4">
                 <div className="flex h-12 items-center justify-center rounded-lg bg-white/[0.032] sm:h-14">
                   <Image src={item.logo} alt={item.alt} width={90} height={36}
                     className="h-8 w-auto object-contain opacity-62 grayscale transition duration-300 group-hover:opacity-100 group-hover:grayscale-0" />
@@ -212,6 +214,7 @@ export default function Home() {
         </div>
       </div>
 
+      <CareerPaths locale="fr" />
       {/* ── FEATURED PROJECTS ── */}
       <div className="animate-fade-in-up delay-600">
         <FeaturedProjects locale="fr" />

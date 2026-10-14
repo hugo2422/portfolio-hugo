@@ -55,7 +55,7 @@ export default function UniversityENPage() {
 
     const totalCourses = courses.length;
     const inProgressCourses = courses.filter((course) => course.status === "En cours").length;
-    const completedCourses = totalCourses - inProgressCourses;
+
 
     return (
         <section className="flex flex-col gap-10">
@@ -116,11 +116,11 @@ export default function UniversityENPage() {
                             </div>
 
                             <h3 className="text-xl font-semibold">
-                                Bachelor’s in Computer Science — Data Science
+                                Bachelor’s in Computer Science — concentration in Data Science
                             </h3>
 
                             <p className="text-sm text-white/60">
-                                Graduating September 2026 · Open to job opportunities
+                                Graduated in 2026 · Open to job opportunities
                             </p>
 
                             <p className="leading-relaxed text-white/75">

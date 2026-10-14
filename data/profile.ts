@@ -1,67 +1,62 @@
 export const profile = {
-    fr: {
-        name: "Hugo Tekeng",
-        location: "Trois-Rivières, QC",
-        headline:
-            "Développeur logiciel spécialisé en science des données | Python · Java · Spring Boot · React | Bac. Informatique UQTR — Septembre 2026",
-        hero: {
-            badge: "Fin de programme sept. 2026 · À la recherche d'un emploi",
-            title: "Développeur logiciel & Data Scientist",
-            subtitle:
-                "Je conçois des systèmes back-end robustes et des solutions orientées données — du développement fullstack et mobile jusqu'au machine learning et à l'inférence causale.",
-            ctas: {
-                primary: "Me contacter",
-                secondary: "Voir mes projets",
-                tertiary: "CV",
-            },
+    "fr": {
+        "name": "Armel Hugo Tekeng",
+        "location": "Trois-Rivières, QC",
+        "headline": "Développement logiciel & science des données | Java · Python · SQL | Diplômé de l’UQTR",
+        "hero": {
+            "badge": "Diplômé en 2026 · À la recherche d’un emploi junior",
+            "title": "Développement logiciel & science des données",
+            "subtitle": "Je développe des applications utiles aux équipes et des analyses pour éclairer leurs décisions. Mon parcours associe informatique, mathématiques appliquées et réalisations concrètes.",
+            "ctas": {
+                "primary": "Me contacter",
+                "secondary": "Voir mes projets",
+                "tertiary": "Mes deux CV"
+            }
         },
-        about: {
-            title: "À propos",
-            paragraphs: [
-                "Je suis étudiant finissant en informatique à l'UQTR (diplôme prévu en septembre 2026), avec une spécialisation en science des données et de solides compétences en développement logiciel.",
-                "Je conçois des systèmes back-end, des API REST, des applications mobiles Android et des pipelines de données pour transformer des besoins concrets en solutions robustes et maintenables.",
-                "Mes projets couvrent un spectre large : système ERP en production réelle (Spring Boot, PostgreSQL), application mobile Android (MVVM, Firebase, Google Maps), modèles de machine learning (classification, régression, clustering, PCA, embeddings) et inférence causale avancée (Double Machine Learning, DAG, critère backdoor).",
-                "Titulaire d'une Licence en Mathématiques Appliquées (Université de Dschang, reconnue équivalente à un Baccalauréat canadien), je combine rigueur analytique et pragmatisme en développement logiciel.",
-                "J'accorde une attention particulière à la qualité du code, à la rigueur méthodologique et à la documentation technique.",
-            ],
+        "about": {
+            "title": "À propos",
+            "paragraphs": [
+                "Diplômé du baccalauréat en informatique de l’UQTR en 2026, concentration en science des données, je suis également titulaire d’une licence en mathématiques appliquées de l’Université de Dschang (2023).",
+                "Je développe des applications Java et Python et je travaille sur la préparation de données, les tableaux de bord, la modélisation et l’inférence causale.",
+                "Mon expérience freelance chez Lucatex comprend la conception et le déploiement d’un système de gestion utilisé quotidiennement en production. Mes projets universitaires et personnels comprennent une application Android, une application Flask/MongoDB, une étude EEG et le prototype e-commerce EcomOS AI.",
+                "J’aime comprendre les besoins des utilisateurs, construire des solutions utiles et expliquer ce que les données permettent réellement de conclure, y compris leurs limites.",
+                "Je recherche un poste junior en développement logiciel, comme analyste-programmeur, en analyse de données/BI ou en science des données/modélisation. Ces quatre orientations m’intéressent au même degré."
+            ]
         },
-        contact: {
-            email: "tekenghugo7750@gmail.com",
-            phone: "(819) 266-7890",
-        },
+        "contact": {
+            "email": "tekenghugo7750@gmail.com",
+            "phone": "(819) 266-7890"
+        }
     },
-
-    en: {
-        name: "Hugo Tekeng",
-        location: "Trois-Rivières, QC",
-        headline:
-            "Software Developer specialized in Data Science | Python · Java · Spring Boot · React | B.Sc. Computer Science UQTR — September 2026",
-        hero: {
-            badge: "Graduating September 2026 · Open to job opportunities",
-            title: "Software Developer & Data Scientist",
-            subtitle:
-                "I build robust backend systems and data-driven solutions — from fullstack and Android development to machine learning and causal inference.",
-            ctas: {
-                primary: "Contact me",
-                secondary: "View projects",
-                tertiary: "Resume",
-            },
+    "en": {
+        "name": "Armel Hugo Tekeng",
+        "location": "Trois-Rivières, QC",
+        "headline": "Software development & data science | Java · Python · SQL | UQTR graduate",
+        "hero": {
+            "badge": "2026 graduate · Seeking junior opportunities",
+            "title": "Software development & data science",
+            "subtitle": "I build applications that support teams and analyses that inform decisions. My background combines computer science, applied mathematics and practical projects.",
+            "ctas": {
+                "primary": "Contact me",
+                "secondary": "View projects",
+                "tertiary": "My resumes"
+            }
         },
-        about: {
-            title: "About",
-            paragraphs: [
-                "I am a finishing student in Computer Science at UQTR (graduating September 2026), specializing in data science with strong software development skills.",
-                "I design backend systems, REST APIs, Android mobile applications, and data pipelines to turn real-world needs into robust and maintainable solutions.",
-                "My projects span a wide spectrum: a production ERP system (Spring Boot, PostgreSQL), an Android mobile app (MVVM, Firebase, Google Maps), machine learning models (classification, regression, clustering, PCA, embeddings), and advanced causal inference (Double Machine Learning, DAG, backdoor criterion).",
-                "Holding a degree in Applied Mathematics (Université de Dschang, recognized as equivalent to a Canadian B.Sc.), I combine analytical rigor with practical software engineering.",
-                "I pay close attention to code quality, methodological rigor, and technical documentation.",
-            ],
+        "about": {
+            "title": "About",
+            "paragraphs": [
+                "I graduated from UQTR in 2026 with a bachelor’s degree in Computer Science, concentration in Data Science. I also hold a degree in Applied Mathematics from the University of Dschang (2023).",
+                "I develop Java and Python applications and work on data preparation, dashboards, modeling and causal inference.",
+                "My freelance experience at Lucatex includes designing and deploying a management system used daily in production. My academic and personal projects include an Android app, a Flask/MongoDB application, an EEG study and the EcomOS AI e-commerce prototype.",
+                "I enjoy understanding user needs, building useful applications and explaining what data can support, including the limits of the results.",
+                "I am equally interested in junior software developer, programmer analyst, data/BI analyst and data science/modeling roles."
+            ]
         },
-        contact: {
-            email: "tekenghugo7750@gmail.com",
-            phone: "(819) 266-7890",
-        },
-    },
+        "contact": {
+            "email": "tekenghugo7750@gmail.com",
+            "phone": "(819) 266-7890"
+        }
+    }
 } as const;
 
 export type Locale = keyof typeof profile;

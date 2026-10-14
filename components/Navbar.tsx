@@ -10,6 +10,11 @@ function isEnglishPath(p: string) {
 
 export default function Navbar() {
   const pathname = usePathname();
+  return <NavbarContents key={pathname} />;
+}
+
+function NavbarContents() {
+  const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled]  = useState(false);
 
@@ -28,7 +33,7 @@ export default function Navbar() {
     ? pathname.replace(/^\/en(\/|$)/, "/")
     : `/en${pathname === "/" ? "" : pathname}`;
 
-  useEffect(() => { setMenuOpen(false); }, [pathname]);
+
 
   useEffect(() => {
     const fn = () => setScrolled(window.scrollY > 16);
@@ -209,7 +214,7 @@ export default function Navbar() {
             {/* Status strip */}
             <div className="flex items-center justify-center gap-2 border-t border-white/[0.06] px-4 py-2.5">
               <span className="status-dot h-1.5 w-1.5" />
-              <span className="text-[10px] text-white/35">Disponible · Fin de programme été 2026</span>
+              <span className="text-[10px] text-white/35">{isEN ? "Open to work · 2026 graduate" : "En recherche d’emploi · Diplômé en 2026"}</span>
             </div>
           </div>
         </div>

@@ -71,7 +71,7 @@ export default function AboutPage() {
           <p className="text-xs font-semibold uppercase tracking-wider text-white/35">Statut</p>
           <div className="mt-3 flex items-center gap-2">
             <span className="status-dot" />
-            <span className="text-white/85">À la recherche d'un emploi</span>
+            <span className="text-white/85">À la recherche d’un emploi</span>
           </div>
         </div>
       </div>
