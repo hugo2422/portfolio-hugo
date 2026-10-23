@@ -30,6 +30,7 @@ export default function Footer() {
           {/* Center — links */}
           <nav className="flex flex-wrap gap-x-5 gap-y-1" aria-label="Footer navigation">
             {[
+              { href: "/services", label: "Services" },
               { href: "/projects",   label: en?"Projects":"Projets"  },
               { href: "/about",      label: en?"About":"À propos" },
               { href: "/experience", label: en?"Experience":"Expérience" },

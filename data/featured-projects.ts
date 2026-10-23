@@ -14,7 +14,7 @@ export type FeaturedProject = {
 };
 
 export const featuredProjects: FeaturedProject[] = [
-    {
+  {
     "id": "ops-system",
     "cover": "/images/projects/ops-system/cover.jpg",
     "tagFr": "ERP · Spring Boot · En production",
@@ -26,27 +26,31 @@ export const featuredProjects: FeaturedProject[] = [
     "hrefFr": "/projects/ops-system",
     "hrefEn": "/en/projects/ops-system",
     "stackPreview": [
-        "Java",
-        "Spring Boot",
-        "SQL"
+      "Java",
+      "Spring Boot",
+      "SQL"
     ],
     "statusKey": "in-production"
-},
-    {
-        id: "citoyen-actif",
-        cover: "/images/projects/citoyen-actif/cover.png",
-        tagFr: "Android · Firebase · Google Maps",
-        tagEn: "Android · Firebase · Google Maps",
-        titleFr: "Citoyen Actif",
-        titleEn: "Citoyen Actif",
-        descFr: "Application Android de signalement d'infrastructures urbaines géolocalisées — architecture MVVM, Room, Firestore, notifications push FCM et carte interactive.",
-        descEn: "Android app for geolocated urban infrastructure reporting — MVVM, Room, Firestore, FCM push notifications and interactive map.",
-        hrefFr: "/projects/citoyen-actif",
-        hrefEn: "/en/projects/citoyen-actif",
-        stackPreview: ["Java", "Android", "Firebase"],
-        statusKey: "completed",
-    },
-    {
+  },
+  {
+    "id": "citoyen-actif",
+    "cover": "/images/projects/citoyen-actif/cover.png",
+    "tagFr": "Android · Firebase · Google Maps",
+    "tagEn": "Android · Firebase · Google Maps",
+    "titleFr": "Citoyen Actif",
+    "titleEn": "Citoyen Actif",
+    "descFr": "Application Android de signalement d'infrastructures urbaines géolocalisées — architecture MVVM, Room, Firestore, notifications push FCM et carte interactive.",
+    "descEn": "Android app for geolocated urban infrastructure reporting — MVVM, Room, Firestore, FCM push notifications and interactive map.",
+    "hrefFr": "/projects/citoyen-actif",
+    "hrefEn": "/en/projects/citoyen-actif",
+    "stackPreview": [
+      "Java",
+      "Android",
+      "Firebase"
+    ],
+    "statusKey": "completed"
+  },
+  {
     "id": "projet-depression",
     "cover": "/images/projects/projet-depression/cover.jpg",
     "tagFr": "Machine Learning · Flask · MongoDB",
@@ -58,15 +62,15 @@ export const featuredProjects: FeaturedProject[] = [
     "hrefFr": "/projects/projet-depression",
     "hrefEn": "/en/projects/projet-depression",
     "stackPreview": [
-        "Python",
-        "Scikit-learn",
-        "MongoDB"
+      "Python",
+      "Scikit-learn",
+      "MongoDB"
     ],
     "statusKey": "completed"
-},
-    {
+  },
+  {
     "id": "causal-smoking",
-    "cover": "/images/projects/projet-depression/cover.jpg",
+    "cover": "/images/projects/causal-smoking/workflow.svg",
     "tagFr": "Inférence causale · DML · Random Forest",
     "tagEn": "Causal inference · DML · Random Forest",
     "titleFr": "Inférence causale — Tabagisme & Sommeil",
@@ -76,15 +80,15 @@ export const featuredProjects: FeaturedProject[] = [
     "hrefFr": "/projects/causal-smoking",
     "hrefEn": "/en/projects/causal-smoking",
     "stackPreview": [
-        "Python",
-        "Scikit-learn",
-        "Statsmodels"
+      "Python",
+      "Scikit-learn",
+      "Statsmodels"
     ],
     "statusKey": "completed"
-},
-    {
+  },
+  {
     "id": "eeg-causal",
-    "cover": "/images/projects/projet-depression/cover.jpg",
+    "cover": "/images/projects/eeg-causal/results-fr.svg",
     "tagFr": "EEG · Deep Learning · Inférence causale",
     "tagEn": "EEG · Deep Learning · Causal Inference",
     "titleFr": "EEG et état des yeux",
@@ -94,13 +98,13 @@ export const featuredProjects: FeaturedProject[] = [
     "hrefFr": "/projects/eeg-causal",
     "hrefEn": "/en/projects/eeg-causal",
     "stackPreview": [
-        "Python",
-        "PyTorch",
-        "EconML"
+      "Python",
+      "PyTorch",
+      "EconML"
     ],
     "statusKey": "completed"
-},
-    {
+  },
+  {
     "id": "ecomos-ai",
     "cover": "/images/projects/ecomos-ai/cover.jpg",
     "tagFr": "Prototype · Python · Analyse e-commerce",
@@ -112,10 +116,10 @@ export const featuredProjects: FeaturedProject[] = [
     "hrefFr": "/projects/ecomos-ai",
     "hrefEn": "/en/projects/ecomos-ai",
     "stackPreview": [
-        "Python",
-        "Pandas",
-        "Streamlit"
+      "Python",
+      "Pandas",
+      "Streamlit"
     ],
     "statusKey": "in-progress"
-},
+  }
 ];

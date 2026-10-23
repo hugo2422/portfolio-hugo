@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import EducationStory from "../../components/EducationStory";
 import { useMemo, useState } from "react";
 import { courses, priorDegrees } from "../../data/university";
 import { experiences } from "../../data/experience";
@@ -34,97 +35,11 @@ export default function UniversityPage() {
         items: filteredCourses.filter((course) => course.sessionFr === session),
     }));
 
-    const totalCourses = courses.length;
-    const inProgressCourses = courses.filter((course) => course.status === "En cours").length;
 
 
     return (
         <section className="flex flex-col gap-10">
-
-
-            <div className="flex flex-col gap-4">
-                <div className="flex flex-col gap-2">
-                    <h2 className="text-2xl font-semibold tracking-tight">
-                        Vue d’ensemble académique
-                    </h2>
-                    <p className="max-w-3xl text-white/70">
-                        Mon parcours universitaire repose sur deux formations complémentaires :
-                        une base rigoureuse en mathématiques appliquées, puis une spécialisation
-                        en informatique et sciences des données.
-                    </p>
-                </div>
-
-                <div className="grid gap-4 md:grid-cols-2">
-                    <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
-                        <div className="flex flex-col gap-3">
-                            <div className="flex flex-wrap gap-2">
-                                <span className="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-sm text-white/75">
-                                    Université de Dschang
-                                </span>
-                                <span className="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-sm text-white/75">
-                                    Cameroun
-                                </span>
-                                <span className="rounded-full border border-emerald-400/20 bg-emerald-400/10 px-3 py-1 text-sm text-emerald-300">
-                                    WES : Bachelor’s degree
-                                </span>
-                            </div>
-
-                            <h3 className="text-xl font-semibold">
-                                Licence en mathématiques appliquées
-                            </h3>
-
-                            <p className="text-sm text-white/60">2019 — 2023</p>
-
-                            <p className="leading-relaxed text-white/75">
-                                Formation initiale complète en analyse, algèbre, probabilités,
-                                statistiques, équations différentielles, modélisation et calcul scientifique.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
-                        <div className="flex flex-col gap-3">
-                            <div className="flex flex-wrap gap-2">
-                                <span className="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-sm text-white/75">
-                                    UQTR
-                                </span>
-                                <span className="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-sm text-white/75">
-                                    Canada
-                                </span>
-                                <span className="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-sm text-white/75">
-                                    2023 — présent
-                                </span>
-                            </div>
-
-                            <h3 className="text-xl font-semibold">
-                                Baccalauréat en informatique — concentration en science des données
-                            </h3>
-
-                            <p className="text-sm text-white/60">
-                                Diplômé en 2026 · À la recherche d’un emploi
-                            </p>
-
-                            <p className="leading-relaxed text-white/75">
-                                Approfondissement en développement logiciel, data science, bases de
-                                données, systèmes, réseaux, architecture et projets appliqués.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
-                    <p className="text-sm text-white/60">Progression du parcours</p>
-                    <p className="mt-2 text-lg font-medium">
-                        Mathématiques appliquées → Informatique → Data / Logiciel / Plateformes
-                    </p>
-                    <p className="mt-3 max-w-4xl leading-relaxed text-white/70">
-                        Cette progression rend mon profil particulièrement cohérent : une base
-                        mathématique forte pour la modélisation et l’analyse, prolongée par une
-                        formation avancée en informatique orientée vers les systèmes, les données
-                        et la réalisation de projets concrets.
-                    </p>
-                </div>
-            </div>
+            <EducationStory locale="fr" />
 
 
             <div className="flex flex-wrap gap-3">

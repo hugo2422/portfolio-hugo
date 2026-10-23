@@ -22,10 +22,12 @@ function NavbarContents() {
   const base = isEN ? "/en" : "";
 
   const navItems = [
+    { href: `${base}/services`, label: "Services" },
     { href: `${base}/about`,      label: isEN ? "About"      : "À propos"   },
     { href: `${base}/projects`,   label: isEN ? "Projects"   : "Projets"    },
     { href: `${base}/experience`, label: isEN ? "Experience" : "Expérience" },
     { href: `${base}/university`, label: isEN ? "University" : "Parcours"   },
+    { href: `${base}/certifications`, label: isEN ? "Learning" : "Certifications" },
     { href: `${base}/hire-me`,    label: isEN ? "Open to work" : "Emploi"   },
   ];
 
@@ -63,7 +65,7 @@ function NavbarContents() {
             className="group flex shrink-0 items-center gap-2.5"
             aria-label="Hugo Tekeng — Accueil"
           >
-            <div className="relative flex h-8 w-8 items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-blue-500 to-violet-600 text-[11px] font-bold text-white shadow-lg shadow-blue-500/25">
+            <div className="relative flex h-8 w-8 items-center justify-center overflow-hidden rounded-lg bg-[#296653] text-[11px] font-bold text-white shadow-none">
               HT
               <div className="absolute inset-0 bg-white/10 opacity-0 transition group-hover:opacity-100" />
             </div>
@@ -73,7 +75,7 @@ function NavbarContents() {
           </Link>
 
           {/* Desktop nav */}
-          <nav className="hidden items-center gap-0.5 md:flex" aria-label="Navigation principale">
+          <nav className="hidden items-center gap-0.5 lg:flex" aria-label="Navigation principale">
             {navItems.map((item) => {
               const active = pathname === item.href || pathname.startsWith(item.href + "/");
               return (
@@ -96,7 +98,7 @@ function NavbarContents() {
           </nav>
 
           {/* Right actions */}
-          <div className="hidden items-center gap-2 md:flex">
+          <div className="hidden items-center gap-2 lg:flex">
             <Link
               href={switchHref}
               className="rounded-lg border border-white/10 bg-white/[0.04] px-3 py-1.5 text-xs font-medium text-white/55 transition hover:border-white/18 hover:bg-white/[0.07] hover:text-white/85"
@@ -118,7 +120,7 @@ function NavbarContents() {
             onClick={() => setMenuOpen((v) => !v)}
             aria-label={menuOpen ? "Fermer le menu" : "Ouvrir le menu"}
             aria-expanded={menuOpen}
-            className="flex h-9 w-9 items-center justify-center rounded-lg border border-white/10 bg-white/[0.05] text-white/70 transition hover:bg-white/[0.09] md:hidden"
+            className="flex h-9 w-9 items-center justify-center rounded-lg border border-white/10 bg-white/[0.05] text-white/70 transition hover:bg-white/[0.09] lg:hidden"
           >
             <svg className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
               {menuOpen
@@ -132,7 +134,7 @@ function NavbarContents() {
 
       {/* Mobile menu — full-screen overlay */}
       {menuOpen && (
-        <div className="fixed inset-0 z-[60] md:hidden">
+        <div className="fixed inset-0 z-[60] lg:hidden">
           {/* Backdrop */}
           <div
             className="absolute inset-0 bg-black/65 backdrop-blur-md"
@@ -146,7 +148,7 @@ function NavbarContents() {
             {/* Panel header */}
             <div className="flex items-center justify-between border-b border-white/[0.07] px-4 py-3.5">
               <div className="flex items-center gap-2.5">
-                <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-blue-500 to-violet-600 text-[11px] font-bold text-white">
+                <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#296653] text-[11px] font-bold text-white">
                   HT
                 </div>
                 <div>

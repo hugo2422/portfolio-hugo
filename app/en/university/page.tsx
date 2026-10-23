@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import EducationStory from "../../../components/EducationStory";
 import { useMemo, useState } from "react";
 import { courses, priorDegrees } from "../../../data/university";
 import { experiences } from "../../../data/experience";
@@ -13,7 +14,7 @@ const sessionsOrder = [
     "Summer 2025",
     "Fall 2025",
     "Winter 2026",
-    "September 2026",
+    "Summer 2026",
     ];
 
 export default function UniversityENPage() {
@@ -53,96 +54,12 @@ export default function UniversityENPage() {
         items: filteredCourses.filter((course) => course.sessionEn === session),
     }));
 
-    const totalCourses = courses.length;
-    const inProgressCourses = courses.filter((course) => course.status === "En cours").length;
 
 
     return (
         <section className="flex flex-col gap-10">
+            <EducationStory locale="en" />
 
-
-            <div className="flex flex-col gap-4">
-                <div className="flex flex-col gap-2">
-                    <h2 className="text-2xl font-semibold tracking-tight">
-                        Academic overview
-                    </h2>
-                    <p className="max-w-3xl text-white/70">
-                        My academic path is built on two complementary degrees: a rigorous
-                        foundation in applied mathematics, followed by a specialization in
-                        computer science and data science.
-                    </p>
-                </div>
-
-                <div className="grid gap-4 md:grid-cols-2">
-                    <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
-                        <div className="flex flex-col gap-3">
-                            <div className="flex flex-wrap gap-2">
-                                <span className="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-sm text-white/75">
-                                    University of Dschang
-                                </span>
-                                <span className="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-sm text-white/75">
-                                    Cameroon
-                                </span>
-                                <span className="rounded-full border border-emerald-400/20 bg-emerald-400/10 px-3 py-1 text-sm text-emerald-300">
-                                    WES: Bachelor’s degree
-                                </span>
-                            </div>
-
-                            <h3 className="text-xl font-semibold">
-                                Bachelor’s Degree in Applied Mathematics
-                            </h3>
-
-                            <p className="text-sm text-white/60">2019 — 2023</p>
-
-                            <p className="leading-relaxed text-white/75">
-                                Initial academic training in analysis, algebra, probability,
-                                statistics, differential equations, modeling, and scientific computing.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
-                        <div className="flex flex-col gap-3">
-                            <div className="flex flex-wrap gap-2">
-                                <span className="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-sm text-white/75">
-                                    UQTR
-                                </span>
-                                <span className="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-sm text-white/75">
-                                    Canada
-                                </span>
-                                <span className="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-sm text-white/75">
-                                    2023 — present
-                                </span>
-                            </div>
-
-                            <h3 className="text-xl font-semibold">
-                                Bachelor’s in Computer Science — concentration in Data Science
-                            </h3>
-
-                            <p className="text-sm text-white/60">
-                                Graduated in 2026 · Open to job opportunities
-                            </p>
-
-                            <p className="leading-relaxed text-white/75">
-                                Further development in software engineering, data science,
-                                databases, systems, networks, architecture, and applied projects.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
-                    <p className="text-sm text-white/60">Path progression</p>
-                    <p className="mt-2 text-lg font-medium">
-                        Applied Mathematics → Computer Science → Data / Software / Platforms
-                    </p>
-                    <p className="mt-3 max-w-4xl leading-relaxed text-white/70">
-                        This progression makes my profile especially coherent: a strong
-                        mathematical foundation for modeling and analysis, extended by advanced
-                        training in computing focused on systems, data, and real-world projects.
-                    </p>
-                </div>
-            </div>
 
             <div className="flex flex-wrap gap-3">
                 <a

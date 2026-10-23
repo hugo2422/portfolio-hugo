@@ -12,7 +12,7 @@ export default function ContactPageEN() {
                     Let&apos;s work <span className="gradient-text">together</span>
                 </h1>
                 <p className="max-w-xl text-base leading-relaxed text-white/55 sm:text-lg">
-                    I graduated from UQTR in Computer Science, concentration in Data Science. I am seeking a junior role in software development, programmer analysis, data/BI analysis or modeling.
+                    Would you like to discuss a project, a freelance assignment or a job opportunity? Tell me about your needs and the context of your request.
                 </p>
             </div>
 

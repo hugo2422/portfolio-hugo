@@ -2454,30 +2454,48 @@ export const courses: CourseItem[] = [
         screenshots: [],
     },
     {
-        slug: "projet-synthese-ete-2026",
-        status: "En cours",
-        code: "INF-SYN",
-        category: "Projet de synthèse",
-
-        titleFr: "Projet de synthèse",
-        titleEn: "Capstone Project",
-
-        sessionFr: "Été/Sept. 2026",
-        sessionEn: "Summer/Sept. 2026",
-
-        summaryFr:
-            "Session finale du baccalauréat en informatique à l'UQTR. Projet de synthèse intégrateur — plan de cours à venir.",
-
-        summaryEn:
-            "Final session of the B.Sc. in Computer Science at UQTR. Integrative capstone project — course outline to be confirmed.",
-
-        technologies: [],
-        topicsFr: [],
-        topicsEn: [],
-        workFr: [],
-        workEn: [],
-        screenshots: [],
-    },
+    "slug": "projet-synthese-ete-2026",
+    "status": "Complété",
+    "code": "INF-SYN",
+    "category": "Projet de synthèse",
+    "titleFr": "Projet de synthèse — EEG et état des yeux",
+    "titleEn": "Capstone project — EEG and eye state",
+    "sessionFr": "Été 2026",
+    "sessionEn": "Summer 2026",
+    "summaryFr": "Projet intégrateur consacré à la prédiction de l’état des yeux à partir de signaux EEG et à une analyse causale distincte. Le travail relie préparation de séries temporelles, apprentissage automatique, Transformer Encoder et interprétation critique des résultats.",
+    "summaryEn": "Integrative project on predicting eye state from EEG signals and a separate causal analysis. The work connects time-series preparation, machine learning, a Transformer Encoder and critical interpretation of results.",
+    "technologies": [
+        "Python",
+        "Pandas",
+        "Scikit-learn",
+        "PyTorch",
+        "EconML",
+        "Statsmodels"
+    ],
+    "topicsFr": [
+        "Fenêtrage des signaux et séparation chronologique",
+        "Comparaison de modèles tabulaires et séquentiels",
+        "ROC-AUC, exactitude équilibrée et F1 macro",
+        "Hypothèses causales, effets estimés et incertitude"
+    ],
+    "topicsEn": [
+        "Signal windowing and chronological splitting",
+        "Comparison of tabular and sequential models",
+        "ROC-AUC, balanced accuracy and macro F1",
+        "Causal assumptions, estimated effects and uncertainty"
+    ],
+    "workFr": [
+        "Notebook de préparation, entraînement et évaluation",
+        "Comparaison sur 24 fenêtres de test ; analyse des limites",
+        "Rapport de projet et présentation des résultats"
+    ],
+    "workEn": [
+        "Data preparation, training and evaluation notebook",
+        "Comparison on 24 test windows; analysis of limitations",
+        "Project report and results presentation"
+    ],
+    "screenshots": []
+},
 
 ];
 

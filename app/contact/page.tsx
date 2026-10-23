@@ -13,7 +13,7 @@ export default function ContactPage() {
           Travaillons <span className="gradient-text">ensemble</span>
         </h1>
         <p className="max-w-xl text-base leading-relaxed text-white/55 sm:text-lg">
-          Diplômé en informatique de l’UQTR, concentration en science des données, je recherche un poste junior en développement logiciel, analyse-programmation, analyse de données/BI ou modélisation.
+          Vous souhaitez discuter d’un projet, d’une mission indépendante ou d’une opportunité d’emploi ? Présentez-moi votre besoin et le contexte de votre démarche.
         </p>
       </div>
 
