@@ -92,7 +92,7 @@ export default function ContactPage() {
             </div>
             <h2 className="text-xl font-bold text-white/95 sm:text-2xl">À la recherche d&apos;un emploi</h2>
             <p className="mt-1 text-white/55">
-              Développement logiciel · Back-end · Data · Android — Diplômé en 2026
+              Science des données · Analyse / BI · Modélisation — Diplômé en 2026
             </p>
           </div>
           <Link

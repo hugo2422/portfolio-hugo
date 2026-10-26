@@ -120,7 +120,7 @@ function NavbarContents() {
             onClick={() => setMenuOpen((v) => !v)}
             aria-label={menuOpen ? "Fermer le menu" : "Ouvrir le menu"}
             aria-expanded={menuOpen}
-            className="flex h-9 w-9 items-center justify-center rounded-lg border border-white/10 bg-white/[0.05] text-white/70 transition hover:bg-white/[0.09] lg:hidden"
+            className="flex h-11 w-11 items-center justify-center rounded-lg border border-white/10 bg-white/[0.05] text-white/70 transition hover:bg-white/[0.09] lg:hidden"
           >
             <svg className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
               {menuOpen
@@ -143,7 +143,7 @@ function NavbarContents() {
           />
 
           {/* Panel */}
-          <div className="absolute inset-x-3 top-3 overflow-hidden rounded-2xl border border-white/[0.09] bg-[#080e1e]/97 shadow-2xl">
+          <div className="mobile-nav-panel absolute inset-x-3 top-3 overflow-hidden rounded-2xl border border-white/[0.09] bg-[#080e1e]/97 shadow-2xl">
 
             {/* Panel header */}
             <div className="flex items-center justify-between border-b border-white/[0.07] px-4 py-3.5">
@@ -153,7 +153,7 @@ function NavbarContents() {
                 </div>
                 <div>
                   <p className="text-sm font-semibold leading-none text-white">Hugo Tekeng</p>
-                  <p className="mt-0.5 text-[10px] text-white/40">Développeur logiciel & Data</p>
+                  <p className="mt-0.5 text-[10px] text-white/40">{isEN ? "Data science & applied AI" : "Science des données & IA appliquée"}</p>
                 </div>
               </div>
               <button

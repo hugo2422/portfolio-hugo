@@ -148,7 +148,7 @@ export default function UniversityENPage() {
 
                                                     {course.status && (
                                                         <span className="rounded-full border border-emerald-400/20 bg-emerald-400/10 px-3 py-1 text-xs text-emerald-300">
-                                                            Planned 2026
+                                                            Completed
                                                         </span>
                                                     )}
                                                 </div>

@@ -12,7 +12,8 @@ const statusConfig: Record<string, { label: string; style: React.CSSProperties; 
 export default async function ProjectsPage({searchParams}: {searchParams: Promise<{focus?: string}>}) {
  const {focus: requestedFocus}=await searchParams;
  const focus=requestedFocus==="software"||requestedFocus==="data"?requestedFocus:"all";
- const visibleProjects=projects.filter(p=>matchesProjectFocus(p.slug,focus));
+ const dataOrder=["eeg-causal","causal-smoking","projet-depression","ecomos-ai"];
+ const visibleProjects=projects.filter(p=>matchesProjectFocus(p.slug,focus)).sort((a,b)=>(dataOrder.includes(a.slug)?dataOrder.indexOf(a.slug):99)-(dataOrder.includes(b.slug)?dataOrder.indexOf(b.slug):99));
     return (
         <section className="flex flex-col gap-10">
 
@@ -23,7 +24,7 @@ export default async function ProjectsPage({searchParams}: {searchParams: Promis
                     Mes <span className="gradient-text">projets</span>
                 </h1>
                 <p className="max-w-2xl text-base leading-relaxed text-white/55">
-                    Projets académiques, professionnels et personnels — back-end, data, mobile et produit.
+                    Projets académiques, professionnels et personnels — science des données, IA appliquée, analyse et développement logiciel.
                 </p>
 
                 {/* Stats */}
@@ -41,7 +42,7 @@ export default async function ProjectsPage({searchParams}: {searchParams: Promis
                 </div>
             </div>
 
-            <nav aria-label="Catégories de projets" className="flex flex-wrap gap-3">{[{id:"all",label:"Tous les projets"},{id:"software",label:"Développement logiciel"},{id:"data",label:"Science des données"}].map(item=><Link key={item.id} aria-current={focus===item.id?"page":undefined} href={item.id==="all"?"/projects":"/projects?focus="+item.id} className={focus===item.id?"btn-primary":"btn-secondary"}>{item.label}</Link>)}</nav>
+            <nav aria-label="Catégories de projets" className="flex flex-wrap gap-3">{[{id:"all",label:"Tous les projets"},{id:"data",label:"Science des données"},{id:"software",label:"Développement logiciel"}].map(item=><Link key={item.id} aria-current={focus===item.id?"page":undefined} href={item.id==="all"?"/projects":"/projects?focus="+item.id} className={focus===item.id?"btn-primary":"btn-secondary"}>{item.label}</Link>)}</nav>
             {/* Projects grid */}
             <div className="animate-fade-in-up delay-100 grid gap-4 sm:gap-5 sm:grid-cols-2">
                 {visibleProjects.map((p) => {

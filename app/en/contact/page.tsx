@@ -49,7 +49,7 @@ export default function ContactPageEN() {
                             <span className="text-xs font-semibold uppercase tracking-wider text-green-400">Available</span>
                         </div>
                         <h2 className="text-xl font-bold text-white/95 sm:text-2xl">Open to job opportunities</h2>
-                        <p className="mt-1 text-white/55">Backend • Python • Java • Data • Android — Trois-Rivières or remote</p>
+                        <p className="mt-1 text-white/55">Data science • Machine learning • Data analysis / BI — Trois-Rivières or remote</p>
                     </div>
                     <Link href="/en/hire-me" className="shrink-0 inline-flex min-h-[46px] items-center justify-center rounded-full bg-gradient-to-r from-blue-500 to-violet-500 px-6 py-2.5 text-sm font-semibold text-white shadow-lg shadow-blue-500/20 transition hover:from-blue-400 hover:to-violet-400">
                         Learn more →

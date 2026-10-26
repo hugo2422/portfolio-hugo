@@ -438,3 +438,45 @@ a, button, summary { -webkit-tap-highlight-color:transparent; }
 .service-contact-actions>span { color:#b1c4ca; font-size:.75rem; line-height:1.7; }.recruiter-link { color:#b1c4ca; font-size:.85rem; line-height:1.8; padding-top:1.5rem; border-top:1px solid #34434c; }
 @media(max-width:900px) { .service-process { grid-template-columns:repeat(2,minmax(0,1fr)); }.service-contact { grid-template-columns:1fr; gap:1.5rem; } }
 @media(max-width:700px) { .services-preview-grid,.service-offers,.service-process { grid-template-columns:1fr; }.service-contact { padding:1.5rem; }.services-page { gap:3rem; } }
+
+/* Data-first identity and compact, responsive portraits. */
+.home-hero { grid-template-columns:minmax(0,1fr) 290px; gap:3.5rem; }
+.home-hero h1 { font-size:clamp(2.2rem,3.9vw,3.55rem); line-height:1.14; }
+.home-portraits { display:flex; flex-direction:column; align-items:center; gap:1.4rem; min-width:0; }
+.profile-circle { width:220px; margin:0; text-align:center; }
+.profile-circle img { display:block; width:220px; height:220px; border-radius:50%; object-fit:cover; object-position:center; padding:5px; border:1px solid #668d80; background:#15232d; }
+.profile-circle figcaption { margin-top:.7rem; color:#b9c7cd; font-size:.75rem; }
+.graduation-note { display:flex; align-items:center; gap:.9rem; width:100%; border:1px solid #344b55; padding:.7rem; border-radius:10px; background:#101c26; }
+.graduation-note img { width:104px; height:130px; border-radius:5px; object-fit:cover; flex-shrink:0; }
+.graduation-note>span { display:flex; flex-direction:column; gap:.4rem; color:#b9c7cd; font-size:.67rem; line-height:1.7; }
+.graduation-note strong { color:var(--accent); font-weight:550; font-size:.73rem; }
+.graduation-note:hover { border-color:var(--accent); }
+.journey-years strong { font-size:clamp(1.4rem,2.3vw,2rem); }
+main { min-width:0; } main :is(h1,h2,h3,p,li) { overflow-wrap:break-word; } main img { max-width:100%; }
+.home-hero>*,.section-heading>*,.case-section>*,.case-meta>*,.service-contact>* { min-width:0; }
+main button { min-height:44px; }
+header nav a { min-height:44px; display:inline-flex; align-items:center; }
+nav[aria-label="Navigation mobile"] a { min-height:44px; }
+.case-nav a { padding-block:.6rem; min-height:44px; }
+.results-block .table-scroll { max-width:100%; -webkit-overflow-scrolling:touch; }
+@media(max-width:900px) { .home-hero { gap:1.8rem; grid-template-columns:minmax(0,1fr) 250px; }.profile-circle,.profile-circle img { width:190px; }.profile-circle img { height:190px; }.graduation-note img { width:88px; height:110px; } }
+@media(max-width:700px) {
+ .home-hero { grid-template-columns:1fr; gap:1.5rem; padding-top:.3rem; }
+ .home-hero h1 { font-size:clamp(1.95rem,7.6vw,2.8rem); margin:1rem 0; letter-spacing:-.04em; }
+ .home-hero .lead { font-size:.94rem; line-height:1.75; }
+ .home-hero .hero-discipline { font-size:.85rem; margin-bottom:.8rem; }
+ .home-hero .hero-actions { margin-top:1.2rem; gap:.6rem; }
+ .home-hero .hero-actions a { min-height:44px; padding:.7rem 1rem; font-size:.8rem; }
+ .home-hero .availability { margin-top:1rem; font-size:.7rem; }
+ .home-portraits { flex-direction:row; align-items:center; justify-content:center; gap:1rem; }
+ .profile-circle { width:148px; flex-shrink:0; }.profile-circle img { width:148px; height:148px; padding:4px; }.profile-circle figcaption { font-size:.65rem; }
+ .graduation-note { width:auto; max-width:160px; flex-direction:column; align-items:center; text-align:center; gap:.55rem; padding:.6rem; }
+ .graduation-note img { width:88px; height:110px; }.graduation-note>span { font-size:.6rem; gap:.2rem; }.graduation-note strong { font-size:.65rem; }
+ .portfolio-home { gap:3rem; }.proof-strip { gap:1rem; padding:1.2rem 0; }.proof-strip a+a { padding-top:1rem; }
+ .case-header h1,.education-intro h1 { font-size:clamp(1.9rem,8vw,2.6rem); }
+ .case-nav { gap:.3rem 1rem; }.case-section { padding-top:1.5rem; }.flow-diagram { padding:1rem; }
+ .results-block th,.results-block td { padding:.6rem .35rem; font-size:.7rem; }
+ .work-image img { padding:.7rem; }.services-page { gap:2.5rem; }
+}
+@media(max-width:360px) { .home-portraits { gap:.6rem; }.profile-circle { width:124px; }.profile-circle img { width:124px; height:124px; }.graduation-note { max-width:145px; }.hero-actions { gap:.6rem; }.metric-grid { grid-template-columns:1fr; gap:1rem; } }
+@media(max-width:1023px) {  .mobile-nav-panel { max-height:calc(100dvh - 2rem); overflow-y:auto; overscroll-behavior:contain; } }

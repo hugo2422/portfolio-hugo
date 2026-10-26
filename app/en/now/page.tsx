@@ -19,7 +19,7 @@ export default function NowEN() {
 
                 <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
                     <p className="text-sm text-white/60">Learning</p>
-                    <p className="mt-2 text-white/85">Backend, data, best practices</p>
+                    <p className="mt-2 text-white/85">Data science, applied AI and certification preparation</p>
                 </div>
             </div>
         </section>

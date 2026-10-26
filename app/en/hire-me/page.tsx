@@ -20,7 +20,7 @@ export default function HireMePageEN() {
                     Open to{" "}
                     <span className="gradient-text">job opportunities</span>
                 </h1>
-                <p className="max-w-2xl text-base leading-relaxed text-white/55 sm:text-lg">I graduated from UQTR in 2026 in Computer Science, concentration in Data Science. I am equally interested in junior software developer, programmer analyst, data/BI analyst and data science/modeling roles.</p>
+                <p className="max-w-2xl text-base leading-relaxed text-white/55 sm:text-lg">I graduated from UQTR in 2026 with a bachelor’s degree in Computer Science, concentration in Data Science. My priority is a junior role in data science, modeling or data/BI analysis.</p>
             </div>
 
             <div className="animate-fade-in-up delay-100 grid gap-4 sm:grid-cols-3">
@@ -33,7 +33,7 @@ export default function HireMePageEN() {
                 </div>
                 <div className="card-premium rounded-2xl p-5">
                     <p className="text-xs font-semibold uppercase tracking-wider text-white/35">Target roles</p>
-                    <p className="mt-3 font-medium text-white/85">Software · Programmer analysis · Data/BI · Modeling</p>
+                    <p className="mt-3 font-medium text-white/85">Data science · Modeling · Data / BI analysis</p>
                 </div>
                 <div className="card-premium rounded-2xl p-5">
                     <p className="text-xs font-semibold uppercase tracking-wider text-white/35">Location</p>
@@ -58,7 +58,7 @@ export default function HireMePageEN() {
             <div className="animate-fade-in-up delay-300 flex flex-col gap-5">
                 <h2 className="text-xl font-semibold text-white/90">Technical skills</h2>
                 <div className="grid gap-3 sm:grid-cols-2">
-                    {skills.map((cat) => (
+                    {[...skills].sort((a,b) => Number(b.category === "Data & ML") - Number(a.category === "Data & ML")).map((cat) => (
                         <div key={cat.category} className="card-premium rounded-2xl p-5">
                             <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-white/35">{cat.category}</p>
                             <div className="flex flex-wrap gap-2">
@@ -78,7 +78,7 @@ export default function HireMePageEN() {
                         { icon: "🖥️", title: "Backend development", desc: "Production experience with Spring Boot, Java, and SQL. Full ERP deployed and used daily in a real company." },
                         { icon: "📊", title: "Data science", desc: "Data pipelines, ML (classification, regression, clustering), visualization and analytical reporting." },
                         { icon: "📱", title: "Android mobile", desc: "MVVM architecture, Firebase, Room, Google Maps. Functional app developed collaboratively." },
-                    ].map((item) => (
+                    ].sort((a, b) => Number(b.title === "Science des données" || b.title === "Data science") - Number(a.title === "Science des données" || a.title === "Data science")).map((item) => (
                         <div key={item.title} className="card-premium rounded-2xl p-5">
                             <span className="text-2xl">{item.icon}</span>
                             <h3 className="mt-3 font-semibold text-white/90">{item.title}</h3>

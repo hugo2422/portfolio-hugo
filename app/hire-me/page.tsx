@@ -23,7 +23,7 @@ export default function HireMePage() {
                     <span className="gradient-text">d&apos;un emploi</span>
                 </h1>
                 <p className="max-w-2xl text-base leading-relaxed text-white/55 sm:text-lg">
-                    Diplômé en informatique de l’UQTR en 2026, concentration en science des données, je recherche un poste junior en développement logiciel, analyse-programmation, analyse de données/BI ou science des données.
+                    Diplômé du baccalauréat en informatique de l’UQTR en 2026, concentration en science des données, je recherche en priorité un poste junior en science des données, en modélisation ou en analyse de données/BI.
                 </p>
             </div>
 
@@ -39,7 +39,7 @@ export default function HireMePage() {
 
                 <div className="card-premium rounded-2xl p-5">
                     <p className="text-xs font-semibold uppercase tracking-wider text-white/35">Rôles ciblés</p>
-                    <p className="mt-3 font-medium text-white/85">Développement · Analyse-programmation · Data/BI · Modélisation</p>
+                    <p className="mt-3 font-medium text-white/85">Science des données · Modélisation · Analyse de données / BI</p>
                 </div>
 
                 <div className="card-premium rounded-2xl p-5">
@@ -92,7 +92,7 @@ export default function HireMePage() {
                             title: "Mobile Android",
                             desc: "Architecture MVVM, Firebase, Room, Google Maps. Application fonctionnelle développée en équipe et géolocalisée.",
                         },
-                    ].map((item) => (
+                    ].sort((a, b) => Number(b.title === "Science des données" || b.title === "Data science") - Number(a.title === "Science des données" || a.title === "Data science")).map((item) => (
                         <div key={item.title} className="card-premium rounded-2xl p-5">
                             <span className="text-2xl">{item.icon}</span>
                             <h3 className="mt-3 font-semibold text-white/90">{item.title}</h3>
@@ -106,7 +106,7 @@ export default function HireMePage() {
             <div className="animate-fade-in-up delay-400 flex flex-col gap-5">
                 <h2 className="text-xl font-semibold text-white/90">Compétences techniques</h2>
                 <div className="grid gap-3 sm:grid-cols-2">
-                    {skills.map((cat) => (
+                    {[...skills].sort((a,b) => Number(b.category === "Data & ML") - Number(a.category === "Data & ML")).map((cat) => (
                         <div key={cat.category} className="card-premium rounded-2xl p-5">
                             <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-white/35">{cat.category}</p>
                             <div className="flex flex-wrap gap-2">

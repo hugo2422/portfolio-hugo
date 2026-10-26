@@ -12,7 +12,8 @@ const statusConfig: Record<string, { label: string; style: React.CSSProperties; 
 export default async function ProjectsPageEN({searchParams}: {searchParams: Promise<{focus?: string}>}) {
  const {focus: requestedFocus}=await searchParams;
  const focus=requestedFocus==="software"||requestedFocus==="data"?requestedFocus:"all";
- const visibleProjects=projects.filter(p=>matchesProjectFocus(p.slug,focus));
+ const dataOrder=["eeg-causal","causal-smoking","projet-depression","ecomos-ai"];
+ const visibleProjects=projects.filter(p=>matchesProjectFocus(p.slug,focus)).sort((a,b)=>(dataOrder.includes(a.slug)?dataOrder.indexOf(a.slug):99)-(dataOrder.includes(b.slug)?dataOrder.indexOf(b.slug):99));
     return (
         <section className="flex flex-col gap-10">
             <div className="animate-fade-in-up flex flex-col gap-3">
@@ -21,7 +22,7 @@ export default async function ProjectsPageEN({searchParams}: {searchParams: Prom
                     My <span className="gradient-text">projects</span>
                 </h1>
                 <p className="max-w-2xl text-base leading-relaxed text-white/55">
-                    Academic, professional, and personal projects — backend, data, mobile, and product.
+                    Academic, professional, and personal projects — data science, applied AI, analytics and software development.
                 </p>
                 <div className="mt-2 flex flex-wrap gap-3">
                     {[
@@ -37,7 +38,7 @@ export default async function ProjectsPageEN({searchParams}: {searchParams: Prom
                 </div>
             </div>
 
-            <nav aria-label="Project categories" className="flex flex-wrap gap-3">{[{id:"all",label:"All projects"},{id:"software",label:"Software development"},{id:"data",label:"Data science"}].map(item=><Link key={item.id} aria-current={focus===item.id?"page":undefined} href={item.id==="all"?"/en/projects":"/en/projects?focus="+item.id} className={focus===item.id?"btn-primary":"btn-secondary"}>{item.label}</Link>)}</nav>
+            <nav aria-label="Project categories" className="flex flex-wrap gap-3">{[{id:"all",label:"All projects"},{id:"data",label:"Data science"},{id:"software",label:"Software development"}].map(item=><Link key={item.id} aria-current={focus===item.id?"page":undefined} href={item.id==="all"?"/en/projects":"/en/projects?focus="+item.id} className={focus===item.id?"btn-primary":"btn-secondary"}>{item.label}</Link>)}</nav>
             <div className="animate-fade-in-up delay-100 grid gap-5 md:grid-cols-2">
                 {visibleProjects.map((p) => {
                     const status = statusConfig[p.statusKey];

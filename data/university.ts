@@ -2,7 +2,7 @@ export type CourseItem = {
     slug: string;
     code: string;
     category: string;
-    status?: string;
+    status: "Complété";
     titleFr: string;
     titleEn: string;
     sessionFr: string;
@@ -30,6 +30,7 @@ export type CourseItem = {
 export const courses: CourseItem[] = [
     {
         slug: "inf1001-programmation-web",
+        status: "Complété",
         code: "INF1001",
         titleFr: "Programmation Web",
         category: "Web",
@@ -96,6 +97,7 @@ export const courses: CourseItem[] = [
     },
     {
         slug: "inf1002-introduction-programmation-objet",
+        status: "Complété",
         code: "INF1002",
         category: "Programmation objet",
 
@@ -172,6 +174,7 @@ export const courses: CourseItem[] = [
     },
     {
         slug: "sif1053-architecture-ordinateurs",
+        status: "Complété",
         code: "SIF1053",
         category: "Systèmes",
 
@@ -246,6 +249,7 @@ export const courses: CourseItem[] = [
     },
     {
         slug: "stt1001-probabilites-statistiques",
+        status: "Complété",
         code: "STT1001",
         category: "Maths",
 
@@ -336,6 +340,7 @@ export const courses: CourseItem[] = [
     },
     {
         slug: "inf1004-structures-donnees-algorithmes",
+        status: "Complété",
         code: "INF1004",
         category: "Algorithmique",
 
@@ -417,6 +422,7 @@ export const courses: CourseItem[] = [
     },
     {
         slug: "inf1034-introduction-interfaces-utilisateur",
+        status: "Complété",
         code: "INF1034",
         category: "Interfaces",
 
@@ -502,6 +508,7 @@ export const courses: CourseItem[] = [
     },
     {
         slug: "pif1005-mathematiques-pour-informaticiens-1",
+        status: "Complété",
         code: "PIF1005",
         category: "Maths",
 
@@ -572,6 +579,7 @@ export const courses: CourseItem[] = [
     },
     {
         slug: "smi1001-bases-de-donnees-1",
+        status: "Complété",
         code: "SMI1001",
         category: "Bases de données",
 
@@ -661,6 +669,7 @@ export const courses: CourseItem[] = [
     },
     {
         slug: "inf1006-analyse-modelisation",
+        status: "Complété",
         code: "INF1006",
         category: "Logiciel",
 
@@ -750,6 +759,7 @@ export const courses: CourseItem[] = [
     },
     {
         slug: "inf1035-concepts-avances-objet",
+        status: "Complété",
         code: "INF1035",
         category: "Programmation objet",
 
@@ -842,6 +852,7 @@ export const courses: CourseItem[] = [
     },
     {
         slug: "pif1006-mathematiques-pour-informaticiens-2",
+        status: "Complété",
         code: "PIF1006",
         category: "Maths",
 
@@ -937,6 +948,7 @@ export const courses: CourseItem[] = [
     },
     {
         slug: "sdd1001-introduction-science-donnees",
+        status: "Complété",
         code: "SDD1001",
         category: "Data",
 
@@ -1022,6 +1034,7 @@ export const courses: CourseItem[] = [
     },
     {
         slug: "sif1015-systemes-exploitation",
+        status: "Complété",
         code: "SIF1015",
         category: "Systèmes",
 
@@ -1113,6 +1126,7 @@ export const courses: CourseItem[] = [
     },
     {
         slug: "inf1007-conception-logiciels",
+        status: "Complété",
         code: "INF1007",
         category: "Logiciel",
 
@@ -1214,6 +1228,7 @@ export const courses: CourseItem[] = [
     },
     {
         slug: "inf1008-analyse-conception-algorithmes",
+        status: "Complété",
         code: "INF1008",
         category: "Algorithmique",
 
@@ -1303,6 +1318,7 @@ export const courses: CourseItem[] = [
     },
     {
         slug: "inf1009-reseaux-ordinateurs-1",
+        status: "Complété",
         code: "INF1009",
         category: "Réseaux",
 
@@ -1411,6 +1427,7 @@ export const courses: CourseItem[] = [
     },
     {
         slug: "sdd1002-modelisation-simulation",
+        status: "Complété",
         code: "SDD1002",
         category: "Data",
 
@@ -1513,6 +1530,7 @@ export const courses: CourseItem[] = [
     },
     {
         slug: "smi1002-bases-de-donnees-2",
+        status: "Complété",
         code: "SMI1002",
         category: "Bases de données",
 
@@ -1610,6 +1628,7 @@ export const courses: CourseItem[] = [
     },
     {
         slug: "inf1022-projet-synthese",
+        status: "Complété",
         code: "INF1022",
         category: "Projet",
 
@@ -1689,6 +1708,7 @@ export const courses: CourseItem[] = [
     },
     {
         slug: "inf1010-reseaux-ordinateurs-2",
+        status: "Complété",
         code: "INF1010",
         category: "Réseaux",
 
@@ -1795,6 +1815,7 @@ export const courses: CourseItem[] = [
     },
     {
         slug: "inf1014-aspects-juridiques-informatique",
+        status: "Complété",
         code: "INF1014",
         category: "Droit",
 
@@ -1880,6 +1901,7 @@ export const courses: CourseItem[] = [
     },
     {
         slug: "sdd1003-gestion-entrepots-donnees",
+        status: "Complété",
         code: "SDD1003",
         category: "Data",
 
@@ -1967,6 +1989,7 @@ export const courses: CourseItem[] = [
     },
     {
         slug: "tin1003-science-technologie-societe",
+        status: "Complété",
         code: "TIN1003",
         category: "Société",
 
@@ -2062,6 +2085,7 @@ export const courses: CourseItem[] = [
     },
     {
         slug: "inf1011-genie-logiciel",
+        status: "Complété",
         code: "INF1011",
         category: "Logiciel",
 
@@ -2165,9 +2189,10 @@ export const courses: CourseItem[] = [
     },
     {
         slug: "sdd1004-apprentissage-automatique-applications",
+        status: "Complété",
         code: "SDD1004",
         category: "Data",
-        status: "Complété",
+
 
         titleFr: "Apprentissage automatique et applications",
         titleEn: "Machine Learning and Applications",
@@ -2254,9 +2279,10 @@ export const courses: CourseItem[] = [
     },
     {
         slug: "inf1020-commerce-electronique",
+        status: "Complété",
         code: "INF1020",
         category: "Web",
-        status: "Complété",
+
 
         titleFr: "Commerce électronique",
         titleEn: "Electronic Commerce",
@@ -2350,9 +2376,10 @@ export const courses: CourseItem[] = [
     },
     {
         slug: "inf1030-developpement-applications-mobiles",
+        status: "Complété",
         code: "INF1030",
         category: "Mobile",
-        status: "Complété",
+
 
         titleFr: "Introduction au développement d’applications mobiles (Android)",
         titleEn: "Introduction to Mobile Application Development (Android)",
@@ -2455,7 +2482,8 @@ export const courses: CourseItem[] = [
     },
     {
     "slug": "projet-synthese-ete-2026",
-    "status": "Complété",
+    status: "Complété",
+
     "code": "INF-SYN",
     "category": "Projet de synthèse",
     "titleFr": "Projet de synthèse — EEG et état des yeux",
@@ -2547,8 +2575,8 @@ export const priorDegrees: PriorDegree[] = [
         fieldFr: "Mathématiques appliquées",
         fieldEn: "Applied Mathematics",
 
-        periodFr: "2019 — 2023",
-        periodEn: "2019 — 2023",
+        periodFr: "2023",
+        periodEn: "2023",
 
         summaryFr:
             "Formation complète en mathématiques appliquées couvrant l’algèbre, l’analyse, les probabilités, les statistiques, les équations différentielles, l’analyse numérique, la topologie, la géométrie, l’informatique et plusieurs applications scientifiques. Ce parcours m’a donné une base théorique rigoureuse, une forte capacité d’abstraction et une solide aptitude à la modélisation mathématique, au calcul scientifique et à l’analyse quantitative.",

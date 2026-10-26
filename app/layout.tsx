@@ -8,14 +8,14 @@ const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Armel Hugo Tekeng — Développement logiciel & science des données",
+  title: "Armel Hugo Tekeng — Science des données & IA appliquée",
   description:
-    "Portfolio d’Armel Hugo Tekeng. Développement logiciel, analyse de données, BI, modélisation et intérêt pour l’intelligence artificielle. Diplômé en informatique de l’UQTR en 2026, concentration en science des données.",
-  keywords: ["développeur logiciel","data scientist","machine learning","inférence causale","Spring Boot","Python","Java","Android","Trois-Rivières"],
+    "Portfolio d’Armel Hugo Tekeng. Science des données, analyse, BI, modélisation et intelligence artificielle appliquée. Diplômé en informatique de l’UQTR en 2026, concentration en science des données.",
+  keywords: ["science des données","data scientist","machine learning","inférence causale","Spring Boot","Python","Java","Android","Trois-Rivières"],
   authors: [{ name: "Hugo Tekeng", url: "https://www.hugotekeng.com" }],
   openGraph: {
-    title: "Armel Hugo Tekeng — Développement logiciel & science des données",
-    description: "Développement logiciel · Science des données · IA appliquée · Analyse et BI — Diplômé de l’UQTR en 2026.",
+    title: "Armel Hugo Tekeng — Science des données & IA appliquée",
+    description: "Science des données · IA appliquée · Analyse et BI — Diplômé de l’UQTR en 2026.",
     type: "website",
     locale: "fr_CA",
   },
