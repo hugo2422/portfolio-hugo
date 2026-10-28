@@ -498,8 +498,9 @@ nav[aria-label="Navigation mobile"] a { min-height:44px; }
 
 /* Both graduation portraits belong to the academic journey. */
 .education-intro { grid-template-columns:minmax(0,1fr) minmax(0,500px); gap:3rem; }
-.education-portraits { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1rem; align-items:start; min-width:0; }
-.education-portraits .graduation-portrait { width:100%; max-width:100%; margin:0; }
-.education-portraits img { display:block; height:auto; object-fit:contain; }
+.education-portraits { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1.25rem; align-items:stretch; min-width:0; }
+.education-portraits .graduation-portrait { display:flex; flex-direction:column; width:100%; max-width:100%; margin:0; padding:12px; border-radius:12px; background:#111e28; border-color:#354b55; }
+.education-portraits img { display:block; width:100%; height:auto; aspect-ratio:3 / 4; object-fit:contain; object-position:center; background:#1a2a36; border-radius:5px; }
+.education-portraits figcaption { display:flex; align-items:center; justify-content:center; min-height:3.5rem; padding:.75rem .25rem .15rem; text-align:center; font-size:.78rem; line-height:1.5; color:#c6d6dc; }
 @media(max-width:1000px) { .education-intro { grid-template-columns:1fr; gap:2rem; }.education-portraits { width:min(100%,620px); margin-inline:auto; } }
 @media(max-width:600px) { .education-portraits { width:min(100%,300px); grid-template-columns:1fr; gap:1.5rem; } }
