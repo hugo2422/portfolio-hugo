@@ -495,3 +495,11 @@ nav[aria-label="Navigation mobile"] a { min-height:44px; }
  .profile-circle figcaption { font-size:.75rem; }
  .graduation-portrait { width:300px; }
 }
+
+/* Both graduation portraits belong to the academic journey. */
+.education-intro { grid-template-columns:minmax(0,1fr) minmax(0,500px); gap:3rem; }
+.education-portraits { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1rem; align-items:start; min-width:0; }
+.education-portraits .graduation-portrait { width:100%; max-width:100%; margin:0; }
+.education-portraits img { display:block; height:auto; object-fit:contain; }
+@media(max-width:1000px) { .education-intro { grid-template-columns:1fr; gap:2rem; }.education-portraits { width:min(100%,620px); margin-inline:auto; } }
+@media(max-width:600px) { .education-portraits { width:min(100%,300px); grid-template-columns:1fr; gap:1.5rem; } }
