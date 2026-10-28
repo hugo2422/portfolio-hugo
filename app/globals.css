@@ -375,11 +375,11 @@ a, button, summary { -webkit-tap-highlight-color:transparent; }
 .cert-card .text-link { margin-top:auto; padding-top:1.3rem; }
 .contact-band { border-top:1px solid #34434c; padding-top:3rem; }
 .contact-band>p:not(.eyebrow) { color:#b9c7cd; line-height:1.85; max-width:75ch; margin-top:1.3rem; }
-.education-intro { display:grid; grid-template-columns:1fr 240px; gap:4rem; align-items:center; }
+.education-intro { display:grid; grid-template-columns:minmax(0,1fr) 300px; gap:4rem; align-items:center; }
 .education-intro h1,.case-header h1 { font-size:clamp(2.2rem,4.5vw,3.7rem); line-height:1.12; letter-spacing:-.045em; font-weight:550; margin:1rem 0 1.5rem; }
 .graduation-portrait { border:1px solid #344b55; padding:9px; border-radius:6px; background:#14202a; }
 .graduation-portrait img { width:100%; height:auto; border-radius:3px; }
-.graduation-portrait figcaption { font-size:.65rem; color:#bed0d4; padding:.7rem .3rem .2rem; }
+.graduation-portrait figcaption { font-size:.8rem; color:#bed0d4; padding:.7rem .3rem .2rem; }
 .learning-timeline { margin:3rem 0; border-left:1px solid #4c6b67; padding-left:2rem; display:grid; gap:2.5rem; }
 .learning-timeline article { position:relative; }
 .learning-timeline article:before { content:""; width:9px; height:9px; border-radius:50%; background:var(--accent); position:absolute; left:-37px; top:7px; }
@@ -414,7 +414,7 @@ a, button, summary { -webkit-tap-highlight-color:transparent; }
 .case-footer { display:flex; gap:2rem; justify-content:space-between; align-items:center; border-top:1px solid #34434c; padding-top:2rem; }
 .skip-link { position:fixed; top:-100px; left:1rem; z-index:100; padding:.8rem 1rem; background:var(--accent); color:#0b211b; }.skip-link:focus { top:.5rem; }
 @media(max-width:900px) { .home-hero { gap:2rem; }.section-heading { align-items:flex-start; flex-direction:column; gap:1rem; }.section-heading>p { max-width:70ch; }.expertise-grid { grid-template-columns:1fr; }.case-section { grid-template-columns:1fr; gap:1.2rem; }.case-section-label { display:flex; gap:1rem; align-items:baseline; }.case-section-label h2 { margin:0; }.journey-preview { gap:2rem; padding:2rem; } }
-@media(max-width:700px) { .portfolio-home { gap:4rem; }.home-hero { grid-template-columns:1fr; padding-top:1rem; gap:2.5rem; }.home-hero h1 { font-size:clamp(2.35rem,9vw,3.6rem); }.hero-portrait { width:min(80%,320px); margin-inline:auto; transform:rotate(1deg); }.proof-strip { margin-top:0; grid-template-columns:1fr; gap:1.4rem; }.proof-strip a+a { border-top:1px solid #2d3d47; padding-top:1.3rem; }.home-projects,.cert-grid,.journey-preview,.education-intro,.bridge-grid,.case-gallery { grid-template-columns:1fr; }.work-card-body { padding:1.3rem; }.journey-preview { padding:1.5rem; }.journey-years { border-left:0; border-top:1px solid #34434c; padding:1.2rem 0 0; }.journey-years div { display:none; }.education-intro { gap:2rem; }.graduation-portrait { width:240px; max-width:85%; margin:auto; }.case-meta { grid-template-columns:1fr; gap:1rem; }.case-meta div { gap:.3rem; }.metric-grid { gap:.6rem; }.metric-grid strong { font-size:1.15rem; }.case-footer { align-items:flex-start; flex-direction:column; gap:1rem; }.learning-timeline { padding-left:1.4rem; }.learning-timeline article:before { left:-27px; } }
+@media(max-width:700px) { .portfolio-home { gap:4rem; }.home-hero { grid-template-columns:1fr; padding-top:1rem; gap:2.5rem; }.home-hero h1 { font-size:clamp(2.35rem,9vw,3.6rem); }.hero-portrait { width:min(80%,320px); margin-inline:auto; transform:rotate(1deg); }.proof-strip { margin-top:0; grid-template-columns:1fr; gap:1.4rem; }.proof-strip a+a { border-top:1px solid #2d3d47; padding-top:1.3rem; }.home-projects,.cert-grid,.journey-preview,.education-intro,.bridge-grid,.case-gallery { grid-template-columns:1fr; }.work-card-body { padding:1.3rem; }.journey-preview { padding:1.5rem; }.journey-years { border-left:0; border-top:1px solid #34434c; padding:1.2rem 0 0; }.journey-years div { display:none; }.education-intro { gap:2rem; }.graduation-portrait { width:300px; max-width:100%; margin:auto; }.case-meta { grid-template-columns:1fr; gap:1rem; }.case-meta div { gap:.3rem; }.metric-grid { gap:.6rem; }.metric-grid strong { font-size:1.15rem; }.case-footer { align-items:flex-start; flex-direction:column; gap:1rem; }.learning-timeline { padding-left:1.4rem; }.learning-timeline article:before { left:-27px; } }
 @media(prefers-reduced-motion:reduce) { *,*::before,*::after { animation:none!important; transition:none!important; scroll-behavior:auto!important; } }
 
 .section-heading h1 { font-size:clamp(2rem,4vw,3.1rem); letter-spacing:-.04em; line-height:1.15; font-weight:550; margin-top:.7rem; }
@@ -480,3 +480,18 @@ nav[aria-label="Navigation mobile"] a { min-height:44px; }
 }
 @media(max-width:360px) { .home-portraits { gap:.6rem; }.profile-circle { width:124px; }.profile-circle img { width:124px; height:124px; }.graduation-note { max-width:145px; }.hero-actions { gap:.6rem; }.metric-grid { grid-template-columns:1fr; gap:1rem; } }
 @media(max-width:1023px) {  .mobile-nav-panel { max-height:calc(100dvh - 2rem); overflow-y:auto; overscroll-behavior:contain; } }
+
+/* Full graduation portrait: preserve the face, gown and diploma on every screen. */
+.home-portraits { gap:1rem; }
+.profile-circle,.profile-circle img { width:156px; }
+.profile-circle img { height:156px; }
+.graduation-note { width:100%; max-width:290px; flex-direction:column; text-align:center; padding:.75rem; gap:.8rem; }
+.graduation-note img { display:block; width:100%; height:auto; aspect-ratio:1022 / 1279; object-fit:contain; }
+.graduation-note>span { font-size:.78rem; line-height:1.6; gap:.2rem; }
+.graduation-note strong { font-size:.86rem; }
+@media(max-width:700px) {
+ .home-portraits { flex-direction:column; gap:1.25rem; }
+ .graduation-note { width:min(100%,280px); max-width:280px; }
+ .profile-circle figcaption { font-size:.75rem; }
+ .graduation-portrait { width:300px; }
+}
