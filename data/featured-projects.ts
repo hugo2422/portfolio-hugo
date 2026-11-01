@@ -28,7 +28,7 @@ export const featuredProjects: FeaturedProject[] = [
     "stackPreview": [
       "Java",
       "Spring Boot",
-      "SQL"
+      "PostgreSQL"
     ],
     "statusKey": "in-production"
   },

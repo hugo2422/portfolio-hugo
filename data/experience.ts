@@ -36,18 +36,23 @@ export const experiences: Experience[] = [
         "missionsFr": [
             "Analyse des besoins métier et adaptation des fonctionnalités.",
             "Développement des transferts de caisse, prêts, primes et rapports journaliers.",
+            "Gestion des accès par rôle (employé, patron, administrateur), avec un tableau de bord dédié à chaque rôle.",
             "Gestion des autorisations, suivi des transactions et verrouillage des journées comptables.",
+            "Déverrouillage ciblé des journées comptables, avec traçabilité des autorisations.",
             "Maintenance de l’application en production."
         ],
         "missionsEn": [
             "Business requirements analysis and feature adaptation.",
             "Development of cash transfers, loans, bonuses and daily reporting.",
+            "Role-based access (employee, owner, administrator), with a dedicated dashboard for each role.",
             "Access management, transaction tracking and accounting day locking.",
+            "Targeted unlocking of accounting days, with authorization traceability.",
             "Production application maintenance."
         ],
         "technologies": [
             "Java",
             "Spring Boot",
+            "PostgreSQL",
             "SQL",
             "Thymeleaf",
             "HTML/CSS"

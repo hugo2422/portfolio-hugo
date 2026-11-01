@@ -195,6 +195,7 @@ export const projects: Project[] = [
       "Suivi des performances employés, calcul automatique des primes et tableau de bord dédié par rôle.",
       "Gestion clientèle avec autocomplétion, historique des transactions et profils clients.",
       "Verrouillage des journées comptables, génération de rapports globaux et archivage sécurisé.",
+      "Déverrouillage ciblé d'une journée comptable (employé, date, rapport ou type d'opérations), révocable, avec traçabilité complète de l'autorisation.",
       "Forum interne de communication entre employés et gestion des soldes téléphoniques."
     ],
     "roadmapFr": [
@@ -213,6 +214,7 @@ export const projects: Project[] = [
       "Employee performance tracking, automatic bonus calculation, and role-specific dashboards.",
       "Client management with autocomplete search, transaction history, and client profiles.",
       "Accounting day lock, global report generation, and secure data archiving.",
+      "Targeted unlocking of a closed accounting day (employee, date, report or operation type), revocable, with full authorization traceability.",
       "Internal employee communication forum and phone credit management."
     ],
     "roadmapEn": [
@@ -224,6 +226,7 @@ export const projects: Project[] = [
       "ERP",
       "Spring Boot",
       "Java",
+      "PostgreSQL",
       "SQL"
     ],
     "period": "2025 — 2026",
@@ -232,6 +235,7 @@ export const projects: Project[] = [
     "stack": [
       "Java",
       "Spring Boot",
+      "PostgreSQL",
       "SQL",
       "HTML/CSS",
       "Thymeleaf"

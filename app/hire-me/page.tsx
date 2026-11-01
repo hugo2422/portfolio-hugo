@@ -44,7 +44,7 @@ export default function HireMePage() {
 
                 <div className="card-premium rounded-2xl p-5">
                     <p className="text-xs font-semibold uppercase tracking-wider text-white/35">Localisation</p>
-                    <p className="mt-3 font-medium text-white/85">Trois-Rivières / télétravail</p>
+                    <p className="mt-3 font-medium text-white/85">Trois-Rivières, Québec · sur site, hybride ou télétravail</p>
                 </div>
             </div>
 
@@ -59,7 +59,7 @@ export default function HireMePage() {
                     </div>
                     <div>
                         <h2 className="text-lg font-semibold text-white/95">
-                            Baccalauréat en informatique — Diplômé en 2026
+                            Baccalauréat en informatique — Diplômé en septembre 2026
                         </h2>
                         <p className="mt-1 text-sm text-white/50">
                             Université du Québec à Trois-Rivières (UQTR) · Concentration : science des données
@@ -80,7 +80,7 @@ export default function HireMePage() {
                         {
                             icon: "🖥️",
                             title: "Développement back-end",
-                            desc: "Expérience réelle en production avec Spring Boot, Java et SQL. Système ERP complet déployé et utilisé quotidiennement par une entreprise.",
+                            desc: "Expérience réelle en production avec Spring Boot, Java et PostgreSQL. Système ERP complet déployé et utilisé quotidiennement par une entreprise.",
                         },
                         {
                             icon: "📊",

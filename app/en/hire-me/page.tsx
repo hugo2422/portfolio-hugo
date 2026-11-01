@@ -37,7 +37,7 @@ export default function HireMePageEN() {
                 </div>
                 <div className="card-premium rounded-2xl p-5">
                     <p className="text-xs font-semibold uppercase tracking-wider text-white/35">Location</p>
-                    <p className="mt-3 font-medium text-white/85">Trois-Rivières / remote</p>
+                    <p className="mt-3 font-medium text-white/85">Trois-Rivières, Quebec · on-site, hybrid or remote</p>
                 </div>
             </div>
 
@@ -75,7 +75,7 @@ export default function HireMePageEN() {
                 <h2 className="text-xl font-semibold text-white/90">What I bring</h2>
                 <div className="grid gap-4 sm:grid-cols-3">
                     {[
-                        { icon: "🖥️", title: "Backend development", desc: "Production experience with Spring Boot, Java, and SQL. Full ERP deployed and used daily in a real company." },
+                        { icon: "🖥️", title: "Backend development", desc: "Production experience with Spring Boot, Java, and PostgreSQL. Full ERP deployed and used daily in a real company." },
                         { icon: "📊", title: "Data science", desc: "Data pipelines, ML (classification, regression, clustering), visualization and analytical reporting." },
                         { icon: "📱", title: "Android mobile", desc: "MVVM architecture, Firebase, Room, Google Maps. Functional app developed collaboratively." },
                     ].sort((a, b) => Number(b.title === "Science des données" || b.title === "Data science") - Number(a.title === "Science des données" || a.title === "Data science")).map((item) => (
