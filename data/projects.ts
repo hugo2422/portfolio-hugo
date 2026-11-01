@@ -172,7 +172,7 @@ export const projects: Project[] = [
   },
   {
     "slug": "ops-system",
-    "cover": "/images/projects/ops-system/cover.jpg",
+    "cover": "/images/projects/ops-system/app.jpg",
     "titleFr": "Système de gestion d'entreprise — Lucatex SARL",
     "statusFr": "En production",
     "codeStatusFr": "Code privé (système en production)",
@@ -286,7 +286,7 @@ export const projects: Project[] = [
     ],
     "screenshots": [
       {
-        "src": "/images/projects/ops-system/cover.jpg",
+        "src": "/images/projects/ops-system/app.jpg",
         "altFr": "Aperçu du système de gestion Lucatex",
         "altEn": "Lucatex management system preview"
       }
@@ -408,7 +408,7 @@ export const projects: Project[] = [
   },
   {
     "slug": "ecomos-ai",
-    "cover": "/images/projects/ecomos-ai/cover.jpg",
+    "cover": "/images/projects/ecomos-ai/app.jpg",
     "titleFr": "EcomOS AI",
     "statusFr": "Prototype fonctionnel — En développement",
     "codeStatusFr": "Code privé (startup en développement)",
@@ -511,7 +511,7 @@ export const projects: Project[] = [
     ],
     "screenshots": [
       {
-        "src": "/images/projects/ecomos-ai/cover.jpg",
+        "src": "/images/projects/ecomos-ai/app.jpg",
         "altFr": "Aperçu EcomOS AI",
         "altEn": "EcomOS AI preview"
       }

@@ -16,7 +16,7 @@ export type FeaturedProject = {
 export const featuredProjects: FeaturedProject[] = [
   {
     "id": "ops-system",
-    "cover": "/images/projects/ops-system/cover.jpg",
+    "cover": "/images/projects/ops-system/app.jpg",
     "tagFr": "ERP · Spring Boot · En production",
     "tagEn": "ERP · Spring Boot · In production",
     "titleFr": "Système de gestion d'entreprise",
@@ -106,7 +106,7 @@ export const featuredProjects: FeaturedProject[] = [
   },
   {
     "id": "ecomos-ai",
-    "cover": "/images/projects/ecomos-ai/cover.jpg",
+    "cover": "/images/projects/ecomos-ai/app.jpg",
     "tagFr": "Prototype · Python · Analyse e-commerce",
     "tagEn": "Prototype · Python · E-commerce analytics",
     "titleFr": "EcomOS AI",
